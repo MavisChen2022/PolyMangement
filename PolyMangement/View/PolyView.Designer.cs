@@ -56,46 +56,46 @@
             this.btnDel = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.ChargeList = new System.Windows.Forms.TabPage();
-            this.ChargeDetail = new System.Windows.Forms.TabPage();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.radioButtonAQM = new System.Windows.Forms.RadioButton();
-            this.radioButtonYoXin = new System.Windows.Forms.RadioButton();
-            this.radioButtonAQMG3 = new System.Windows.Forms.RadioButton();
-            this.radioButtonMejing = new System.Windows.Forms.RadioButton();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.ChargeDetail = new System.Windows.Forms.TabPage();
             this.comboBoxMachine = new System.Windows.Forms.ComboBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.radioButtonMejing = new System.Windows.Forms.RadioButton();
+            this.radioButtonAQMG3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonYoXin = new System.Windows.Forms.RadioButton();
+            this.radioButtonAQM = new System.Windows.Forms.RadioButton();
+            this.txtASDopant = new System.Windows.Forms.TextBox();
+            this.txtPhDopant = new System.Windows.Forms.TextBox();
+            this.txtBDopant = new System.Windows.Forms.TextBox();
+            this.txtHemLock = new System.Windows.Forms.TextBox();
+            this.txtXinhua = new System.Windows.Forms.TextBox();
+            this.txtAS = new System.Windows.Forms.TextBox();
+            this.txtAR = new System.Windows.Forms.TextBox();
+            this.txtPCA = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.ChargeList.SuspendLayout();
@@ -426,6 +426,126 @@
             this.ChargeList.Text = "使用紀錄";
             this.ChargeList.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.Location = new System.Drawing.Point(181, 44);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 24);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "AS";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Location = new System.Drawing.Point(246, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 24);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "AR";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label38.Location = new System.Drawing.Point(999, 18);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(80, 17);
+            this.label38.TabIndex = 39;
+            this.label38.Text = "100100068";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label37.Location = new System.Drawing.Point(899, 18);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(80, 17);
+            this.label37.TabIndex = 38;
+            this.label37.Text = "100100068";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label36.Location = new System.Drawing.Point(789, 18);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(80, 17);
+            this.label36.TabIndex = 37;
+            this.label36.Text = "100100068";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label34.Location = new System.Drawing.Point(685, 18);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(80, 17);
+            this.label34.TabIndex = 36;
+            this.label34.Text = "100100068";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label33.Location = new System.Drawing.Point(341, 18);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(80, 17);
+            this.label33.TabIndex = 35;
+            this.label33.Text = "100100068";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label35.Location = new System.Drawing.Point(89, 18);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(80, 17);
+            this.label35.TabIndex = 34;
+            this.label35.Text = "100100068";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label32.Location = new System.Drawing.Point(427, 18);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(80, 17);
+            this.label32.TabIndex = 31;
+            this.label32.Text = "100100068";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label31.Location = new System.Drawing.Point(513, 18);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(80, 17);
+            this.label31.TabIndex = 30;
+            this.label31.Text = "100100068";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label30.Location = new System.Drawing.Point(599, 18);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(80, 17);
+            this.label30.TabIndex = 29;
+            this.label30.Text = "100100068";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label29.Location = new System.Drawing.Point(3, 18);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(80, 17);
+            this.label29.TabIndex = 28;
+            this.label29.Text = "100100068";
+            // 
             // ChargeDetail
             // 
             this.ChargeDetail.Controls.Add(this.comboBoxMachine);
@@ -435,14 +555,14 @@
             this.ChargeDetail.Controls.Add(this.radioButtonAQMG3);
             this.ChargeDetail.Controls.Add(this.radioButtonYoXin);
             this.ChargeDetail.Controls.Add(this.radioButtonAQM);
-            this.ChargeDetail.Controls.Add(this.textBox8);
-            this.ChargeDetail.Controls.Add(this.textBox7);
-            this.ChargeDetail.Controls.Add(this.textBox6);
-            this.ChargeDetail.Controls.Add(this.textBox5);
-            this.ChargeDetail.Controls.Add(this.textBox4);
-            this.ChargeDetail.Controls.Add(this.textBox3);
-            this.ChargeDetail.Controls.Add(this.textBox2);
-            this.ChargeDetail.Controls.Add(this.textBox1);
+            this.ChargeDetail.Controls.Add(this.txtASDopant);
+            this.ChargeDetail.Controls.Add(this.txtPhDopant);
+            this.ChargeDetail.Controls.Add(this.txtBDopant);
+            this.ChargeDetail.Controls.Add(this.txtHemLock);
+            this.ChargeDetail.Controls.Add(this.txtXinhua);
+            this.ChargeDetail.Controls.Add(this.txtAS);
+            this.ChargeDetail.Controls.Add(this.txtAR);
+            this.ChargeDetail.Controls.Add(this.txtPCA);
             this.ChargeDetail.Controls.Add(this.label24);
             this.ChargeDetail.Controls.Add(this.label23);
             this.ChargeDetail.Controls.Add(this.label22);
@@ -463,340 +583,33 @@
             this.ChargeDetail.Text = "使用明細";
             this.ChargeDetail.UseVisualStyleBackColor = true;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label13.Location = new System.Drawing.Point(31, 30);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 24);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "機台";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label14.Location = new System.Drawing.Point(422, 101);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(35, 24);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "AS";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label15.Location = new System.Drawing.Point(288, 101);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 24);
-            this.label15.TabIndex = 2;
-            this.label15.Text = "鑫華";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label16.Location = new System.Drawing.Point(149, 101);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(49, 24);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "PCA";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label17.Location = new System.Drawing.Point(557, 101);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(37, 24);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "AR";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label18.Location = new System.Drawing.Point(656, 101);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(97, 24);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "HemLock";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label19.ForeColor = System.Drawing.Color.Green;
-            this.label19.Location = new System.Drawing.Point(456, 231);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(29, 24);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "硼";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label20.ForeColor = System.Drawing.Color.Blue;
-            this.label20.Location = new System.Drawing.Point(298, 231);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(29, 24);
-            this.label20.TabIndex = 7;
-            this.label20.Text = "磷";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label21.ForeColor = System.Drawing.Color.Red;
-            this.label21.Location = new System.Drawing.Point(159, 231);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(29, 24);
-            this.label21.TabIndex = 8;
-            this.label21.Text = "砷";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label22.Location = new System.Drawing.Point(6, 101);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(87, 24);
-            this.label22.TabIndex = 9;
-            this.label22.Text = "Poly種類";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label23.Location = new System.Drawing.Point(6, 231);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(79, 24);
-            this.label23.TabIndex = 10;
-            this.label23.Text = "Dopant";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label24.Location = new System.Drawing.Point(8, 347);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(86, 24);
-            this.label24.TabIndex = 11;
-            this.label24.Text = "石英坩堝";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label29.Location = new System.Drawing.Point(3, 18);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(80, 17);
-            this.label29.TabIndex = 28;
-            this.label29.Text = "100100068";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label30.Location = new System.Drawing.Point(599, 18);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(80, 17);
-            this.label30.TabIndex = 29;
-            this.label30.Text = "100100068";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label31.Location = new System.Drawing.Point(513, 18);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(80, 17);
-            this.label31.TabIndex = 30;
-            this.label31.Text = "100100068";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label32.Location = new System.Drawing.Point(427, 18);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(80, 17);
-            this.label32.TabIndex = 31;
-            this.label32.Text = "100100068";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label35.Location = new System.Drawing.Point(89, 18);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(80, 17);
-            this.label35.TabIndex = 34;
-            this.label35.Text = "100100068";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label33.Location = new System.Drawing.Point(341, 18);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(80, 17);
-            this.label33.TabIndex = 35;
-            this.label33.Text = "100100068";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label34.Location = new System.Drawing.Point(685, 18);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(80, 17);
-            this.label34.TabIndex = 36;
-            this.label34.Text = "100100068";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label36.Location = new System.Drawing.Point(789, 18);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(80, 17);
-            this.label36.TabIndex = 37;
-            this.label36.Text = "100100068";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label37.Location = new System.Drawing.Point(899, 18);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(80, 17);
-            this.label37.TabIndex = 38;
-            this.label37.Text = "100100068";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label38.Location = new System.Drawing.Point(999, 18);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(80, 17);
-            this.label38.TabIndex = 39;
-            this.label38.Text = "100100068";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(246, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 24);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "AR";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(181, 44);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 24);
-            this.label4.TabIndex = 41;
-            this.label4.Text = "AS";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(127, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 16;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(521, 151);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 17;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(402, 151);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 18;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(266, 151);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 19;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(653, 151);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 20;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(426, 270);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 21;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(266, 270);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 22;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(127, 270);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 23;
-            // 
-            // radioButtonAQM
-            // 
-            this.radioButtonAQM.AutoSize = true;
-            this.radioButtonAQM.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.radioButtonAQM.Location = new System.Drawing.Point(150, 347);
-            this.radioButtonAQM.Name = "radioButtonAQM";
-            this.radioButtonAQM.Size = new System.Drawing.Size(77, 28);
-            this.radioButtonAQM.TabIndex = 24;
-            this.radioButtonAQM.TabStop = true;
-            this.radioButtonAQM.Text = "AQM";
-            this.radioButtonAQM.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonYoXin
-            // 
-            this.radioButtonYoXin.AutoSize = true;
-            this.radioButtonYoXin.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.radioButtonYoXin.Location = new System.Drawing.Point(292, 347);
-            this.radioButtonYoXin.Name = "radioButtonYoXin";
-            this.radioButtonYoXin.Size = new System.Drawing.Size(66, 28);
-            this.radioButtonYoXin.TabIndex = 25;
-            this.radioButtonYoXin.TabStop = true;
-            this.radioButtonYoXin.Text = "佑鑫";
-            this.radioButtonYoXin.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonAQMG3
-            // 
-            this.radioButtonAQMG3.AutoSize = true;
-            this.radioButtonAQMG3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.radioButtonAQMG3.Location = new System.Drawing.Point(415, 347);
-            this.radioButtonAQMG3.Name = "radioButtonAQMG3";
-            this.radioButtonAQMG3.Size = new System.Drawing.Size(140, 28);
-            this.radioButtonAQMG3.TabIndex = 26;
-            this.radioButtonAQMG3.TabStop = true;
-            this.radioButtonAQMG3.Text = "G3 AQM(短)";
-            this.radioButtonAQMG3.UseVisualStyleBackColor = true;
+            // comboBoxMachine
+            // 
+            this.comboBoxMachine.FormattingEnabled = true;
+            this.comboBoxMachine.Location = new System.Drawing.Point(127, 34);
+            this.comboBoxMachine.Name = "comboBoxMachine";
+            this.comboBoxMachine.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxMachine.TabIndex = 30;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnCancel.Location = new System.Drawing.Point(935, 356);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(115, 54);
+            this.btnCancel.TabIndex = 29;
+            this.btnCancel.Text = "取消";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnSave.Location = new System.Drawing.Point(935, 270);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(115, 55);
+            this.btnSave.TabIndex = 28;
+            this.btnSave.Text = "儲存";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // radioButtonMejing
             // 
@@ -810,33 +623,220 @@
             this.radioButtonMejing.Text = "美晶";
             this.radioButtonMejing.UseVisualStyleBackColor = true;
             // 
-            // btnSave
+            // radioButtonAQMG3
             // 
-            this.btnSave.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnSave.Location = new System.Drawing.Point(935, 270);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(115, 55);
-            this.btnSave.TabIndex = 28;
-            this.btnSave.Text = "儲存";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.radioButtonAQMG3.AutoSize = true;
+            this.radioButtonAQMG3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.radioButtonAQMG3.Location = new System.Drawing.Point(415, 347);
+            this.radioButtonAQMG3.Name = "radioButtonAQMG3";
+            this.radioButtonAQMG3.Size = new System.Drawing.Size(140, 28);
+            this.radioButtonAQMG3.TabIndex = 26;
+            this.radioButtonAQMG3.TabStop = true;
+            this.radioButtonAQMG3.Text = "G3 AQM(短)";
+            this.radioButtonAQMG3.UseVisualStyleBackColor = true;
             // 
-            // btnCancel
+            // radioButtonYoXin
             // 
-            this.btnCancel.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnCancel.Location = new System.Drawing.Point(935, 356);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(115, 54);
-            this.btnCancel.TabIndex = 29;
-            this.btnCancel.Text = "取消";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.radioButtonYoXin.AutoSize = true;
+            this.radioButtonYoXin.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.radioButtonYoXin.Location = new System.Drawing.Point(292, 347);
+            this.radioButtonYoXin.Name = "radioButtonYoXin";
+            this.radioButtonYoXin.Size = new System.Drawing.Size(66, 28);
+            this.radioButtonYoXin.TabIndex = 25;
+            this.radioButtonYoXin.TabStop = true;
+            this.radioButtonYoXin.Text = "佑鑫";
+            this.radioButtonYoXin.UseVisualStyleBackColor = true;
             // 
-            // comboBoxMachine
+            // radioButtonAQM
             // 
-            this.comboBoxMachine.FormattingEnabled = true;
-            this.comboBoxMachine.Location = new System.Drawing.Point(127, 34);
-            this.comboBoxMachine.Name = "comboBoxMachine";
-            this.comboBoxMachine.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxMachine.TabIndex = 30;
+            this.radioButtonAQM.AutoSize = true;
+            this.radioButtonAQM.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.radioButtonAQM.Location = new System.Drawing.Point(150, 347);
+            this.radioButtonAQM.Name = "radioButtonAQM";
+            this.radioButtonAQM.Size = new System.Drawing.Size(77, 28);
+            this.radioButtonAQM.TabIndex = 24;
+            this.radioButtonAQM.TabStop = true;
+            this.radioButtonAQM.Text = "AQM";
+            this.radioButtonAQM.UseVisualStyleBackColor = true;
+            // 
+            // txtASDopant
+            // 
+            this.txtASDopant.Location = new System.Drawing.Point(127, 270);
+            this.txtASDopant.Name = "txtASDopant";
+            this.txtASDopant.Size = new System.Drawing.Size(100, 22);
+            this.txtASDopant.TabIndex = 23;
+            // 
+            // txtPhDopant
+            // 
+            this.txtPhDopant.Location = new System.Drawing.Point(266, 270);
+            this.txtPhDopant.Name = "txtPhDopant";
+            this.txtPhDopant.Size = new System.Drawing.Size(100, 22);
+            this.txtPhDopant.TabIndex = 22;
+            // 
+            // txtBDopant
+            // 
+            this.txtBDopant.Location = new System.Drawing.Point(426, 270);
+            this.txtBDopant.Name = "txtBDopant";
+            this.txtBDopant.Size = new System.Drawing.Size(100, 22);
+            this.txtBDopant.TabIndex = 21;
+            // 
+            // txtHemLock
+            // 
+            this.txtHemLock.Location = new System.Drawing.Point(653, 151);
+            this.txtHemLock.Name = "txtHemLock";
+            this.txtHemLock.Size = new System.Drawing.Size(100, 22);
+            this.txtHemLock.TabIndex = 20;
+            // 
+            // txtXinhua
+            // 
+            this.txtXinhua.Location = new System.Drawing.Point(266, 151);
+            this.txtXinhua.Name = "txtXinhua";
+            this.txtXinhua.Size = new System.Drawing.Size(100, 22);
+            this.txtXinhua.TabIndex = 19;
+            // 
+            // txtAS
+            // 
+            this.txtAS.Location = new System.Drawing.Point(402, 151);
+            this.txtAS.Name = "txtAS";
+            this.txtAS.Size = new System.Drawing.Size(100, 22);
+            this.txtAS.TabIndex = 18;
+            // 
+            // txtAR
+            // 
+            this.txtAR.Location = new System.Drawing.Point(521, 151);
+            this.txtAR.Name = "txtAR";
+            this.txtAR.Size = new System.Drawing.Size(100, 22);
+            this.txtAR.TabIndex = 17;
+            // 
+            // txtPCA
+            // 
+            this.txtPCA.Location = new System.Drawing.Point(127, 151);
+            this.txtPCA.Name = "txtPCA";
+            this.txtPCA.Size = new System.Drawing.Size(100, 22);
+            this.txtPCA.TabIndex = 16;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label24.Location = new System.Drawing.Point(8, 347);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(86, 24);
+            this.label24.TabIndex = 11;
+            this.label24.Text = "石英坩堝";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label23.Location = new System.Drawing.Point(6, 231);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(79, 24);
+            this.label23.TabIndex = 10;
+            this.label23.Text = "Dopant";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label22.Location = new System.Drawing.Point(6, 101);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(87, 24);
+            this.label22.TabIndex = 9;
+            this.label22.Text = "Poly種類";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label21.ForeColor = System.Drawing.Color.Red;
+            this.label21.Location = new System.Drawing.Point(159, 231);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(29, 24);
+            this.label21.TabIndex = 8;
+            this.label21.Text = "砷";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label20.ForeColor = System.Drawing.Color.Blue;
+            this.label20.Location = new System.Drawing.Point(298, 231);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(29, 24);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "磷";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label19.ForeColor = System.Drawing.Color.Green;
+            this.label19.Location = new System.Drawing.Point(456, 231);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(29, 24);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "硼";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label18.Location = new System.Drawing.Point(656, 101);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(97, 24);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "HemLock";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label17.Location = new System.Drawing.Point(557, 101);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(37, 24);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "AR";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label16.Location = new System.Drawing.Point(149, 101);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 24);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "PCA";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label15.Location = new System.Drawing.Point(288, 101);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(48, 24);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "鑫華";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label14.Location = new System.Drawing.Point(422, 101);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(35, 24);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "AS";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label13.Location = new System.Drawing.Point(31, 30);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(48, 24);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "機台";
             // 
             // PolyView
             // 
@@ -915,14 +915,14 @@
         private System.Windows.Forms.RadioButton radioButtonAQMG3;
         private System.Windows.Forms.RadioButton radioButtonYoXin;
         private System.Windows.Forms.RadioButton radioButtonAQM;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtASDopant;
+        private System.Windows.Forms.TextBox txtPhDopant;
+        private System.Windows.Forms.TextBox txtBDopant;
+        private System.Windows.Forms.TextBox txtHemLock;
+        private System.Windows.Forms.TextBox txtXinhua;
+        private System.Windows.Forms.TextBox txtAS;
+        private System.Windows.Forms.TextBox txtAR;
+        private System.Windows.Forms.TextBox txtPCA;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ComboBox comboBoxMachine;

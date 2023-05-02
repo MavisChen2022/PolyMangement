@@ -19,53 +19,53 @@ namespace PolyMangement.View
 
         public string PCAText 
         { 
-            get => throw new NotImplementedException();
-            set => throw new NotImplementedException(); 
+            get => txtPCA.Text;
+            set => txtPCA.Text=value;
         }
         public string XinhuaText 
-        { 
-            get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); 
+        {
+            get => txtXinhua.Text;
+            set => txtXinhua.Text=value;
         }
         public string ASText 
-        { 
-            get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); 
+        {
+            get => txtAS.Text;
+            set => txtAS.Text=value;    
         }
         public string ARText 
         { 
-            get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); 
+            get => txtAR.Text;
+            set => txtAR.Text=value;
         }
-        public string Hemlock 
-        { 
-            get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); 
+        public string HemlockText 
+        {
+            get => txtHemLock.Text; 
+            set => txtHemLock.Text=value;
         }
         public string RemainPCA 
-        { 
-            get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); 
+        {
+            get => lbPCA.Text;
+            set => lbPCA.Text=value;
         }
         public string RemainXinhua 
-        { 
-            get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); 
+        {
+            get => lbXinhua.Text; 
+            set => lbXinhua.Text = value;
         }
         public string RemainAS 
-        { 
-            get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); 
+        {
+            get => lbAS.Text;
+            set => lbAS.Text = value; 
         }
         public string RemainAR 
         { 
-            get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); 
+            get => lbAR.Text;
+            set => lbAR.Text = value; 
         }
         public string RemainHemLock 
-        { 
-            get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); 
+        {
+            get => lbHemLock.Text; 
+            set => lbHemLock.Text = value;
         }
 
         public event EventHandler AddEvent;

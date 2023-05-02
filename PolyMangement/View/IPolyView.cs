@@ -13,7 +13,7 @@ namespace PolyMangement.View
         string XinhuaText { get; set; }
         string ASText { get; set; }
         string ARText { get; set; }
-        string Hemlock { get; set; }
+        string HemlockText { get; set; }
 
         string RemainPCA { get; set; }
         string RemainXinhua { get; set; }
