@@ -16,15 +16,38 @@ namespace PolyMangement.View
         {
             InitializeComponent();
             ButtonFunctionList();
+            tabControl1.TabPages.Remove(ChargeDetail);
         }
 
         private void ButtonFunctionList()
         {
-            btnAdd.Click += delegate { AddEvent?.Invoke(this, EventArgs.Empty); };
-            btnEdit.Click+=delegate { EditEvent?.Invoke(this, EventArgs.Empty); };
-            btnDel.Click+=delegate { DeleteEvent?.Invoke(this, EventArgs.Empty); };
-            btnSave.Click += delegate { SaveEvent?.Invoke(this, EventArgs.Empty); };
-            btnCancel.Click += delegate { CancelEvent?.Invoke(this, EventArgs.Empty); };
+            btnAdd.Click += delegate 
+            { 
+                //AddEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(ChargeList);
+                tabControl1.TabPages.Add(ChargeDetail);
+            };
+            btnEdit.Click+=delegate 
+            { 
+                EditEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(ChargeList);
+                tabControl1.TabPages.Add(ChargeDetail);
+            };
+            btnDel.Click+=delegate 
+            { 
+                DeleteEvent?.Invoke(this, EventArgs.Empty);
+
+            };
+            btnSave.Click += delegate 
+            { 
+                SaveEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(ChargeDetail);
+                tabControl1.TabPages.Add(ChargeList);
+            };
+            btnCancel.Click += delegate 
+            { 
+                CancelEvent?.Invoke(this, EventArgs.Empty); 
+            };
         }
 
         public string PCAText 
@@ -76,6 +99,11 @@ namespace PolyMangement.View
         {
             get => lbHemLock.Text; 
             set => lbHemLock.Text = value;
+        }
+        public string machineNum 
+        {
+            get => comboBoxMachine.Text;
+            set => comboBoxMachine.Text=value;
         }
 
         public event EventHandler AddEvent;

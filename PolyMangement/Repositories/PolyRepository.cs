@@ -1,6 +1,7 @@
 ﻿using PolyMangement.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,20 @@ namespace PolyMangement.Repositories
         }
         public void Add(PolyModel polymodel)
         {
-            throw new NotImplementedException();
+            using (var conn = new SQLiteConnection(connectionString))
+            using (var cmd = new SQLiteCommand())
+            {
+                conn.Open();
+                cmd.Connection = conn;
+                cmd.CommandText = "INSERT INTO test VALUES(@machine,@pca,@xinhua,@aspoly,@arpoly,@hemlock)";
+                cmd.Parameters.Add("@machine",DbType.String).Value = polymodel.Machine;
+                cmd.Parameters.Add("@pca", DbType.Int32).Value = polymodel.Pca;
+                cmd.Parameters.Add("@xinHua", DbType.Int32).Value = polymodel.Xinhua;
+                cmd.Parameters.Add("@aspoly", DbType.Int32).Value = polymodel.ASpoly;
+                cmd.Parameters.Add("@arpoly", DbType.Int32).Value = polymodel.ARpoly;
+                cmd.Parameters.Add("@hemlock", DbType.Int32).Value = polymodel.Hemlock;
+                cmd.ExecuteNonQuery();
+            }
         }
 
         public void Delete(int id)
@@ -44,11 +58,12 @@ namespace PolyMangement.Repositories
                     while (dr.Read())
                     {
                         var poly = new PolyModel();
-                        poly.Pca = Convert.ToInt32(dr[0]);
-                        poly.Xinhua = Convert.ToInt32(dr[1]);
-                        poly.ASpoly = Convert.ToInt32(dr[2]);
-                        poly.ARpoly = Convert.ToInt32(dr[3]);
-                        poly.Hemlock = Convert.ToInt32(dr[4]);
+                        poly.Machine = dr[0].ToString();
+                        poly.Pca = Convert.ToInt32(dr[1]);
+                        poly.Xinhua = Convert.ToInt32(dr[2]);
+                        poly.ASpoly = Convert.ToInt32(dr[3]);
+                        poly.ARpoly = Convert.ToInt32(dr[4]);
+                        poly.Hemlock = Convert.ToInt32(dr[5]);
                         stockList.Add(poly);
                     }
                 }

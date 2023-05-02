@@ -25,11 +25,25 @@ namespace PolyMangement.Presenter
             this.polyView.AddEvent += AddPoly;
             this.polyView.EditEvent += EditPoly;
             this.polyView.DeleteEvent += DeleteRecord;
+            this.polyView.SaveEvent += SaveRecord;
 
             this.polyView.SetPolyBindingSource(polyBindingSource);
 
             LoadAllStockList();
             polyView.Show();
+        }
+
+        private void SaveRecord(object sender, EventArgs e)
+        {
+            var poly = new PolyModel();
+            poly.Machine = polyView.machineNum;
+            poly.Pca = Convert.ToInt32(polyView.PCAText);
+            poly.Xinhua = Convert.ToInt32(polyView.XinhuaText);
+            poly.ASpoly = Convert.ToInt32(polyView.ASText);
+            poly.ARpoly = Convert.ToInt32(polyView.ARText);
+            poly.Hemlock = Convert.ToInt32(polyView.HemlockText);
+            polyRepository.Add(poly);
+            LoadAllStockList();
         }
 
         private void LoadAllStockList()
@@ -40,7 +54,15 @@ namespace PolyMangement.Presenter
 
         private void AddPoly(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var poly = new PolyModel();
+            poly.Machine = polyView.machineNum;
+            poly.Pca = Convert.ToInt32(polyView.PCAText);
+            poly.Xinhua= Convert.ToInt32(polyView.XinhuaText);
+            poly.ASpoly= Convert.ToInt32(polyView.ASText);
+            poly.ARpoly= Convert.ToInt32(polyView.ARText);
+            poly.Hemlock= Convert.ToInt32(polyView.HemlockText);
+            polyRepository.Add(poly);
+            LoadAllStockList();
         }
 
         private void EditPoly(object sender, EventArgs e)

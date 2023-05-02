@@ -9,6 +9,7 @@ namespace PolyMangement.View
 {
     public interface IPolyView
     {
+        string machineNum { get; set; }
         string PCAText { get;set;}
         string XinhuaText { get; set; }
         string ASText { get; set; }
