@@ -1,4 +1,8 @@
-﻿using System;
+﻿using PolyMangement.Model;
+using PolyMangement.Presenter;
+using PolyMangement.Repositories;
+using PolyMangement.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +20,12 @@ namespace PolyMangement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run((Form)View);
+
+            string SQLiteConnectionString = @"URI=file:"+Application.StartupPath+"\\stockTable.db";
+            IPolyRepository polyRepository=new PolyRepository(SQLiteConnectionString);
+            IPolyView polyView = new PolyView();
+            new PolyPresenter(polyView, polyRepository);
+            Application.Run((Form)polyView);
         }
     }
 }

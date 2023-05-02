@@ -24,9 +24,11 @@ namespace PolyMangement.View
         event EventHandler AddEvent;
         event EventHandler EditEvent;
         event EventHandler DeleteEvent;
-        event EventHandler UpdateRemainPoly;
+        event EventHandler UpdateRemainPolyEvent;
+        event EventHandler SaveEvent;
+        event EventHandler CancelEvent;
 
-        void SetPolyBindingSource(BindingSource polyList);
+        void SetPolyBindingSource(BindingSource stockList);
 
         void Show();
     }

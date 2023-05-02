@@ -16,6 +16,5 @@ namespace PolyMangement.Model
         IEnumerable<PolyModel> GetAll();
         IEnumerable<PolyModel> GetByValue(PolyModel polymodel);
 
-        void SetPolyBindingSource(BindingSource polyList);
     }
 }

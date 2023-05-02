@@ -15,6 +15,16 @@ namespace PolyMangement.View
         public PolyView()
         {
             InitializeComponent();
+            ButtonFunctionList();
+        }
+
+        private void ButtonFunctionList()
+        {
+            btnAdd.Click += delegate { AddEvent?.Invoke(this, EventArgs.Empty); };
+            btnEdit.Click+=delegate { EditEvent?.Invoke(this, EventArgs.Empty); };
+            btnDel.Click+=delegate { DeleteEvent?.Invoke(this, EventArgs.Empty); };
+            btnSave.Click += delegate { SaveEvent?.Invoke(this, EventArgs.Empty); };
+            btnCancel.Click += delegate { CancelEvent?.Invoke(this, EventArgs.Empty); };
         }
 
         public string PCAText 
@@ -71,11 +81,13 @@ namespace PolyMangement.View
         public event EventHandler AddEvent;
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
-        public event EventHandler UpdateRemainPoly;
+        public event EventHandler UpdateRemainPolyEvent;
+        public event EventHandler SaveEvent;
+        public event EventHandler CancelEvent;
 
-        public void SetPolyBindingSource(BindingSource polyList)
+        public void SetPolyBindingSource(BindingSource stockList)
         {
-            throw new NotImplementedException();
+            dataGridView1.DataSource = stockList;
         }
     }
 }
