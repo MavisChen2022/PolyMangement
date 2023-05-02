@@ -23,13 +23,14 @@ namespace PolyMangement.Repositories
             {
                 conn.Open();
                 cmd.Connection = conn;
-                cmd.CommandText = "INSERT INTO test VALUES(@machine,@pca,@xinhua,@aspoly,@arpoly,@hemlock)";
+                cmd.CommandText = "INSERT INTO test(machine,pca,xinhua,aspoly,arpoly,hemlock,time) VALUES(@machine,@pca,@xinhua,@aspoly,@arpoly,@hemlock,@time)";
                 cmd.Parameters.Add("@machine",DbType.String).Value = polymodel.Machine;
                 cmd.Parameters.Add("@pca", DbType.Int32).Value = polymodel.Pca;
                 cmd.Parameters.Add("@xinHua", DbType.Int32).Value = polymodel.Xinhua;
                 cmd.Parameters.Add("@aspoly", DbType.Int32).Value = polymodel.ASpoly;
                 cmd.Parameters.Add("@arpoly", DbType.Int32).Value = polymodel.ARpoly;
                 cmd.Parameters.Add("@hemlock", DbType.Int32).Value = polymodel.Hemlock;
+                cmd.Parameters.Add("@time",DbType.DateTime).Value = polymodel.Time;
                 cmd.ExecuteNonQuery();
             }
         }
@@ -41,7 +42,23 @@ namespace PolyMangement.Repositories
 
         public void Edit(PolyModel polymodel)
         {
-            throw new NotImplementedException();
+            using (var conn = new SQLiteConnection(connectionString))
+            using (var cmd = new SQLiteCommand())
+            {
+                conn.Open();
+                cmd.Connection = conn;
+                cmd.CommandText = @"UPDATE test 
+                                    SET machine=@machine,pca=@pca,xinhua=@xinhua,aspoly=@aspoly,arpoly=@arpoly,hemlock=@hemlock 
+                                    WHERE time=@time";
+                cmd.Parameters.Add("@machine", DbType.String).Value = polymodel.Machine;
+                cmd.Parameters.Add("@pca", DbType.Int32).Value = polymodel.Pca;
+                cmd.Parameters.Add("@xinHua", DbType.Int32).Value = polymodel.Xinhua;
+                cmd.Parameters.Add("@aspoly", DbType.Int32).Value = polymodel.ASpoly;
+                cmd.Parameters.Add("@arpoly", DbType.Int32).Value = polymodel.ARpoly;
+                cmd.Parameters.Add("@hemlock", DbType.Int32).Value = polymodel.Hemlock;
+                cmd.Parameters.Add("@time", DbType.DateTime).Value = polymodel.Time;
+                cmd.ExecuteNonQuery();
+            }
         }
 
         public IEnumerable<PolyModel> GetAll()
@@ -64,6 +81,7 @@ namespace PolyMangement.Repositories
                         poly.ASpoly = Convert.ToInt32(dr[3]);
                         poly.ARpoly = Convert.ToInt32(dr[4]);
                         poly.Hemlock = Convert.ToInt32(dr[5]);
+                        poly.Time = (DateTime)dr[6];
                         stockList.Add(poly);
                     }
                 }

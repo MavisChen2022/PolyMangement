@@ -96,6 +96,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.lbId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.ChargeList.SuspendLayout();
@@ -374,8 +375,9 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(23, 127);
             this.dataGridView1.Name = "dataGridView1";
@@ -621,6 +623,7 @@
             // 
             // ChargeDetail
             // 
+            this.ChargeDetail.Controls.Add(this.lbId);
             this.ChargeDetail.Controls.Add(this.comboBoxMachine);
             this.ChargeDetail.Controls.Add(this.btnCancel);
             this.ChargeDetail.Controls.Add(this.btnSave);
@@ -651,7 +654,7 @@
             this.ChargeDetail.Location = new System.Drawing.Point(4, 22);
             this.ChargeDetail.Name = "ChargeDetail";
             this.ChargeDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.ChargeDetail.Size = new System.Drawing.Size(1087, 452);
+            this.ChargeDetail.Size = new System.Drawing.Size(1376, 689);
             this.ChargeDetail.TabIndex = 1;
             this.ChargeDetail.Text = "使用明細";
             this.ChargeDetail.UseVisualStyleBackColor = true;
@@ -684,7 +687,7 @@
             "K22",
             "K23",
             "K24"});
-            this.comboBoxMachine.Location = new System.Drawing.Point(127, 34);
+            this.comboBoxMachine.Location = new System.Drawing.Point(266, 30);
             this.comboBoxMachine.Name = "comboBoxMachine";
             this.comboBoxMachine.Size = new System.Drawing.Size(121, 20);
             this.comboBoxMachine.TabIndex = 30;
@@ -930,11 +933,21 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label13.Location = new System.Drawing.Point(31, 30);
+            this.label13.Location = new System.Drawing.Point(140, 30);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(48, 24);
             this.label13.TabIndex = 0;
             this.label13.Text = "機台";
+            // 
+            // lbId
+            // 
+            this.lbId.AutoSize = true;
+            this.lbId.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbId.Location = new System.Drawing.Point(22, 30);
+            this.lbId.Name = "lbId";
+            this.lbId.Size = new System.Drawing.Size(31, 24);
+            this.lbId.TabIndex = 31;
+            this.lbId.Text = "ID";
             // 
             // PolyView
             // 
@@ -1024,5 +1037,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ComboBox comboBoxMachine;
+        private System.Windows.Forms.Label lbId;
     }
 }

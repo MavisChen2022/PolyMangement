@@ -14,6 +14,8 @@ namespace PolyMangement.Model
         private int aspoly;
         private int arpoly;
         private int hemlock;
+        private DateTime time;
+
 
         public string Machine { get => machine; set => machine = value; }
         public int Pca { get => pca; set => pca = value; }
@@ -21,6 +23,6 @@ namespace PolyMangement.Model
         public int ASpoly { get => aspoly; set => aspoly = value; }
         public int ARpoly { get => arpoly; set => arpoly = value; }
         public int Hemlock { get => hemlock; set => hemlock = value; }
-        
+        public DateTime Time { get => time; set => time = value; }
     }
 }
