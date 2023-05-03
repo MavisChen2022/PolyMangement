@@ -63,17 +63,19 @@ namespace PolyMangement.Presenter
             var poly = new PolyModel();
            
             poly.Machine = polyView.machineNum;
-            poly.Pca = Convert.ToInt32(polyView.PCAText);
-            poly.Xinhua = Convert.ToInt32(polyView.XinhuaText);
-            poly.ASpoly = Convert.ToInt32(polyView.ASText);
-            poly.ARpoly = Convert.ToInt32(polyView.ARText);
-            poly.Hemlock = Convert.ToInt32(polyView.HemlockText);
-            poly.AsDopant= Convert.ToInt32(polyView.ASDopantText);
-            poly.PhDopant=Convert.ToInt32(polyView.PHDopantText);
-            poly.BDopant= Convert.ToInt32(polyView.BDopantText);
+            poly.Pca = int.TryParse(polyView.PCAText, out _) ? Convert.ToInt32(polyView.PCAText) : 0;
+            poly.Xinhua = int.TryParse(polyView.XinhuaText, out _) ? Convert.ToInt32(polyView.XinhuaText) : 0;
+            poly.ASpoly = int.TryParse(polyView.ASText, out _) ? Convert.ToInt32(polyView.ASText) : 0;
+            poly.ARpoly = int.TryParse(polyView.ARText, out _) ? Convert.ToInt32(polyView.ARText) : 0;
+            poly.Hemlock = int.TryParse(polyView.HemlockText, out _) ? Convert.ToInt32(polyView.HemlockText) : 0;
+            poly.AsDopant = int.TryParse(polyView.ASDopantText, out _) ? Convert.ToInt32(polyView.ASDopantText) : 0;
+            poly.PhDopant = int.TryParse(polyView.PHDopantText, out _) ? Convert.ToInt32(polyView.PHDopantText) : 0;
+            poly.BDopant = int.TryParse(polyView.BDopantText, out _) ? Convert.ToInt32(polyView.BDopantText) : 0;
+
             if (polyView.IsEdit)
             {
-                poly.Id = Convert.ToInt32(polyView.idText);
+                
+                poly.Id = int.TryParse(polyView.idText, out _) ? Convert.ToInt32(polyView.idText) : 0;
                 poly.Time = Convert.ToDateTime(polyView.chargeTime);
                 polyRepository.Edit(poly);
             }
