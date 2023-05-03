@@ -23,13 +23,19 @@ namespace PolyMangement.Repositories
             {
                 conn.Open();
                 cmd.Connection = conn;
-                cmd.CommandText = "INSERT INTO test(machine,pca,xinhua,aspoly,arpoly,hemlock,time) VALUES(@machine,@pca,@xinhua,@aspoly,@arpoly,@hemlock,@time)";
+                cmd.CommandText = @"INSERT INTO test(machine,pca,xinhua,aspoly,arpoly,hemlock,asdopant,phdopant,bdopant,time) 
+                                    VALUES(@machine,@pca,@xinhua,@aspoly,@arpoly,@hemlock,@asdopant,@phdopant,@bdopant,@time)";
                 cmd.Parameters.Add("@machine",DbType.String).Value = polymodel.Machine;
                 cmd.Parameters.Add("@pca", DbType.Int32).Value = polymodel.Pca;
                 cmd.Parameters.Add("@xinHua", DbType.Int32).Value = polymodel.Xinhua;
                 cmd.Parameters.Add("@aspoly", DbType.Int32).Value = polymodel.ASpoly;
                 cmd.Parameters.Add("@arpoly", DbType.Int32).Value = polymodel.ARpoly;
                 cmd.Parameters.Add("@hemlock", DbType.Int32).Value = polymodel.Hemlock;
+
+                cmd.Parameters.Add("@asdopant", DbType.Int32).Value = polymodel.AsDopant;
+                cmd.Parameters.Add("@phdopant", DbType.Int32).Value = polymodel.PhDopant;
+                cmd.Parameters.Add("@bdopant", DbType.Int32).Value = polymodel.BDopant;
+
                 cmd.Parameters.Add("@time",DbType.DateTime).Value = polymodel.Time;
                 
                 cmd.ExecuteNonQuery();
@@ -58,7 +64,8 @@ namespace PolyMangement.Repositories
                 conn.Open();
                 cmd.Connection = conn;
                 cmd.CommandText = @"UPDATE test 
-                                    SET machine=@machine,pca=@pca,xinhua=@xinhua,aspoly=@aspoly,arpoly=@arpoly,hemlock=@hemlock     
+                                    SET machine=@machine,pca=@pca,xinhua=@xinhua,aspoly=@aspoly,arpoly=@arpoly,hemlock=@hemlock
+                                    ,asdopant=@asdopant,phdopant=@phdopant,bdopant=@bdopant
                                     WHERE id=@id";
                 cmd.Parameters.Add("@id",DbType.Int32).Value = polymodel.Id;
                 cmd.Parameters.Add("@machine", DbType.String).Value = polymodel.Machine;
@@ -67,6 +74,11 @@ namespace PolyMangement.Repositories
                 cmd.Parameters.Add("@aspoly", DbType.Int32).Value = polymodel.ASpoly;
                 cmd.Parameters.Add("@arpoly", DbType.Int32).Value = polymodel.ARpoly;
                 cmd.Parameters.Add("@hemlock", DbType.Int32).Value = polymodel.Hemlock;
+
+                cmd.Parameters.Add("@asdopant", DbType.Int32).Value = polymodel.AsDopant;
+                cmd.Parameters.Add("@phdopant", DbType.Int32).Value = polymodel.PhDopant;
+                cmd.Parameters.Add("@bdopant", DbType.Int32).Value = polymodel.BDopant;
+
                 cmd.Parameters.Add("@time", DbType.DateTime).Value = polymodel.Time;
                 cmd.ExecuteNonQuery();
             }
@@ -93,18 +105,17 @@ namespace PolyMangement.Repositories
                         poly.ASpoly = Convert.ToInt32(dr[4]);
                         poly.ARpoly = Convert.ToInt32(dr[5]);
                         poly.Hemlock = Convert.ToInt32(dr[6]);
-                        poly.Time = (DateTime)dr[7];
+
+                        poly.AsDopant= Convert.ToInt32(dr[7]);
+                        poly.PhDopant= Convert.ToInt32(dr[8]);
+                        poly.BDopant= Convert.ToInt32(dr[9]);
+
+                        poly.Time = (DateTime)dr[10];
                         stockList.Add(poly);
                     }
                 }
             }
             return stockList;
         }
-
-        public IEnumerable<PolyModel> GetByValue(PolyModel polymodel)
-        {
-            throw new NotImplementedException();
-        }
-
     }
 }

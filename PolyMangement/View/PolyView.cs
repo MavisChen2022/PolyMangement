@@ -124,6 +124,21 @@ namespace PolyMangement.View
             get => lbId.Text;
             set => lbId.Text=value;
         }
+        public string ASDopantText 
+        {
+            get => txtASDopant.Text;
+            set => txtASDopant.Text=value;
+        }
+        public string PHDopantText 
+        { 
+            get => txtPhDopant.Text;
+            set => txtPhDopant.Text=value;
+        }
+        public string BDopantText 
+        { 
+            get => txtBDopant.Text;
+            set => txtBDopant.Text=value;
+        }
 
         public event EventHandler AddEvent;
         public event EventHandler EditEvent;

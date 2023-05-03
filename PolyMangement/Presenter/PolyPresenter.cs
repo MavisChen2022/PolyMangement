@@ -52,6 +52,9 @@ namespace PolyMangement.Presenter
             polyView.ASText=poly.ASpoly.ToString();
             polyView.ARText=poly.ARpoly.ToString();
             polyView.HemlockText=poly.Hemlock.ToString();
+            polyView.ASDopantText=poly.AsDopant.ToString();
+            polyView.PHDopantText = poly.PhDopant.ToString();
+            polyView.BDopantText = poly.BDopant.ToString();
             polyView.chargeTime= poly.Time.ToString();
             polyView.IsEdit=true;
         }
@@ -65,6 +68,9 @@ namespace PolyMangement.Presenter
             poly.ASpoly = Convert.ToInt32(polyView.ASText);
             poly.ARpoly = Convert.ToInt32(polyView.ARText);
             poly.Hemlock = Convert.ToInt32(polyView.HemlockText);
+            poly.AsDopant= Convert.ToInt32(polyView.ASDopantText);
+            poly.PhDopant=Convert.ToInt32(polyView.PHDopantText);
+            poly.BDopant= Convert.ToInt32(polyView.BDopantText);
             if (polyView.IsEdit)
             {
                 poly.Id = Convert.ToInt32(polyView.idText);
@@ -99,6 +105,9 @@ namespace PolyMangement.Presenter
             polyView.ARText = null;
             polyView.HemlockText = null;
             polyView.chargeTime = null;
+            polyView.ASDopantText = null;
+            polyView.PHDopantText = null;
+            polyView.BDopantText = null;
             polyView.IsEdit = false;
         }
     }

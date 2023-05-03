@@ -14,7 +14,6 @@ namespace PolyMangement.Model
         void Delete(int id);
 
         IEnumerable<PolyModel> GetAll();
-        IEnumerable<PolyModel> GetByValue(PolyModel polymodel);
 
     }
 }
