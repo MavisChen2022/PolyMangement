@@ -17,7 +17,7 @@ namespace PolyMangement.Model
         private int hemlock;
         private DateTime time;
 
-
+        public int Id { get => id; set => id = value; }
         public string Machine { get => machine; set => machine = value; }
         public int Pca { get => pca; set => pca = value; }
         public int Xinhua { get => xinhua; set => xinhua = value; }
@@ -25,6 +25,6 @@ namespace PolyMangement.Model
         public int ARpoly { get => arpoly; set => arpoly = value; }
         public int Hemlock { get => hemlock; set => hemlock = value; }
         public DateTime Time { get => time; set => time = value; }
-        public int Id { get => id; set => id = value; }
+        
     }
 }

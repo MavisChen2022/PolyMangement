@@ -48,7 +48,9 @@ namespace PolyMangement.View
             };
             btnCancel.Click += delegate 
             { 
-                CancelEvent?.Invoke(this, EventArgs.Empty); 
+                CancelEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(ChargeDetail);
+                tabControl1.TabPages.Add(ChargeList);
             };
         }
 

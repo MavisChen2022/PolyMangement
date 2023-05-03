@@ -26,15 +26,12 @@ namespace PolyMangement.Presenter
             this.polyView.EditEvent += EditPoly;
             this.polyView.DeleteEvent += DeleteRecord;
             this.polyView.SaveEvent += SaveRecord;
-
+            this.polyView.CancelEvent += CancelAction;
             this.polyView.SetPolyBindingSource(polyBindingSource);
 
             LoadAllStockList();
             polyView.Show();
         }
-
-       
-
         private void LoadAllStockList()
         {
             stockList = polyRepository.GetAll();
@@ -45,19 +42,6 @@ namespace PolyMangement.Presenter
         {
             polyView.IsEdit=false;
         }
-
-        private void CleanViewField()
-        {
-            polyView.idText=null;
-            polyView.machineNum = null;
-            polyView.PCAText = null;
-            polyView.XinhuaText = null;
-            polyView.ASText = null;
-            polyView.ARText = null;
-            polyView.HemlockText = null;
-            polyView.chargeTime = null;
-        }
-
         private void EditPoly(object sender, EventArgs e)
         {
             var poly = (PolyModel)polyBindingSource.Current;
@@ -100,6 +84,22 @@ namespace PolyMangement.Presenter
             var poly = (PolyModel)polyBindingSource.Current;
             polyRepository.Delete(poly.Id);
             LoadAllStockList();
+        }
+        private void CancelAction(object sender, EventArgs e)
+        {
+            CleanViewField();
+        }
+        private void CleanViewField()
+        {
+            polyView.idText = null;
+            polyView.machineNum = null;
+            polyView.PCAText = null;
+            polyView.XinhuaText = null;
+            polyView.ASText = null;
+            polyView.ARText = null;
+            polyView.HemlockText = null;
+            polyView.chargeTime = null;
+            polyView.IsEdit = false;
         }
     }
 }
