@@ -20,6 +20,11 @@ namespace PolyMangement.Model
         private int phDopant;
         private int bDopant;
 
+        private int aqm;
+        private int yoxing;
+        private int aqmG3;
+        private int mejing;
+
         private DateTime time;
 
         
@@ -34,7 +39,11 @@ namespace PolyMangement.Model
         public int AsDopant { get => asDopant; set => asDopant = value; }
         public int PhDopant { get => phDopant; set => phDopant = value; }
         public int BDopant { get => bDopant; set => bDopant = value; }
+        public int Aqm { get => aqm; set => aqm = value; }
+        public int Yoxing { get => yoxing; set => yoxing = value; }
+        public int AqmG3 { get => aqmG3; set => aqmG3 = value; }
+        public int Mejing { get => mejing; set => mejing = value; }
         public DateTime Time { get => time; set => time = value; }
-        
+
     }
 }

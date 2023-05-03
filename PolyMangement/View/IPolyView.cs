@@ -27,6 +27,11 @@ namespace PolyMangement.View
         string PHDopantText { get; set; }
         string BDopantText { get; set; }
 
+        bool AqmRadio { get; set; }
+        bool YoxingRad { get; set; }
+        bool AqmG3Rad { get; set; }
+        bool MejingRad { get; set; }
+
         string chargeTime { get; set; }
 
         bool IsEdit { get; set; }

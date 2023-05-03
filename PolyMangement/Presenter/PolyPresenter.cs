@@ -56,6 +56,12 @@ namespace PolyMangement.Presenter
             polyView.PHDopantText = poly.PhDopant.ToString();
             polyView.BDopantText = poly.BDopant.ToString();
             polyView.chargeTime= poly.Time.ToString();
+
+            polyView.AqmRadio = poly.Aqm!=0;
+            polyView.YoxingRad = poly.Yoxing != 0;
+            polyView.AqmG3Rad= poly.AqmG3 != 0;
+            polyView.MejingRad= poly.Mejing != 0;
+
             polyView.IsEdit=true;
         }
         private void SaveRecord(object sender, EventArgs e)
@@ -71,6 +77,11 @@ namespace PolyMangement.Presenter
             poly.AsDopant = int.TryParse(polyView.ASDopantText, out _) ? Convert.ToInt32(polyView.ASDopantText) : 0;
             poly.PhDopant = int.TryParse(polyView.PHDopantText, out _) ? Convert.ToInt32(polyView.PHDopantText) : 0;
             poly.BDopant = int.TryParse(polyView.BDopantText, out _) ? Convert.ToInt32(polyView.BDopantText) : 0;
+
+            poly.Aqm = Convert.ToInt32(polyView.AqmRadio);
+            poly.Yoxing = Convert.ToInt32(polyView.YoxingRad);
+            poly.AqmG3 = Convert.ToInt32(polyView.AqmG3Rad);
+            poly.Mejing = Convert.ToInt32(polyView.MejingRad);
 
             if (polyView.IsEdit)
             {

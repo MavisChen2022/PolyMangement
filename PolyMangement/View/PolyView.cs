@@ -13,6 +13,10 @@ namespace PolyMangement.View
     public partial class PolyView : Form,IPolyView
     {
         private bool isEdit;
+        private bool aqmRad;
+        private bool yoxingRad;
+        private bool aqmG3Rad;
+        private bool mejingRad;
 
         public PolyView()
         {
@@ -138,6 +142,26 @@ namespace PolyMangement.View
         { 
             get => txtBDopant.Text;
             set => txtBDopant.Text=value;
+        }
+        public bool AqmRadio 
+        {
+            get => radioButtonAQM.Checked;
+            set => aqmRad=value;
+        }
+        public bool YoxingRad 
+        {
+            get => radioButtonYoXin.Checked;
+            set => yoxingRad=value;
+        }
+        public bool AqmG3Rad 
+        {
+            get => radioButtonAQMG3.Checked;
+            set => aqmG3Rad=value;
+        }
+        public bool MejingRad 
+        {
+            get => radioButtonMejing.Checked;
+            set => mejingRad=value;
         }
 
         public event EventHandler AddEvent;

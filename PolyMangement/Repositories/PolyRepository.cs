@@ -23,8 +23,8 @@ namespace PolyMangement.Repositories
             {
                 conn.Open();
                 cmd.Connection = conn;
-                cmd.CommandText = @"INSERT INTO test(machine,pca,xinhua,aspoly,arpoly,hemlock,asdopant,phdopant,bdopant,time) 
-                                    VALUES(@machine,@pca,@xinhua,@aspoly,@arpoly,@hemlock,@asdopant,@phdopant,@bdopant,@time)";
+                cmd.CommandText = @"INSERT INTO test(machine,pca,xinhua,aspoly,arpoly,hemlock,asdopant,phdopant,bdopant,aqm,yoxing,aqmG3,mejing,time) 
+                                    VALUES(@machine,@pca,@xinhua,@aspoly,@arpoly,@hemlock,@asdopant,@phdopant,@bdopant,@aqm,@yoxing,@aqmG3,@mejing,@time)";
                 cmd.Parameters.Add("@machine",DbType.String).Value = polymodel.Machine;
                 cmd.Parameters.Add("@pca", DbType.Int32).Value = polymodel.Pca;
                 cmd.Parameters.Add("@xinHua", DbType.Int32).Value = polymodel.Xinhua;
@@ -35,6 +35,11 @@ namespace PolyMangement.Repositories
                 cmd.Parameters.Add("@asdopant", DbType.Int32).Value = polymodel.AsDopant;
                 cmd.Parameters.Add("@phdopant", DbType.Int32).Value = polymodel.PhDopant;
                 cmd.Parameters.Add("@bdopant", DbType.Int32).Value = polymodel.BDopant;
+
+                cmd.Parameters.Add("@aqm", DbType.Int32).Value = polymodel.Aqm;
+                cmd.Parameters.Add("@yoxing", DbType.Int32).Value = polymodel.Yoxing;
+                cmd.Parameters.Add("@aqmG3", DbType.Int32).Value = polymodel.AqmG3;
+                cmd.Parameters.Add("@mejing", DbType.Int32).Value = polymodel.Mejing;
 
                 cmd.Parameters.Add("@time",DbType.DateTime).Value = polymodel.Time;
                 
@@ -65,7 +70,7 @@ namespace PolyMangement.Repositories
                 cmd.Connection = conn;
                 cmd.CommandText = @"UPDATE test 
                                     SET machine=@machine,pca=@pca,xinhua=@xinhua,aspoly=@aspoly,arpoly=@arpoly,hemlock=@hemlock
-                                    ,asdopant=@asdopant,phdopant=@phdopant,bdopant=@bdopant
+                                    ,asdopant=@asdopant,phdopant=@phdopant,bdopant=@bdopant,aqm=@aqm,yoxing=@yoxing,aqmG3=@aqmG3,mejing=@mejing
                                     WHERE id=@id";
                 cmd.Parameters.Add("@id",DbType.Int32).Value = polymodel.Id;
                 cmd.Parameters.Add("@machine", DbType.String).Value = polymodel.Machine;
@@ -78,6 +83,11 @@ namespace PolyMangement.Repositories
                 cmd.Parameters.Add("@asdopant", DbType.Int32).Value = polymodel.AsDopant;
                 cmd.Parameters.Add("@phdopant", DbType.Int32).Value = polymodel.PhDopant;
                 cmd.Parameters.Add("@bdopant", DbType.Int32).Value = polymodel.BDopant;
+
+                cmd.Parameters.Add("@aqm", DbType.Int32).Value = polymodel.Aqm;
+                cmd.Parameters.Add("@yoxing",DbType.Int32).Value=polymodel.Yoxing;
+                cmd.Parameters.Add("@aqmG3", DbType.Int32).Value = polymodel.AqmG3;
+                cmd.Parameters.Add("@mejing", DbType.Int32).Value = polymodel.Mejing;
 
                 cmd.Parameters.Add("@time", DbType.DateTime).Value = polymodel.Time;
                 cmd.ExecuteNonQuery();
@@ -110,7 +120,12 @@ namespace PolyMangement.Repositories
                         poly.PhDopant= Convert.ToInt32(dr[8]);
                         poly.BDopant= Convert.ToInt32(dr[9]);
 
-                        poly.Time = (DateTime)dr[10];
+                        poly.Aqm= Convert.ToInt32(dr[10]);
+                        poly.Yoxing= Convert.ToInt32(dr[11]);
+                        poly.AqmG3 = Convert.ToInt32(dr[12]);
+                        poly.Mejing= Convert.ToInt32(dr[13]);
+
+                        poly.Time = (DateTime)dr[14];
                         stockList.Add(poly);
                     }
                 }
