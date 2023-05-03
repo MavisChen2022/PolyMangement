@@ -8,6 +8,7 @@ namespace PolyMangement.Model
 {
     public class PolyModel
     {
+        private int id;
         private string machine;
         private int pca;
         private int xinhua;
@@ -24,5 +25,6 @@ namespace PolyMangement.Model
         public int ARpoly { get => arpoly; set => arpoly = value; }
         public int Hemlock { get => hemlock; set => hemlock = value; }
         public DateTime Time { get => time; set => time = value; }
+        public int Id { get => id; set => id = value; }
     }
 }

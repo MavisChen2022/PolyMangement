@@ -9,6 +9,7 @@ namespace PolyMangement.View
 {
     public interface IPolyView
     {
+        string idText { get; set; }
         string machineNum { get; set; }
         string PCAText { get;set;}
         string XinhuaText { get; set; }
@@ -21,6 +22,8 @@ namespace PolyMangement.View
         string RemainAS { get; set; }
         string RemainAR { get; set; }
         string RemainHemLock { get; set; }
+        string chargeTime { get; set; }
+        bool IsEdit { get; set; }
 
         event EventHandler AddEvent;
         event EventHandler EditEvent;

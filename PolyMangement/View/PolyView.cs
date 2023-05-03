@@ -12,6 +12,8 @@ namespace PolyMangement.View
 {
     public partial class PolyView : Form,IPolyView
     {
+        private bool isEdit;
+
         public PolyView()
         {
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace PolyMangement.View
         private void ButtonFunctionList()
         {
             btnAdd.Click += delegate 
-            { 
+            {
                 //AddEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(ChargeList);
                 tabControl1.TabPages.Add(ChargeDetail);
@@ -104,6 +106,21 @@ namespace PolyMangement.View
         {
             get => comboBoxMachine.Text;
             set => comboBoxMachine.Text=value;
+        }
+        public bool IsEdit 
+        {
+            get => isEdit;
+            set => isEdit = value;
+        }
+        public string chargeTime 
+        { 
+            get => lbTime.Text;
+            set => lbTime.Text=value;
+        }
+        public string idText 
+        { 
+            get => lbId.Text;
+            set => lbId.Text=value;
         }
 
         public event EventHandler AddEvent;

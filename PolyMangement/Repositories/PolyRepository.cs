@@ -31,6 +31,7 @@ namespace PolyMangement.Repositories
                 cmd.Parameters.Add("@arpoly", DbType.Int32).Value = polymodel.ARpoly;
                 cmd.Parameters.Add("@hemlock", DbType.Int32).Value = polymodel.Hemlock;
                 cmd.Parameters.Add("@time",DbType.DateTime).Value = polymodel.Time;
+                
                 cmd.ExecuteNonQuery();
             }
         }
@@ -48,8 +49,9 @@ namespace PolyMangement.Repositories
                 conn.Open();
                 cmd.Connection = conn;
                 cmd.CommandText = @"UPDATE test 
-                                    SET machine=@machine,pca=@pca,xinhua=@xinhua,aspoly=@aspoly,arpoly=@arpoly,hemlock=@hemlock 
-                                    WHERE time=@time";
+                                    SET machine=@machine,pca=@pca,xinhua=@xinhua,aspoly=@aspoly,arpoly=@arpoly,hemlock=@hemlock     
+                                    WHERE id=@id";
+                cmd.Parameters.Add("@id",DbType.Int32).Value = polymodel.Id;
                 cmd.Parameters.Add("@machine", DbType.String).Value = polymodel.Machine;
                 cmd.Parameters.Add("@pca", DbType.Int32).Value = polymodel.Pca;
                 cmd.Parameters.Add("@xinHua", DbType.Int32).Value = polymodel.Xinhua;
@@ -75,13 +77,14 @@ namespace PolyMangement.Repositories
                     while (dr.Read())
                     {
                         var poly = new PolyModel();
-                        poly.Machine = dr[0].ToString();
-                        poly.Pca = Convert.ToInt32(dr[1]);
-                        poly.Xinhua = Convert.ToInt32(dr[2]);
-                        poly.ASpoly = Convert.ToInt32(dr[3]);
-                        poly.ARpoly = Convert.ToInt32(dr[4]);
-                        poly.Hemlock = Convert.ToInt32(dr[5]);
-                        poly.Time = (DateTime)dr[6];
+                        poly.Id= Convert.ToInt32(dr[0]);
+                        poly.Machine = dr[1].ToString();
+                        poly.Pca = Convert.ToInt32(dr[2]);
+                        poly.Xinhua = Convert.ToInt32(dr[3]);
+                        poly.ASpoly = Convert.ToInt32(dr[4]);
+                        poly.ARpoly = Convert.ToInt32(dr[5]);
+                        poly.Hemlock = Convert.ToInt32(dr[6]);
+                        poly.Time = (DateTime)dr[7];
                         stockList.Add(poly);
                     }
                 }

@@ -69,6 +69,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.ChargeDetail = new System.Windows.Forms.TabPage();
+            this.lbTime = new System.Windows.Forms.Label();
             this.comboBoxMachine = new System.Windows.Forms.ComboBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -382,14 +383,14 @@
             this.dataGridView1.Location = new System.Drawing.Point(23, 127);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1200, 554);
+            this.dataGridView1.Size = new System.Drawing.Size(1100, 554);
             this.dataGridView1.TabIndex = 24;
             // 
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnAdd.Location = new System.Drawing.Point(1262, 127);
+            this.btnAdd.Location = new System.Drawing.Point(1162, 127);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(106, 51);
             this.btnAdd.TabIndex = 25;
@@ -400,7 +401,7 @@
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEdit.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnEdit.Location = new System.Drawing.Point(1264, 223);
+            this.btnEdit.Location = new System.Drawing.Point(1164, 223);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(106, 51);
             this.btnEdit.TabIndex = 26;
@@ -411,7 +412,7 @@
             // 
             this.btnDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDel.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDel.Location = new System.Drawing.Point(1267, 310);
+            this.btnDel.Location = new System.Drawing.Point(1167, 310);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(106, 51);
             this.btnDel.TabIndex = 27;
@@ -426,7 +427,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1384, 715);
+            this.tabControl1.Size = new System.Drawing.Size(1284, 715);
             this.tabControl1.TabIndex = 28;
             // 
             // ChargeList
@@ -472,7 +473,7 @@
             this.ChargeList.Location = new System.Drawing.Point(4, 22);
             this.ChargeList.Name = "ChargeList";
             this.ChargeList.Padding = new System.Windows.Forms.Padding(3);
-            this.ChargeList.Size = new System.Drawing.Size(1376, 689);
+            this.ChargeList.Size = new System.Drawing.Size(1276, 689);
             this.ChargeList.TabIndex = 0;
             this.ChargeList.Text = "使用紀錄";
             this.ChargeList.UseVisualStyleBackColor = true;
@@ -624,6 +625,7 @@
             // ChargeDetail
             // 
             this.ChargeDetail.Controls.Add(this.lbId);
+            this.ChargeDetail.Controls.Add(this.lbTime);
             this.ChargeDetail.Controls.Add(this.comboBoxMachine);
             this.ChargeDetail.Controls.Add(this.btnCancel);
             this.ChargeDetail.Controls.Add(this.btnSave);
@@ -654,10 +656,20 @@
             this.ChargeDetail.Location = new System.Drawing.Point(4, 22);
             this.ChargeDetail.Name = "ChargeDetail";
             this.ChargeDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.ChargeDetail.Size = new System.Drawing.Size(1376, 689);
+            this.ChargeDetail.Size = new System.Drawing.Size(1276, 689);
             this.ChargeDetail.TabIndex = 1;
             this.ChargeDetail.Text = "使用明細";
             this.ChargeDetail.UseVisualStyleBackColor = true;
+            // 
+            // lbTime
+            // 
+            this.lbTime.AutoSize = true;
+            this.lbTime.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbTime.Location = new System.Drawing.Point(517, 14);
+            this.lbTime.Name = "lbTime";
+            this.lbTime.Size = new System.Drawing.Size(48, 24);
+            this.lbTime.TabIndex = 31;
+            this.lbTime.Text = "時間";
             // 
             // comboBoxMachine
             // 
@@ -687,7 +699,7 @@
             "K22",
             "K23",
             "K24"});
-            this.comboBoxMachine.Location = new System.Drawing.Point(266, 30);
+            this.comboBoxMachine.Location = new System.Drawing.Point(266, 18);
             this.comboBoxMachine.Name = "comboBoxMachine";
             this.comboBoxMachine.Size = new System.Drawing.Size(121, 20);
             this.comboBoxMachine.TabIndex = 30;
@@ -933,7 +945,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label13.Location = new System.Drawing.Point(140, 30);
+            this.label13.Location = new System.Drawing.Point(150, 18);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(48, 24);
             this.label13.TabIndex = 0;
@@ -943,17 +955,17 @@
             // 
             this.lbId.AutoSize = true;
             this.lbId.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbId.Location = new System.Drawing.Point(22, 30);
+            this.lbId.Location = new System.Drawing.Point(23, 18);
             this.lbId.Name = "lbId";
             this.lbId.Size = new System.Drawing.Size(31, 24);
-            this.lbId.TabIndex = 31;
+            this.lbId.TabIndex = 32;
             this.lbId.Text = "ID";
             // 
             // PolyView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 715);
+            this.ClientSize = new System.Drawing.Size(1284, 715);
             this.Controls.Add(this.tabControl1);
             this.Name = "PolyView";
             this.Text = "PolyView";
@@ -1037,6 +1049,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ComboBox comboBoxMachine;
+        private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Label lbId;
     }
 }

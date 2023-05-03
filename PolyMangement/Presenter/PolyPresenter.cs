@@ -33,19 +33,7 @@ namespace PolyMangement.Presenter
             polyView.Show();
         }
 
-        private void SaveRecord(object sender, EventArgs e)
-        {
-            var poly = new PolyModel();
-            poly.Machine = polyView.machineNum;
-            poly.Pca = Convert.ToInt32(polyView.PCAText);
-            poly.Xinhua = Convert.ToInt32(polyView.XinhuaText);
-            poly.ASpoly = Convert.ToInt32(polyView.ASText);
-            poly.ARpoly = Convert.ToInt32(polyView.ARText);
-            poly.Hemlock = Convert.ToInt32(polyView.HemlockText);
-            poly.Time = DateTime.Now;
-            polyRepository.Add(poly);
-            LoadAllStockList();
-        }
+       
 
         private void LoadAllStockList()
         {
@@ -55,31 +43,57 @@ namespace PolyMangement.Presenter
 
         private void AddPoly(object sender, EventArgs e)
         {
-            var poly = new PolyModel();
-            poly.Machine = polyView.machineNum;
-            poly.Pca = Convert.ToInt32(polyView.PCAText);
-            poly.Xinhua= Convert.ToInt32(polyView.XinhuaText);
-            poly.ASpoly= Convert.ToInt32(polyView.ASText);
-            poly.ARpoly= Convert.ToInt32(polyView.ARText);
-            poly.Hemlock= Convert.ToInt32(polyView.HemlockText);
-            poly.Time=DateTime.Now;
-            polyRepository.Add(poly);
-            LoadAllStockList();
+            polyView.IsEdit=false;
+        }
+
+        private void CleanViewField()
+        {
+            polyView.idText=null;
+            polyView.machineNum = null;
+            polyView.PCAText = null;
+            polyView.XinhuaText = null;
+            polyView.ASText = null;
+            polyView.ARText = null;
+            polyView.HemlockText = null;
+            polyView.chargeTime = null;
         }
 
         private void EditPoly(object sender, EventArgs e)
         {
             var poly = (PolyModel)polyBindingSource.Current;
+            polyView.idText=poly.Id.ToString();
             polyView.machineNum= poly.Machine;
             polyView.PCAText=poly.Pca.ToString();
             polyView.XinhuaText=poly.Xinhua.ToString();
             polyView.ASText=poly.ASpoly.ToString();
             polyView.ARText=poly.ARpoly.ToString();
             polyView.HemlockText=poly.Hemlock.ToString();
-            polyRepository.Edit(poly);
-            LoadAllStockList();
+            polyView.chargeTime= poly.Time.ToString();
+            polyView.IsEdit=true;
         }
-
+        private void SaveRecord(object sender, EventArgs e)
+        {
+            var poly = new PolyModel();
+            poly.Id = Convert.ToInt32(polyView.idText);
+            poly.Machine = polyView.machineNum;
+            poly.Pca = Convert.ToInt32(polyView.PCAText);
+            poly.Xinhua = Convert.ToInt32(polyView.XinhuaText);
+            poly.ASpoly = Convert.ToInt32(polyView.ASText);
+            poly.ARpoly = Convert.ToInt32(polyView.ARText);
+            poly.Hemlock = Convert.ToInt32(polyView.HemlockText);
+            if (polyView.IsEdit)
+            {
+                poly.Time = Convert.ToDateTime(polyView.chargeTime);
+                polyRepository.Edit(poly);
+            }
+            else
+            {
+                poly.Time = DateTime.Now;
+                polyRepository.Add(poly);
+            }
+            LoadAllStockList();
+            CleanViewField();
+        }
         private void DeleteRecord(object sender, EventArgs e)
         {
             throw new NotImplementedException();
