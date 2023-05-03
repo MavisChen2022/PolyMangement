@@ -38,7 +38,16 @@ namespace PolyMangement.Repositories
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            using (var conn = new SQLiteConnection(connectionString))
+            using (var cmd = new SQLiteCommand())
+            {
+                conn.Open();
+                cmd.Connection = conn;
+                cmd.CommandText = "DELETE FROM test WHERE id=@id";
+                cmd.Parameters.Add("@id",DbType.Int32).Value = id;
+
+                cmd.ExecuteNonQuery();
+            }
         }
 
         public void Edit(PolyModel polymodel)

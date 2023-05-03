@@ -74,7 +74,7 @@ namespace PolyMangement.Presenter
         private void SaveRecord(object sender, EventArgs e)
         {
             var poly = new PolyModel();
-            poly.Id = Convert.ToInt32(polyView.idText);
+           
             poly.Machine = polyView.machineNum;
             poly.Pca = Convert.ToInt32(polyView.PCAText);
             poly.Xinhua = Convert.ToInt32(polyView.XinhuaText);
@@ -83,6 +83,7 @@ namespace PolyMangement.Presenter
             poly.Hemlock = Convert.ToInt32(polyView.HemlockText);
             if (polyView.IsEdit)
             {
+                poly.Id = Convert.ToInt32(polyView.idText);
                 poly.Time = Convert.ToDateTime(polyView.chargeTime);
                 polyRepository.Edit(poly);
             }
@@ -96,7 +97,9 @@ namespace PolyMangement.Presenter
         }
         private void DeleteRecord(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var poly = (PolyModel)polyBindingSource.Current;
+            polyRepository.Delete(poly.Id);
+            LoadAllStockList();
         }
     }
 }
