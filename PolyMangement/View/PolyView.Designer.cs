@@ -69,6 +69,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.ChargeDetail = new System.Windows.Forms.TabPage();
+            this.lbId = new System.Windows.Forms.Label();
             this.lbTime = new System.Windows.Forms.Label();
             this.comboBoxMachine = new System.Windows.Forms.ComboBox();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -97,7 +98,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.lbId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.ChargeList.SuspendLayout();
@@ -134,7 +134,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(95, 44);
+            this.label5.Location = new System.Drawing.Point(101, 44);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 24);
             this.label5.TabIndex = 4;
@@ -344,7 +344,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbXinhua.AutoSize = true;
             this.lbXinhua.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbXinhua.Location = new System.Drawing.Point(101, 81);
+            this.lbXinhua.Location = new System.Drawing.Point(111, 81);
             this.lbXinhua.Name = "lbXinhua";
             this.lbXinhua.Size = new System.Drawing.Size(21, 24);
             this.lbXinhua.TabIndex = 21;
@@ -661,6 +661,16 @@
             this.ChargeDetail.Text = "使用明細";
             this.ChargeDetail.UseVisualStyleBackColor = true;
             // 
+            // lbId
+            // 
+            this.lbId.AutoSize = true;
+            this.lbId.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbId.Location = new System.Drawing.Point(23, 18);
+            this.lbId.Name = "lbId";
+            this.lbId.Size = new System.Drawing.Size(31, 24);
+            this.lbId.TabIndex = 32;
+            this.lbId.Text = "ID";
+            // 
             // lbTime
             // 
             this.lbTime.AutoSize = true;
@@ -950,16 +960,6 @@
             this.label13.Size = new System.Drawing.Size(48, 24);
             this.label13.TabIndex = 0;
             this.label13.Text = "機台";
-            // 
-            // lbId
-            // 
-            this.lbId.AutoSize = true;
-            this.lbId.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbId.Location = new System.Drawing.Point(23, 18);
-            this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(31, 24);
-            this.lbId.TabIndex = 32;
-            this.lbId.Text = "ID";
             // 
             // PolyView
             // 

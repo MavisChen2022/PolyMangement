@@ -22,10 +22,10 @@ namespace PolyMangement
             Application.SetCompatibleTextRenderingDefault(false);
 
             string SQLiteConnectionString = @"URI=file:"+Application.StartupPath+"\\stockTable.db";
-            IPolyRepository polyRepository=new PolyRepository(SQLiteConnectionString);
-            IPolyView polyView = new PolyView();
-            new PolyPresenter(polyView, polyRepository);
-            Application.Run((Form)polyView);
+            
+            IMainView mainView = new MainView();
+            new MainPresenter(mainView, SQLiteConnectionString);
+            Application.Run((Form)mainView);
         }
     }
 }

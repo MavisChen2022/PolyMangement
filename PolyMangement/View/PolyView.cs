@@ -175,5 +175,26 @@ namespace PolyMangement.View
         {
             dataGridView1.DataSource = stockList;
         }
+
+
+        private static PolyView instance;
+        public static PolyView GetInstance(Form parenterContainer)
+        {
+            if (instance==null || instance.IsDisposed)
+            {
+                instance = new PolyView();
+                instance.MdiParent = parenterContainer;
+                instance.FormBorderStyle=FormBorderStyle.None;
+            }
+            else
+            {
+                if (instance.WindowState==FormWindowState.Minimized)
+                {
+                    instance.WindowState = FormWindowState.Normal;
+                }
+                instance.BringToFront();
+            }
+            return instance;
+        }
     }
 }
