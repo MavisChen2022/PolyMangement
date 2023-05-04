@@ -61,7 +61,9 @@
   <ItemGroup>
     <Compile Include="IsExternalInit.cs" />
     <Compile Include="Model\IPolyRepository.cs" />
+    <Compile Include="Model\ISearchRepository.cs" />
     <Compile Include="Model\PolyModel.cs" />
+    <Compile Include="Model\SearchModel.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
     <Compile Include="Presenter\PolyPresenter.cs" />
     <Compile Include="Program.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="Repositories\PolyRepository.cs" />
     <Compile Include="View\IMainView.cs" />
     <Compile Include="View\IPolyView.cs" />
+    <Compile Include="View\ISearchView.cs" />
     <Compile Include="View\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +84,12 @@
     </Compile>
     <Compile Include="View\PolyView.Designer.cs">
       <DependentUpon>PolyView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SearchView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SearchView.Designer.cs">
+      <DependentUpon>SearchView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\PolyView.resx">
       <DependentUpon>PolyView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SearchView.resx">
+      <DependentUpon>SearchView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
