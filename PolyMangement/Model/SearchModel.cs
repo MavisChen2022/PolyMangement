@@ -31,8 +31,8 @@ namespace PolyMangement.Model
         public string Machine { get => machine; set => machine = value; }
         public int Pca { get => pca; set => pca = value; }
         public int Xinhua { get => xinhua; set => xinhua = value; }
-        public int Aspoly { get => aspoly; set => aspoly = value; }
-        public int Arpoly { get => arpoly; set => arpoly = value; }
+        public int ASpoly { get => aspoly; set => aspoly = value; }
+        public int ARpoly { get => arpoly; set => arpoly = value; }
         public int Hemlock { get => hemlock; set => hemlock = value; }
         public int AsDopant { get => asDopant; set => asDopant = value; }
         public int PhDopant { get => phDopant; set => phDopant = value; }

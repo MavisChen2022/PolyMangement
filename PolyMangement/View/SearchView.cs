@@ -10,11 +10,57 @@ using System.Windows.Forms;
 
 namespace PolyMangement.View
 {
-    public partial class SearchView : Form
+    public partial class SearchView : Form,ISearchView
     {
         public SearchView()
         {
             InitializeComponent();
+            ButtonFunctionCollection();
+        }
+
+        private void ButtonFunctionCollection()
+        {
+            btnSearch.Click +=delegate{ SearchEvent?.Invoke(this, EventArgs.Empty); };
+            btnOutputExcel.Click += delegate { OutputExcelEvent?.Invoke(this, EventArgs.Empty); };
+        }
+
+        public DateTime SearchTime 
+        { 
+            get => dateTimePicker1.Value;
+            set => dateTimePicker1.Value=value;
+        }
+        public string DayNight 
+        {
+            get => comboBoxDayNight.Text;
+            set => comboBoxDayNight.Text=value;
+        }
+
+        public event EventHandler SearchEvent;
+        public event EventHandler OutputExcelEvent;
+
+        public void SetSearchBindingSource(BindingSource stockList)
+        {
+            dataGridView1.DataSource = stockList;
+        }
+
+        private static SearchView instance;
+        public static SearchView GetInstance(Form parenterContainer)
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new SearchView();
+                instance.MdiParent = parenterContainer;
+                instance.FormBorderStyle = FormBorderStyle.None;
+            }
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                {
+                    instance.WindowState = FormWindowState.Normal;
+                }
+                instance.BringToFront();
+            }
+            return instance;
         }
     }
 }

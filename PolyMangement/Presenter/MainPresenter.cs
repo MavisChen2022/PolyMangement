@@ -20,6 +20,14 @@ namespace PolyMangement.Presenter
             this.mainview = mainview;
             this.sqliteConnectionString = sqliteConnectionString;
             this.mainview.ShowStockListEvent += ShowStockListView;
+            this.mainview.SearchStockListEvent += SearchStockListView;
+        }
+
+        private void SearchStockListView(object sender, EventArgs e)
+        {
+            ISearchRepository searchRepository=new SearchRepository(sqliteConnectionString);
+            ISearchView searchView = SearchView.GetInstance((Form)mainview);
+            new SearchPresenter(searchView, searchRepository);
         }
 
         private void ShowStockListView(object sender, EventArgs e)
