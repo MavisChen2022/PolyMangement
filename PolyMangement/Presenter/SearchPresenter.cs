@@ -36,18 +36,15 @@ namespace PolyMangement.Presenter
             SearchBindingSource.DataSource = searchList;
         }
 
-        private void SearchSpecifiedDate(object sender, EventArgs e) //日班0點~24點功能已完成，待調整至0800~2000
+        private void SearchSpecifiedDate(object sender, EventArgs e) 
         {
-            if (searchView.DayNight == "日班")
+            var shift=searchView.DayNight.ToString();
+            if (shift == "日班" || shift == "夜班")
             {
                 var searchTime = new SearchModel();
                 searchTime.SpecifiedTime = searchView.SearchTime;
-                searchList = searchRepository.GetByValue(searchTime.SpecifiedTime);
+                searchList = searchRepository.GetByValue(searchTime.SpecifiedTime, shift);
                 SearchBindingSource.DataSource = searchList;
-            }
-            else if(searchView.DayNight == "夜班")
-            {
-                throw new NotImplementedException();
             }
             else
             {

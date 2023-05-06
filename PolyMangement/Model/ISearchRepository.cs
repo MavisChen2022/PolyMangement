@@ -9,6 +9,6 @@ namespace PolyMangement.Model
     public interface ISearchRepository
     {
         IEnumerable<SearchModel> GetNow();
-        IEnumerable<SearchModel> GetByValue(DateTime choice);   //分出日夜班
+        IEnumerable<SearchModel> GetByValue(DateTime choice,string shift);   //分出日夜班
     }
 }
