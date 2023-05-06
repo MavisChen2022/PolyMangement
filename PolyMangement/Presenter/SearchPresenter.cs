@@ -30,9 +30,11 @@ namespace PolyMangement.Presenter
             this.searchView.Show();
         }
 
-        private void LoadCurrentCondition()//還沒實作此功能，先寫成撈全部資料;GetNow也是先寫成撈全部資料
+        private void LoadCurrentCondition()
         {
-            searchList = searchRepository.GetNow();
+            var searchTime = new SearchModel();
+            searchTime.SpecifiedTime = DateTime.Now;
+            searchList = searchRepository.GetNow(searchTime.SpecifiedTime);
             SearchBindingSource.DataSource = searchList;
         }
 

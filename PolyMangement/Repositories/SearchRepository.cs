@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,11 +16,11 @@ namespace PolyMangement.Repositories
             connectionString=connection;
         }
 
-        public IEnumerable<SearchModel> GetByValue(DateTime choice, string shift)
+        public IEnumerable<SearchModel> GetByValue(DateTime selectedTime, string shift)
         {
-            string startTime = shift == "日班" ? choice.ToString("yyyy-MM-dd 08:00:00") : choice.ToString("yyyy-MM-dd 20:00:00");
-            string endTime = shift == "日班" ? choice.ToString("yyyy-MM-dd 20:00:00") : choice.AddDays(1).ToString("yyyy-MM-dd 08:00:00");
-            
+            string startTime = shift == "日班" ? selectedTime.ToString("yyyy-MM-dd 08:00:00") : selectedTime.ToString("yyyy-MM-dd 20:00:00");
+            string endTime = shift == "日班" ? selectedTime.ToString("yyyy-MM-dd 20:00:00") : selectedTime.AddDays(1).ToString("yyyy-MM-dd 08:00:00");
+
             var searchList = new List<SearchModel>();
             using (var conn = new SQLiteConnection(connectionString))
             using (var cmd = new SQLiteCommand())
@@ -32,15 +33,29 @@ namespace PolyMangement.Repositories
             return searchList;
         }
 
-        public IEnumerable<SearchModel> GetNow()
+        public IEnumerable<SearchModel> GetNow(DateTime currentTime)
         {
+            TimeSpan choiceTime = Convert.ToDateTime(currentTime.ToShortTimeString()).TimeOfDay;
+            TimeSpan dayStart = DateTime.Parse("08:00").TimeOfDay;
+            TimeSpan dayEnd = DateTime.Parse("20:00").TimeOfDay;
+            string targetStart;
+            string targetEnd = currentTime.ToLongTimeString();
+            if (choiceTime >= dayStart && choiceTime < dayEnd)
+            {
+                targetStart = currentTime.ToString("yyyy-MM-dd 08:00:00");
+            }
+            else
+            {
+                targetStart= currentTime.AddDays(-1).ToString("yyyy-MM-dd 20:00:00");
+            }
+
             var searchList = new List<SearchModel>();
             using (var conn = new SQLiteConnection(connectionString))
             using (var cmd = new SQLiteCommand())
             {
                 conn.Open();
                 cmd.Connection = conn;
-                cmd.CommandText = "SELECT * FROM  test";
+                cmd.CommandText = $"SELECT * FROM  test WHERE time>='{targetStart}' AND time<'{targetEnd}'";
                 DatabaseReader(searchList, cmd);
             }
             return searchList;
