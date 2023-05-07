@@ -1,11 +1,13 @@
 ﻿using PolyMangement.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace PolyMangement.Repositories
 {
@@ -14,6 +16,44 @@ namespace PolyMangement.Repositories
         public SearchRepository(string connection)
         {
             connectionString=connection;
+        }
+
+        public void ExportExcel(SearchModel searchModel)     //暫時寫成輸出全部的資料，要改成using不然會佔記憶體
+        {
+            // 連接到SQLite資料庫
+            SQLiteConnection connection = new SQLiteConnection(connectionString);
+            connection.Open();
+
+            // 讀取SQLite資料到DataTable
+            SQLiteDataAdapter adapter = new SQLiteDataAdapter("SELECT * FROM  test", connection);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+
+            // 建立一個Excel物件
+            Excel.Application excel = new Excel.Application();
+            Excel.Workbook workbook = excel.Workbooks.Add();
+            Excel.Worksheet worksheet = workbook.ActiveSheet;
+
+            // 將DataGridView中的資料輸出到Excel檔案中
+            for (int i = 0; i < table.Columns.Count; i++)
+            {
+                worksheet.Cells[1, i + 1] = table.Columns[i].ColumnName;
+            }
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                for (int j = 0; j < table.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = table.Rows[i][j].ToString();
+                }
+            }
+
+            // 儲存Excel檔案
+            workbook.SaveAs("output.xlsx");
+
+            // 關閉所有物件
+            workbook.Close();
+            excel.Quit();
+            connection.Close();
         }
 
         public IEnumerable<SearchModel> GetByValue(DateTime selectedTime, string shift)
@@ -43,6 +83,10 @@ namespace PolyMangement.Repositories
             if (choiceTime >= dayStart && choiceTime < dayEnd)
             {
                 targetStart = currentTime.ToString("yyyy-MM-dd 08:00:00");
+            }
+            else if (choiceTime>dayEnd)
+            {
+                targetStart = currentTime.ToString("yyyy-MM-dd 20:00:00");
             }
             else
             {

@@ -21,7 +21,7 @@ namespace PolyMangement.View
         private void ButtonFunctionCollection()
         {
             btnSearch.Click +=delegate{ SearchEvent?.Invoke(this, EventArgs.Empty); };
-            btnOutputExcel.Click += delegate { OutputExcelEvent?.Invoke(this, EventArgs.Empty); };
+            btnExportExcel.Click += delegate { ExportExcelEvent?.Invoke(this, EventArgs.Empty); };
         }
 
         public DateTime SearchTime 
@@ -34,9 +34,14 @@ namespace PolyMangement.View
             get => comboBoxDayNight.Text;
             set => comboBoxDayNight.Text=value;
         }
+        public bool IsExportCurrentFile 
+        { 
+            get => isExportCurrentFile;
+            set => isExportCurrentFile=value; 
+        }
 
         public event EventHandler SearchEvent;
-        public event EventHandler OutputExcelEvent;
+        public event EventHandler ExportExcelEvent;
 
         public void SetSearchBindingSource(BindingSource stockList)
         {
@@ -44,6 +49,8 @@ namespace PolyMangement.View
         }
 
         private static SearchView instance;
+        private bool isExportCurrentFile;
+
         public static SearchView GetInstance(Form parenterContainer)
         {
             if (instance == null || instance.IsDisposed)

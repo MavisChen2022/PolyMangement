@@ -23,7 +23,7 @@ namespace PolyMangement.Presenter
             this.searchRepository = searchRepository;
 
             this.searchView.SearchEvent += SearchSpecifiedDate;
-            this.searchView.OutputExcelEvent += OutoutExcelFile;
+            this.searchView.ExportExcelEvent += ExportExcelFile;
 
             this.searchView.SetSearchBindingSource(SearchBindingSource);
             LoadCurrentCondition();
@@ -32,6 +32,7 @@ namespace PolyMangement.Presenter
 
         private void LoadCurrentCondition()
         {
+            searchView.IsExportCurrentFile = true;
             var searchTime = new SearchModel();
             searchTime.SpecifiedTime = DateTime.Now;
             searchList = searchRepository.GetNow(searchTime.SpecifiedTime);
@@ -43,6 +44,7 @@ namespace PolyMangement.Presenter
             var shift=searchView.DayNight.ToString();
             if (shift == "日班" || shift == "夜班")
             {
+                searchView.IsExportCurrentFile = false;
                 var searchTime = new SearchModel();
                 searchTime.SpecifiedTime = searchView.SearchTime;
                 searchList = searchRepository.GetByValue(searchTime.SpecifiedTime, shift);
@@ -50,13 +52,22 @@ namespace PolyMangement.Presenter
             }
             else
             {
+                searchView.IsExportCurrentFile = true;
+                searchView.SearchTime=DateTime.Now;
                 LoadCurrentCondition();
             }
         }
 
-        private void OutoutExcelFile(object sender, EventArgs e)
+        private void ExportExcelFile(object sender, EventArgs e)     //暫時寫成輸出全部的資料
         {
-            throw new NotImplementedException();
+            if (searchView.IsExportCurrentFile)
+            {
+                var searchTime = new SearchModel();
+                searchTime.SpecifiedTime = DateTime.Now;
+                searchList = searchRepository.GetNow(searchTime.SpecifiedTime);
+                SearchBindingSource.DataSource = searchList;
+                searchRepository.ExportExcel(searchTime);
+            }
         }
     }
 }

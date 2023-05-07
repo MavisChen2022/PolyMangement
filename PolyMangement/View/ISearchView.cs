@@ -11,9 +11,9 @@ namespace PolyMangement.View
     {
         DateTime SearchTime { get; set; }
         string DayNight { get; set; }
-
+        bool IsExportCurrentFile { get; set; }
         event EventHandler SearchEvent;
-        event EventHandler OutputExcelEvent;
+        event EventHandler ExportExcelEvent;
 
         void SetSearchBindingSource(BindingSource stockList);
         void Show();

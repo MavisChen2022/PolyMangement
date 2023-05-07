@@ -32,7 +32,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBoxDayNight = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.btnOutputExcel = new System.Windows.Forms.Button();
+            this.btnExportExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,11 +66,12 @@
             this.comboBoxDayNight.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.comboBoxDayNight.FormattingEnabled = true;
             this.comboBoxDayNight.Items.AddRange(new object[] {
+            "當班使用情況",
             "日班",
             "夜班"});
             this.comboBoxDayNight.Location = new System.Drawing.Point(411, 24);
             this.comboBoxDayNight.Name = "comboBoxDayNight";
-            this.comboBoxDayNight.Size = new System.Drawing.Size(121, 39);
+            this.comboBoxDayNight.Size = new System.Drawing.Size(177, 39);
             this.comboBoxDayNight.TabIndex = 2;
             // 
             // btnSearch
@@ -85,24 +86,24 @@
             this.btnSearch.Text = "搜尋";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // btnOutputExcel
+            // btnExportExcel
             // 
-            this.btnOutputExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnExportExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOutputExcel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnOutputExcel.Location = new System.Drawing.Point(1140, 24);
-            this.btnOutputExcel.Name = "btnOutputExcel";
-            this.btnOutputExcel.Size = new System.Drawing.Size(108, 35);
-            this.btnOutputExcel.TabIndex = 4;
-            this.btnOutputExcel.Text = "輸出Excel檔";
-            this.btnOutputExcel.UseVisualStyleBackColor = true;
+            this.btnExportExcel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnExportExcel.Location = new System.Drawing.Point(1140, 24);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(108, 35);
+            this.btnExportExcel.TabIndex = 4;
+            this.btnExportExcel.Text = "輸出Excel檔";
+            this.btnExportExcel.UseVisualStyleBackColor = true;
             // 
             // SearchView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 715);
-            this.Controls.Add(this.btnOutputExcel);
+            this.Controls.Add(this.btnExportExcel);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.comboBoxDayNight);
             this.Controls.Add(this.dateTimePicker1);
@@ -120,6 +121,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBoxDayNight;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnOutputExcel;
+        private System.Windows.Forms.Button btnExportExcel;
     }
 }
