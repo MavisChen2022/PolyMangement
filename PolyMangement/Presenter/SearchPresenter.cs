@@ -14,7 +14,7 @@ namespace PolyMangement.Presenter
         private ISearchView searchView;
         private ISearchRepository searchRepository;
         private BindingSource SearchBindingSource;
-        private IEnumerable<SearchModel> searchList;
+        private IEnumerable<StockModel> searchList;
 
         public SearchPresenter(ISearchView searchView, ISearchRepository searchRepository)
         {
@@ -34,7 +34,7 @@ namespace PolyMangement.Presenter
         {
             searchView.IsExportCurrentFile = true;
             var shift = "當班使用情況";
-            var searchTime = new SearchModel();
+            var searchTime = new StockModel();
             searchTime.SpecifiedTime = DateTime.Now;
             searchList = searchRepository.GetByValue(searchTime.SpecifiedTime, shift);
             SearchBindingSource.DataSource = searchList;
@@ -43,7 +43,7 @@ namespace PolyMangement.Presenter
         private void SearchSpecifiedDate(object sender, EventArgs e) 
         {
             var shift=searchView.DayNight.ToString();
-            var searchTime = new SearchModel();
+            var searchTime = new StockModel();
             if (shift == "日班" || shift == "夜班")
             {
                 searchView.IsExportCurrentFile = false;
@@ -64,7 +64,7 @@ namespace PolyMangement.Presenter
         private void ExportExcelFile(object sender, EventArgs e)  
         {
             var shift = searchView.DayNight.ToString();
-            var searchTime = new SearchModel();
+            var searchTime = new StockModel();
             if (searchView.IsExportCurrentFile)
             {
                 searchTime.SpecifiedTime = DateTime.Now;

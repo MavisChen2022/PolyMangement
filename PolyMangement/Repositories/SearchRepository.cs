@@ -20,23 +20,23 @@ namespace PolyMangement.Repositories
 
         public void ExportExcel(DateTime currentTime, string shift)     
         {
-            UseCondition(currentTime, shift);
-            BuildExcel(targetStart, targetEnd);
+            string timeInterval = UseCondition(currentTime, shift);
+            BuildExcel(timeInterval);
         }
-        public IEnumerable<SearchModel> GetByValue(DateTime currentTime, string shift)
+        public IEnumerable<StockModel> GetByValue(DateTime currentTime, string shift)
         {
-            UseCondition(currentTime, shift);
-            return GetDataFromSQLite(targetStart, targetEnd);
+            string timeInterval=UseCondition(currentTime, shift);
+            return GetDataFromSQLite(timeInterval);
         }
-        private void BuildExcel(string targetStart, string targetEnd)
+        private void BuildExcel(string timeInterval)
         {
-            var searchList = new List<SearchModel>();
+            var searchList = new List<StockModel>();
             using (var conn = new SQLiteConnection(connectionString))
             using (var cmd = new SQLiteCommand())
             {
                 conn.Open();
                 cmd.Connection = conn;
-                var adapter = new SQLiteDataAdapter($"SELECT * FROM  test WHERE time>='{targetStart}' AND time<'{targetEnd}'", conn);
+                var adapter = new SQLiteDataAdapter(timeInterval, conn);
                 DataTable table = new DataTable();
                 adapter.Fill(table);
 
@@ -63,6 +63,36 @@ namespace PolyMangement.Repositories
                 excel.Quit();
                 conn.Close();
             }
+        }
+        protected string UseCondition(DateTime selectedTime, string shift)
+        {
+            string targetStart;
+            string targetEnd;
+            if (shift == "當班使用情況")
+            {
+                TimeSpan choiceTime = Convert.ToDateTime(selectedTime.ToShortTimeString()).TimeOfDay;
+                TimeSpan dayStart = DateTime.Parse("08:00").TimeOfDay;
+                TimeSpan dayEnd = DateTime.Parse("20:00").TimeOfDay;
+                targetEnd = selectedTime.ToLongTimeString();
+                if (choiceTime >= dayStart && choiceTime < dayEnd)
+                {
+                    targetStart = selectedTime.ToString("yyyy-MM-dd 08:00:00");
+                }
+                else if (choiceTime > dayEnd)
+                {
+                    targetStart = selectedTime.ToString("yyyy-MM-dd 20:00:00");
+                }
+                else
+                {
+                    targetStart = selectedTime.AddDays(-1).ToString("yyyy-MM-dd 20:00:00");
+                }
+            }
+            else
+            {
+                targetStart = shift == "日班" ? selectedTime.ToString("yyyy-MM-dd 08:00:00") : selectedTime.ToString("yyyy-MM-dd 20:00:00");
+                targetEnd = shift == "日班" ? selectedTime.ToString("yyyy-MM-dd 20:00:00") : selectedTime.AddDays(1).ToString("yyyy-MM-dd 08:00:00");
+            }
+            return $"SELECT * FROM  test WHERE time>='{targetStart}' AND time<'{targetEnd}'";
         }
     }
 }

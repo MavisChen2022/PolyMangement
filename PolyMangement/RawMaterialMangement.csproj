@@ -62,8 +62,7 @@
     <Compile Include="IsExternalInit.cs" />
     <Compile Include="Model\IPolyRepository.cs" />
     <Compile Include="Model\ISearchRepository.cs" />
-    <Compile Include="Model\PolyModel.cs" />
-    <Compile Include="Model\SearchModel.cs" />
+    <Compile Include="Model\StockModel.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
     <Compile Include="Presenter\PolyPresenter.cs" />
     <Compile Include="Presenter\SearchPresenter.cs" />

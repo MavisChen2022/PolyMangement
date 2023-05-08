@@ -14,7 +14,7 @@ namespace PolyMangement.Presenter
         private IPolyView polyView;
         private IPolyRepository polyRepository;
         private BindingSource polyBindingSource;
-        private IEnumerable<PolyModel> stockList;
+        private IEnumerable<StockModel> stockList;
 
         public PolyPresenter(IPolyView polyView, IPolyRepository polyRepository)
         {
@@ -44,7 +44,7 @@ namespace PolyMangement.Presenter
         }
         private void EditPoly(object sender, EventArgs e)
         {
-            var poly = (PolyModel)polyBindingSource.Current;
+            var poly = (StockModel)polyBindingSource.Current;
             polyView.idText=poly.Id.ToString();
             polyView.machineNum= poly.Machine;
             polyView.PCAText=poly.Pca.ToString();
@@ -55,7 +55,7 @@ namespace PolyMangement.Presenter
             polyView.ASDopantText=poly.AsDopant.ToString();
             polyView.PHDopantText = poly.PhDopant.ToString();
             polyView.BDopantText = poly.BDopant.ToString();
-            polyView.chargeTime= poly.Time.ToString();
+            polyView.chargeTime= poly.SpecifiedTime.ToString();
 
             polyView.AqmRadio = poly.Aqm!=0;
             polyView.YoxingRad = poly.Yoxing != 0;
@@ -66,7 +66,7 @@ namespace PolyMangement.Presenter
         }
         private void SaveRecord(object sender, EventArgs e)
         {
-            var poly = new PolyModel();
+            var poly = new StockModel();
            
             poly.Machine = polyView.machineNum;
             poly.Pca = int.TryParse(polyView.PCAText, out _) ? Convert.ToInt32(polyView.PCAText) : 0;
@@ -87,12 +87,12 @@ namespace PolyMangement.Presenter
             {
                 
                 poly.Id = int.TryParse(polyView.idText, out _) ? Convert.ToInt32(polyView.idText) : 0;
-                poly.Time = Convert.ToDateTime(polyView.chargeTime);
+                poly.SpecifiedTime = Convert.ToDateTime(polyView.chargeTime);
                 polyRepository.Edit(poly);
             }
             else
             {
-                poly.Time = DateTime.Now;
+                poly.SpecifiedTime = DateTime.Now;
                 polyRepository.Add(poly);
             }
             LoadAllStockList();
@@ -100,7 +100,7 @@ namespace PolyMangement.Presenter
         }
         private void DeleteRecord(object sender, EventArgs e)
         {
-            var poly = (PolyModel)polyBindingSource.Current;
+            var poly = (StockModel)polyBindingSource.Current;
             polyRepository.Delete(poly.Id);
             LoadAllStockList();
         }

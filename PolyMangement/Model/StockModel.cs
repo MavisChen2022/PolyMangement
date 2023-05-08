@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PolyMangement.Model
 {
-    public class PolyModel
+    public class StockModel
     {
         private int id;
         private string machine;
@@ -25,9 +25,9 @@ namespace PolyMangement.Model
         private int aqmG3;
         private int mejing;
 
-        private DateTime time;
+        private DateTime specifiedTime;
 
-        
+
 
         public int Id { get => id; set => id = value; }
         public string Machine { get => machine; set => machine = value; }
@@ -43,7 +43,6 @@ namespace PolyMangement.Model
         public int Yoxing { get => yoxing; set => yoxing = value; }
         public int AqmG3 { get => aqmG3; set => aqmG3 = value; }
         public int Mejing { get => mejing; set => mejing = value; }
-        public DateTime Time { get => time; set => time = value; }
-
+        public DateTime SpecifiedTime { get => specifiedTime; set => specifiedTime = value; }
     }
 }

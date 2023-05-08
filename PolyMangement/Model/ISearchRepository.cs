@@ -8,7 +8,7 @@ namespace PolyMangement.Model
 {
     public interface ISearchRepository
     {
-        IEnumerable<SearchModel> GetByValue(DateTime selectedTime,string shift);
+        IEnumerable<StockModel> GetByValue(DateTime selectedTime,string shift);
         void ExportExcel(DateTime currentTime, string shift);
     }
 }

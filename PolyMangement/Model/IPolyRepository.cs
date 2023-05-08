@@ -9,11 +9,11 @@ namespace PolyMangement.Model
 {
     public interface IPolyRepository
     {
-        void Add(PolyModel polymodel);
-        void Edit(PolyModel polymodel);
+        void Add(StockModel stockModel);
+        void Edit(StockModel stockModel);
         void Delete(int id);
 
-        IEnumerable<PolyModel> GetAll();
+        IEnumerable<StockModel> GetAll();
 
     }
 }
