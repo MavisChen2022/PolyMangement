@@ -14,6 +14,6 @@ namespace PolyMangement.Model
         void Delete(int id);
 
         IEnumerable<StockModel> GetAll();
-
+        int UpdateRemainStock(string stockName);
     }
 }

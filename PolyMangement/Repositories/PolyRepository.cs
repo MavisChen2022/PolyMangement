@@ -80,6 +80,24 @@ namespace PolyMangement.Repositories
             }
         }
 
-        
+        public int UpdateRemainStock(string stockName)
+        {
+            int remaingStock=0;
+            using (var conn = new SQLiteConnection(connectionString))
+            using (var cmd = new SQLiteCommand())
+            {
+                conn.Open();
+                cmd.Connection = conn;
+                cmd.CommandText = $"SELECT sum({stockName}) FROM test";
+                using (var dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        remaingStock= Convert.ToInt32(dr[0]);
+                    }
+                }
+            }
+            return remaingStock;
+        }
     }
 }

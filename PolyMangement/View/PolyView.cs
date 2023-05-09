@@ -83,31 +83,7 @@ namespace PolyMangement.View
             get => txtHemLock.Text; 
             set => txtHemLock.Text=value;
         }
-        public string RemainPCA 
-        {
-            get => lbPCA.Text;
-            set => lbPCA.Text=value;
-        }
-        public string RemainXinhua 
-        {
-            get => lbXinhua.Text; 
-            set => lbXinhua.Text = value;
-        }
-        public string RemainAS 
-        {
-            get => lbAS.Text;
-            set => lbAS.Text = value; 
-        }
-        public string RemainAR 
-        { 
-            get => lbAR.Text;
-            set => lbAR.Text = value; 
-        }
-        public string RemainHemLock 
-        {
-            get => lbHemLock.Text; 
-            set => lbHemLock.Text = value;
-        }
+        
         public string machineNum 
         {
             get => comboBoxMachine.Text;
@@ -164,10 +140,71 @@ namespace PolyMangement.View
             set => mejingRad=value;
         }
 
+        public string RemainPCA
+        {
+            get => lbPCA.Text;
+            set => lbPCA.Text = value;
+        }
+        public string RemainXinhua
+        {
+            get => lbXinhua.Text;
+            set => lbXinhua.Text = value;
+        }
+        public string RemainAS
+        {
+            get => lbAS.Text;
+            set => lbAS.Text = value;
+        }
+        public string RemainAR
+        {
+            get => lbAR.Text;
+            set => lbAR.Text = value;
+        }
+        public string RemainHemLock
+        {
+            get => lbHemLock.Text;
+            set => lbHemLock.Text = value;
+        }
+        public string RemainASDopant 
+        {
+            get => lbAsDopant.Text; 
+            set => lbAsDopant.Text=value;
+        }
+        public string RemainPHDopant 
+        {
+            get => lbPhDopant.Text;
+            set => lbPhDopant.Text=value;
+        }
+        public string RemainBDopant 
+        { 
+            get => lbBDopant.Text;
+            set => lbBDopant.Text=value;
+        }
+        public string RemainAQM 
+        {
+            get => lbAQM.Text;
+            set => lbAQM.Text=value;
+        }
+        public string RemainYoXing 
+        {
+            get => lbYoXin.Text;
+            set => lbYoXin.Text=value;
+        }
+        public string RemainAQMG3 
+        {
+            get => lbAQMG3.Text;
+            set => lbAQMG3.Text=value;
+        }
+        public string RemainMeJing 
+        { 
+            get => lbMejing.Text;
+            set => lbMejing.Text=value;
+        }
+
         public event EventHandler AddEvent;
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
-        public event EventHandler UpdateRemainPolyEvent;
+        public event EventHandler UpdateRemainPolyEvent;  //沒用，要移除
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
 

@@ -28,10 +28,29 @@ namespace PolyMangement.Presenter
             this.polyView.SaveEvent += SaveRecord;
             this.polyView.CancelEvent += CancelAction;
             this.polyView.SetPolyBindingSource(polyBindingSource);
-
+            UpdateRemainingStock();
             LoadAllStockList();
             polyView.Show();
         }
+
+        private void UpdateRemainingStock()  //即時顯示功能未完成
+        {
+            polyView.RemainPCA = polyRepository.UpdateRemainStock("pca").ToString();
+            polyView.RemainXinhua = polyRepository.UpdateRemainStock("xinhua").ToString();
+            polyView.RemainAS = polyRepository.UpdateRemainStock("aspoly").ToString();
+            polyView.RemainAR = polyRepository.UpdateRemainStock("arpoly").ToString();
+            polyView.RemainHemLock = polyRepository.UpdateRemainStock("hemlock").ToString();
+
+            polyView.RemainASDopant = polyRepository.UpdateRemainStock("asdopant").ToString();
+            polyView.RemainPHDopant = polyRepository.UpdateRemainStock("phdopant").ToString();
+            polyView.RemainBDopant = polyRepository.UpdateRemainStock("bdopant").ToString();
+
+            polyView.RemainAQM = polyRepository.UpdateRemainStock("aqm").ToString();
+            polyView.RemainYoXing = polyRepository.UpdateRemainStock("yoxing").ToString();
+            polyView.RemainAQMG3 = polyRepository.UpdateRemainStock("aqmg3").ToString();
+            polyView.RemainMeJing = polyRepository.UpdateRemainStock("mejing").ToString();
+        }
+
         private void LoadAllStockList()
         {
             stockList = polyRepository.GetAll();
