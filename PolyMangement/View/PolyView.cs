@@ -29,7 +29,6 @@ namespace PolyMangement.View
         {
             btnAdd.Click += delegate 
             {
-                //AddEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(ChargeList);
                 tabControl1.TabPages.Add(ChargeDetail);
             };
@@ -204,7 +203,6 @@ namespace PolyMangement.View
         public event EventHandler AddEvent;
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
-        public event EventHandler UpdateRemainPolyEvent;  //沒用，要移除
         public event EventHandler SaveEvent;
         public event EventHandler CancelEvent;
 

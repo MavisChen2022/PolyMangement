@@ -45,7 +45,6 @@ namespace PolyMangement.View
         event EventHandler AddEvent;
         event EventHandler EditEvent;
         event EventHandler DeleteEvent;
-        event EventHandler UpdateRemainPolyEvent;
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
 

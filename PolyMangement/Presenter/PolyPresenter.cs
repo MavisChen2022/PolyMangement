@@ -33,7 +33,7 @@ namespace PolyMangement.Presenter
             polyView.Show();
         }
 
-        private void UpdateRemainingStock()  //即時顯示功能未完成
+        private void UpdateRemainingStock()  
         {
             polyView.RemainPCA = polyRepository.UpdateRemainStock("pca").ToString();
             polyView.RemainXinhua = polyRepository.UpdateRemainStock("xinhua").ToString();
@@ -115,6 +115,7 @@ namespace PolyMangement.Presenter
                 polyRepository.Add(poly);
             }
             LoadAllStockList();
+            UpdateRemainingStock();
             CleanViewField();
         }
         private void DeleteRecord(object sender, EventArgs e)
@@ -122,6 +123,7 @@ namespace PolyMangement.Presenter
             var poly = (StockModel)polyBindingSource.Current;
             polyRepository.Delete(poly.Id);
             LoadAllStockList();
+            UpdateRemainingStock();
         }
         private void CancelAction(object sender, EventArgs e)
         {
