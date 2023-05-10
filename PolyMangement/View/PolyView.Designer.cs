@@ -82,9 +82,9 @@
             this.txtPhDopant = new System.Windows.Forms.TextBox();
             this.txtBDopant = new System.Windows.Forms.TextBox();
             this.txtHemLock = new System.Windows.Forms.TextBox();
-            this.txtXinhua = new System.Windows.Forms.TextBox();
-            this.txtAS = new System.Windows.Forms.TextBox();
             this.txtAR = new System.Windows.Forms.TextBox();
+            this.txtAS = new System.Windows.Forms.TextBox();
+            this.txtXinhua = new System.Windows.Forms.TextBox();
             this.txtPCA = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -637,9 +637,9 @@
             this.ChargeDetail.Controls.Add(this.txtPhDopant);
             this.ChargeDetail.Controls.Add(this.txtBDopant);
             this.ChargeDetail.Controls.Add(this.txtHemLock);
-            this.ChargeDetail.Controls.Add(this.txtXinhua);
-            this.ChargeDetail.Controls.Add(this.txtAS);
             this.ChargeDetail.Controls.Add(this.txtAR);
+            this.ChargeDetail.Controls.Add(this.txtAS);
+            this.ChargeDetail.Controls.Add(this.txtXinhua);
             this.ChargeDetail.Controls.Add(this.txtPCA);
             this.ChargeDetail.Controls.Add(this.label24);
             this.ChargeDetail.Controls.Add(this.label23);
@@ -810,12 +810,12 @@
             this.txtHemLock.Size = new System.Drawing.Size(100, 22);
             this.txtHemLock.TabIndex = 20;
             // 
-            // txtXinhua
+            // txtAR
             // 
-            this.txtXinhua.Location = new System.Drawing.Point(266, 151);
-            this.txtXinhua.Name = "txtXinhua";
-            this.txtXinhua.Size = new System.Drawing.Size(100, 22);
-            this.txtXinhua.TabIndex = 19;
+            this.txtAR.Location = new System.Drawing.Point(521, 151);
+            this.txtAR.Name = "txtAR";
+            this.txtAR.Size = new System.Drawing.Size(100, 22);
+            this.txtAR.TabIndex = 19;
             // 
             // txtAS
             // 
@@ -824,12 +824,12 @@
             this.txtAS.Size = new System.Drawing.Size(100, 22);
             this.txtAS.TabIndex = 18;
             // 
-            // txtAR
+            // txtXinhua
             // 
-            this.txtAR.Location = new System.Drawing.Point(521, 151);
-            this.txtAR.Name = "txtAR";
-            this.txtAR.Size = new System.Drawing.Size(100, 22);
-            this.txtAR.TabIndex = 17;
+            this.txtXinhua.Location = new System.Drawing.Point(266, 151);
+            this.txtXinhua.Name = "txtXinhua";
+            this.txtXinhua.Size = new System.Drawing.Size(100, 22);
+            this.txtXinhua.TabIndex = 17;
             // 
             // txtPCA
             // 
@@ -1042,9 +1042,9 @@
         private System.Windows.Forms.TextBox txtPhDopant;
         private System.Windows.Forms.TextBox txtBDopant;
         private System.Windows.Forms.TextBox txtHemLock;
-        private System.Windows.Forms.TextBox txtXinhua;
-        private System.Windows.Forms.TextBox txtAS;
         private System.Windows.Forms.TextBox txtAR;
+        private System.Windows.Forms.TextBox txtAS;
+        private System.Windows.Forms.TextBox txtXinhua;
         private System.Windows.Forms.TextBox txtPCA;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;

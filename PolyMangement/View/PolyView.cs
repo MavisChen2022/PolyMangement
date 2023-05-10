@@ -65,7 +65,7 @@ namespace PolyMangement.View
         public string XinhuaText 
         {
             get => txtXinhua.Text;
-            set => txtXinhua.Text=value;
+            set => txtXinhua.Text = value;
         }
         public string ASText 
         {
@@ -75,7 +75,7 @@ namespace PolyMangement.View
         public string ARText 
         { 
             get => txtAR.Text;
-            set => txtAR.Text=value;
+            set => txtAR.Text = value;
         }
         public string HemlockText 
         {
