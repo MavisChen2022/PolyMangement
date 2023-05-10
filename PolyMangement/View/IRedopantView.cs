@@ -13,7 +13,7 @@ namespace PolyMangement.View
         string HourMinsText { get; set; }
         string NeckTimes { get; set; }
         string RealText { get; set; }
-        string Remelt { get; set; }
+        string RemeltText { get; set; }
 
         event EventHandler ShowCorrespondRecipeEvent;
         event EventHandler CalTimeIntervalEvent;
