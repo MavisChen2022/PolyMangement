@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRedopant = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnCharge = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -37,7 +37,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnRedopant);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.btnCharge);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -46,15 +46,15 @@
             this.panel1.Size = new System.Drawing.Size(118, 559);
             this.panel1.TabIndex = 0;
             // 
-            // button2
+            // btnRedopant
             // 
-            this.button2.Font = new System.Drawing.Font("微軟正黑體", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.Location = new System.Drawing.Point(0, 240);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 53);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Redopant\r\n計算";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnRedopant.Font = new System.Drawing.Font("微軟正黑體", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRedopant.Location = new System.Drawing.Point(0, 240);
+            this.btnRedopant.Name = "btnRedopant";
+            this.btnRedopant.Size = new System.Drawing.Size(118, 53);
+            this.btnRedopant.TabIndex = 2;
+            this.btnRedopant.Text = "Redopant\r\n計算";
+            this.btnRedopant.UseVisualStyleBackColor = true;
             // 
             // btnSearch
             // 
@@ -94,7 +94,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRedopant;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnCharge;
     }

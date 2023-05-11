@@ -22,6 +22,7 @@ namespace PolyMangement.View
         {
             btnCharge.Click += delegate { ShowStockListEvent?.Invoke(this, EventArgs.Empty); };
             btnSearch.Click+=delegate { SearchStockListEvent?.Invoke(this, EventArgs.Empty); };
+            btnRedopant.Click+=delegate { CalculateRedopantEvent?.Invoke(this, EventArgs.Empty); }; 
         }
 
         public event EventHandler ShowStockListEvent;

@@ -67,11 +67,13 @@
     <Compile Include="Model\StockModel.cs" />
     <Compile Include="Presenter\MainPresenter.cs" />
     <Compile Include="Presenter\PolyPresenter.cs" />
+    <Compile Include="Presenter\RedopantPresenter.cs" />
     <Compile Include="Presenter\SearchPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\PolyRepository.cs" />
+    <Compile Include="Repositories\RedopantRepository.cs" />
     <Compile Include="Repositories\SearchRepository.cs" />
     <Compile Include="View\IMainView.cs" />
     <Compile Include="View\IPolyView.cs" />

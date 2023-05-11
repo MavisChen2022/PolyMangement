@@ -21,6 +21,14 @@ namespace PolyMangement.Presenter
             this.sqliteConnectionString = sqliteConnectionString;
             this.mainview.ShowStockListEvent += ShowStockListView;
             this.mainview.SearchStockListEvent += SearchStockListView;
+            this.mainview.CalculateRedopantEvent += CalculateRedopantView;
+        }
+
+        private void CalculateRedopantView(object sender, EventArgs e)
+        {
+            IRedopantRepository redopantRepository = new RedopantRepository(sqliteConnectionString);
+            IRedopantView redopantView = RedopantView.GetInstance((Form)mainview);
+            new RedopantPresenter(redopantView, redopantRepository);
         }
 
         private void SearchStockListView(object sender, EventArgs e)

@@ -11,5 +11,7 @@ namespace PolyMangement.Model
         void CalRedopant(string timeInterval);
         void CalTimeInterval(DateTime startTime,DateTime endTime);
         void ShowCorrespondRecipe(string recipeName);
+
+
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PolyMangement.View
 {
@@ -18,5 +19,8 @@ namespace PolyMangement.View
         event EventHandler ShowCorrespondRecipeEvent;
         event EventHandler CalTimeIntervalEvent;
         event EventHandler CalRedopantEvent;
+        void SetRedopantBindingSource(BindingSource stockList);
+
+        void Show();
     }
 }

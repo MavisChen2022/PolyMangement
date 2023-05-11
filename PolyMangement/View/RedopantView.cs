@@ -53,9 +53,41 @@ namespace PolyMangement.View
             get => lbRedopantTime.Text;
             set => lbRedopantTime.Text=value;
         }
+        public string testTime
+        {
+            get => YearText+"-" + MonthDayText + " " + HourMinsText;
+        }
+        public string testStartTime
+        {
+            get => DateTime.Now.ToString("yyyy-MMDD HHmm");
+        }
 
         public event EventHandler ShowCorrespondRecipeEvent;
         public event EventHandler CalTimeIntervalEvent;
         public event EventHandler CalRedopantEvent;
+
+        public void SetRedopantBindingSource(BindingSource redopantRecipe)
+        {
+            dataGridView1.DataSource = redopantRecipe;
+        }
+        private static RedopantView instance;
+        public static RedopantView GetInstance(Form parenterContainer)
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new RedopantView();
+                instance.MdiParent = parenterContainer;
+                instance.FormBorderStyle = FormBorderStyle.None;
+            }
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                {
+                    instance.WindowState = FormWindowState.Normal;
+                }
+                instance.BringToFront();
+            }
+            return instance;
+        }
     }
 }
