@@ -23,8 +23,8 @@ namespace PolyMangement.Presenter
             this.redopantView = redopantView;
 
             this.redopantView.CalTimeIntervalEvent += CalTimeInterval;
-            this.redopantView.CalRedopantEvent += CalRedopant;
-            this.redopantView.SetRedopantBindingSource(redopantBindingSource);
+            //this.redopantView.CalRedopantEvent += CalRedopant;
+            //this.redopantView.SetRedopantBindingSource(redopantBindingSource);
             //ShowCorrespondRecipeRule();
             redopantView.Show();
         }
@@ -36,8 +36,8 @@ namespace PolyMangement.Presenter
 
         private void CalTimeInterval(object sender, EventArgs e)
         {
-            //redopantView.RealText=redopantRepository.CalTimeInterval()
-            throw new NotImplementedException();
+            //先用return替代，之後再改成void
+            redopantView.RealText = redopantRepository.CalTimeInterval("2023/01/01 00:00", "2023/01/01 01:00");
         }
 
         private void CalRedopant(object sender, EventArgs e)

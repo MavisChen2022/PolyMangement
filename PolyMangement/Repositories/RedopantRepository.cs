@@ -19,9 +19,13 @@ namespace PolyMangement.Repositories
             throw new NotImplementedException();
         }
 
-        public void CalTimeInterval(DateTime startTime, DateTime endTime)
+        public string CalTimeInterval(string startTime, string endTime)
         {
-            throw new NotImplementedException();
+            var s = Convert.ToDateTime(startTime);
+            var e=Convert.ToDateTime(endTime);
+            TimeSpan ts = e - s;
+            double hrs = ts.TotalSeconds / 3600;
+            return hrs.ToString();
         }
 
         public void ShowCorrespondRecipe(string recipeName)
