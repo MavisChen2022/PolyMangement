@@ -34,10 +34,12 @@ namespace PolyMangement.Presenter
             throw new NotImplementedException();
         }
 
-        private void CalTimeInterval(object sender, EventArgs e)
+        private void CalTimeInterval(object sender, EventArgs e) 
         {
-            //先用return替代，之後再改成void
-            redopantView.RealText = redopantRepository.CalTimeInterval("2023/01/01 00:00", "2023/01/01 01:00");
+            string startTime = redopantRepository.ChangeTimeFormat(redopantView.StartYearText, redopantView.StartMonthDayText, redopantView.StartHourMinsText);
+            string endTime = redopantRepository.ChangeTimeFormat(redopantView.EndYearText, redopantView.EndMonthDayText, redopantView.EndHourMinsText);
+            redopantView.RealText = Math.Round(redopantRepository.CalculateTimeInterval(startTime, endTime), 2).ToString();
+            redopantView.RemeltText = Math.Floor(redopantRepository.CalculateTimeInterval(startTime, endTime)).ToString();
         }
 
         private void CalRedopant(object sender, EventArgs e)

@@ -9,9 +9,12 @@ namespace PolyMangement.View
 {
     public interface IRedopantView
     {
-        string YearText { get; set; }
-        string MonthDayText { get; set; }
-        string HourMinsText { get; set; }
+        string StartYearText { get; set; }
+        string StartMonthDayText { get; set; }
+        string StartHourMinsText { get; set; }
+        string EndYearText { get; set; }
+        string EndMonthDayText { get; set; }
+        string EndHourMinsText { get; set; }
         string NeckTimes { get; set; }
         string RealText { get; set; }
         string RemeltText { get; set; }

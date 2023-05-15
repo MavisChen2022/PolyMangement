@@ -8,8 +8,9 @@ namespace PolyMangement.Model
 {
     public interface IRedopantRepository
     {
+        string ChangeTimeFormat(string year, string monthDay, string hourMins);
         void CalRedopant(string timeInterval);
-        string CalTimeInterval(string startTime, string endTime);
+        double CalculateTimeInterval(string startTime, string endTime);
         void ShowCorrespondRecipe(string recipeName);
 
 

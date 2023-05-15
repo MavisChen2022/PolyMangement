@@ -23,20 +23,20 @@ namespace PolyMangement.View
             };
         }
 
-        public string YearText 
+        public string StartYearText 
         {
-            get => txtEndYear.Text;
-            set => txtEndYear.Text=value;
+            get => txtStartYear.Text;
+            set => txtStartYear.Text=value;
         }
-        public string MonthDayText 
+        public string StartMonthDayText 
         { 
-            get => txtEndMD.Text;
-            set => txtEndMD.Text=value;
+            get => txtStartMD.Text;
+            set => txtStartMD.Text=value;
         }
-        public string HourMinsText 
+        public string StartHourMinsText 
         { 
-            get => txtEndHM.Text;
-            set => txtEndHM.Text=value;
+            get => txtStartHM.Text;
+            set => txtStartHM.Text=value;
         }
         public string NeckTimes 
         {
@@ -53,18 +53,27 @@ namespace PolyMangement.View
             get => lbRedopantTime.Text;
             set => lbRedopantTime.Text=value;
         }
-        public string testTime
-        {
-            get => YearText+"-" + MonthDayText + " " + HourMinsText;
-        }
-        public string testStartTime
-        {
-            get => DateTime.Now.ToString("yyyy-MMDD HHmm");
-        }
 
+
+        public string EndYearText 
+        {
+            get => txtEndYear.Text;
+            set => txtEndYear.Text=value;
+        }
+        public string EndMonthDayText 
+        { 
+            get => txtEndMD.Text;
+            set => txtEndMD.Text = value;
+        }
+        public string EndHourMinsText 
+        {
+            get => txtEndHM.Text;
+            set => txtEndHM.Text = value;
+        }
         public event EventHandler ShowCorrespondRecipeEvent;
         public event EventHandler CalTimeIntervalEvent;
         public event EventHandler CalRedopantEvent;
+
 
         public void SetRedopantBindingSource(BindingSource redopantRecipe)
         {
