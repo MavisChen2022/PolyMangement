@@ -46,7 +46,7 @@ namespace PolyMangement.Repositories
         public string ChangeTimeFormat(string year, string monthDay, string hourMins)
         {
             var hourMin = hourMins.Insert(2, ":");
-            return year + "/" + monthDay + " " + hourMin;
+            return $"{year}/{monthDay} {hourMin}";
         }
 
         public IEnumerable<RedopantModel> ShowCorrespondRecipe(string recipeName)  //指定秀出RecipeA還沒有實作，目前裡面的實際功能是一次秀全部
@@ -63,9 +63,9 @@ namespace PolyMangement.Repositories
                     while (dr.Read())
                     {
                         var correspond = new RedopantModel();
-                        correspond.Hour = Convert.ToInt32(dr[0]);
-                        correspond.RecipeA = dr[1].ToString();
-                        correspond.RecipeB = dr[2].ToString();
+                        correspond.hour = Convert.ToInt32(dr[0]);
+                        correspond.recipeA = dr[1].ToString();
+                        correspond.recipeB = dr[2].ToString();
                         rule.Add(correspond);
                     }
                 }

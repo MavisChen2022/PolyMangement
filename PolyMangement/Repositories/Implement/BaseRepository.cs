@@ -26,24 +26,24 @@ namespace PolyMangement.Repositories
                     while (dr.Read())
                     {
                         var search = new StockModel();
-                        search.Id = Convert.ToInt32(dr[0]);
-                        search.Machine = dr[1].ToString();
-                        search.Pca = Convert.ToInt32(dr[2]);
-                        search.Xinhua = Convert.ToInt32(dr[3]);
-                        search.ASpoly = Convert.ToInt32(dr[4]);
-                        search.ARpoly = Convert.ToInt32(dr[5]);
-                        search.Hemlock = Convert.ToInt32(dr[6]);
+                        search.id = Convert.ToInt32(dr[0]);
+                        search.machine = dr[1].ToString();
+                        search.pca = Convert.ToInt32(dr[2]);
+                        search.xinhua = Convert.ToInt32(dr[3]);
+                        search.aSpoly = Convert.ToInt32(dr[4]);
+                        search.aRpoly = Convert.ToInt32(dr[5]);
+                        search.hemlock = Convert.ToInt32(dr[6]);
 
-                        search.AsDopant = Convert.ToInt32(dr[7]);
-                        search.PhDopant = Convert.ToInt32(dr[8]);
-                        search.BDopant = Convert.ToInt32(dr[9]);
+                        search.asDopant = Convert.ToInt32(dr[7]);
+                        search.phDopant = Convert.ToInt32(dr[8]);
+                        search.bDopant = Convert.ToInt32(dr[9]);
 
-                        search.Aqm = Convert.ToInt32(dr[10]);
-                        search.Yoxing = Convert.ToInt32(dr[11]);
-                        search.AqmG3 = Convert.ToInt32(dr[12]);
-                        search.Mejing = Convert.ToInt32(dr[13]);
+                        search.aqm = Convert.ToInt32(dr[10]);
+                        search.yoxing = Convert.ToInt32(dr[11]);
+                        search.aqmG3 = Convert.ToInt32(dr[12]);
+                        search.mejing = Convert.ToInt32(dr[13]);
 
-                        search.SpecifiedTime = (DateTime)dr[14];
+                        search.specifiedTime = (DateTime)dr[14];
                         searchList.Add(search);
                     }
                 }

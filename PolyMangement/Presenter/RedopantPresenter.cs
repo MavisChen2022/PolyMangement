@@ -22,7 +22,6 @@ namespace PolyMangement.Presenter
             this.redopantBindingSource=new BindingSource();
             this.redopantRepository = redopantRepository;
             this.redopantView = redopantView;
-
             this.redopantView.CalculateTimeIntervalEvent += CalculateTimeInterval;
             //this.redopantView.CalRedopantEvent += CalRedopant;
             this.redopantView.SetRedopantBindingSource(redopantBindingSource);

@@ -35,8 +35,8 @@ namespace PolyMangement.Presenter
             searchView.IsExportCurrentFile = true;
             var shift = "當班使用情況";
             var searchTime = new StockModel();
-            searchTime.SpecifiedTime = DateTime.Now;
-            searchList = searchRepository.GetByValue(searchTime.SpecifiedTime, shift);
+            searchTime.specifiedTime = DateTime.Now;
+            searchList = searchRepository.GetByValue(searchTime.specifiedTime, shift);
             SearchBindingSource.DataSource = searchList;
         }
 
@@ -47,7 +47,7 @@ namespace PolyMangement.Presenter
             if (shift == "日班" || shift == "夜班")
             {
                 searchView.IsExportCurrentFile = false;
-                searchTime.SpecifiedTime = searchView.SearchTime;
+                searchTime.specifiedTime = searchView.SearchTime;
                 
             }
             else
@@ -55,9 +55,9 @@ namespace PolyMangement.Presenter
                 searchView.IsExportCurrentFile = true;
                 searchView.SearchTime=DateTime.Now;
                 shift = "當班使用情況";
-                searchTime.SpecifiedTime = DateTime.Now;
+                searchTime.specifiedTime = DateTime.Now;
             }
-            searchList = searchRepository.GetByValue(searchTime.SpecifiedTime, shift);
+            searchList = searchRepository.GetByValue(searchTime.specifiedTime, shift);
             SearchBindingSource.DataSource = searchList;
         }
 
@@ -67,13 +67,13 @@ namespace PolyMangement.Presenter
             var searchTime = new StockModel();
             if (searchView.IsExportCurrentFile)
             {
-                searchTime.SpecifiedTime = DateTime.Now;
+                searchTime.specifiedTime = DateTime.Now;
             }
             else
             {
-                searchTime.SpecifiedTime = searchView.SearchTime;
+                searchTime.specifiedTime = searchView.SearchTime;
             }
-            searchRepository.ExportExcel(searchTime.SpecifiedTime, shift);
+            searchRepository.ExportExcel(searchTime.specifiedTime, shift);
         }
     }
 }

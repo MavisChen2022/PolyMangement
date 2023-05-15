@@ -21,10 +21,10 @@ namespace PolyMangement
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            string SQLiteConnectionString = @"URI=file:"+Application.StartupPath+"\\stockTable.db";
+            string sqliteConnectionString = @"URI=file:"+Application.StartupPath+"\\stockTable.db";
             
             IMainView mainView = new MainView();
-            new MainPresenter(mainView, SQLiteConnectionString);
+            new MainPresenter(mainView, sqliteConnectionString);
             Application.Run((Form)mainView);
         }
     }

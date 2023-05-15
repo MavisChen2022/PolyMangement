@@ -58,24 +58,24 @@ namespace PolyMangement.Repositories
                 conn.Open();
                 cmd.Connection = conn;
                 cmd.CommandText = action;
-                cmd.Parameters.Add("@id", DbType.Int32).Value = stockModel.Id;
-                cmd.Parameters.Add("@machine", DbType.String).Value = stockModel.Machine;
-                cmd.Parameters.Add("@pca", DbType.Int32).Value = stockModel.Pca;
-                cmd.Parameters.Add("@xinHua", DbType.Int32).Value = stockModel.Xinhua;
-                cmd.Parameters.Add("@aspoly", DbType.Int32).Value = stockModel.ASpoly;
-                cmd.Parameters.Add("@arpoly", DbType.Int32).Value = stockModel.ARpoly;
-                cmd.Parameters.Add("@hemlock", DbType.Int32).Value = stockModel.Hemlock;
+                cmd.Parameters.Add("@id", DbType.Int32).Value = stockModel.id;
+                cmd.Parameters.Add("@machine", DbType.String).Value = stockModel.machine;
+                cmd.Parameters.Add("@pca", DbType.Int32).Value = stockModel.pca;
+                cmd.Parameters.Add("@xinHua", DbType.Int32).Value = stockModel.xinhua;
+                cmd.Parameters.Add("@aspoly", DbType.Int32).Value = stockModel.aSpoly;
+                cmd.Parameters.Add("@arpoly", DbType.Int32).Value = stockModel.aRpoly;
+                cmd.Parameters.Add("@hemlock", DbType.Int32).Value = stockModel.hemlock;
 
-                cmd.Parameters.Add("@asdopant", DbType.Int32).Value = stockModel.AsDopant;
-                cmd.Parameters.Add("@phdopant", DbType.Int32).Value = stockModel.PhDopant;
-                cmd.Parameters.Add("@bdopant", DbType.Int32).Value = stockModel.BDopant;
+                cmd.Parameters.Add("@asdopant", DbType.Int32).Value = stockModel.asDopant;
+                cmd.Parameters.Add("@phdopant", DbType.Int32).Value = stockModel.phDopant;
+                cmd.Parameters.Add("@bdopant", DbType.Int32).Value = stockModel.bDopant;
 
-                cmd.Parameters.Add("@aqm", DbType.Int32).Value = stockModel.Aqm;
-                cmd.Parameters.Add("@yoxing", DbType.Int32).Value = stockModel.Yoxing;
-                cmd.Parameters.Add("@aqmG3", DbType.Int32).Value = stockModel.AqmG3;
-                cmd.Parameters.Add("@mejing", DbType.Int32).Value = stockModel.Mejing;
+                cmd.Parameters.Add("@aqm", DbType.Int32).Value = stockModel.aqm;
+                cmd.Parameters.Add("@yoxing", DbType.Int32).Value = stockModel.yoxing;
+                cmd.Parameters.Add("@aqmG3", DbType.Int32).Value = stockModel.aqmG3;
+                cmd.Parameters.Add("@mejing", DbType.Int32).Value = stockModel.mejing;
 
-                cmd.Parameters.Add("@time", DbType.DateTime).Value = stockModel.SpecifiedTime;
+                cmd.Parameters.Add("@time", DbType.DateTime).Value = stockModel.specifiedTime;
                 cmd.ExecuteNonQuery();
             }
         }
