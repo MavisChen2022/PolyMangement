@@ -20,7 +20,7 @@ namespace PolyMangement.View
         string RemeltText { get; set; }
 
         event EventHandler ShowCorrespondRecipeEvent;
-        event EventHandler CalTimeIntervalEvent;
+        event EventHandler CalculateTimeIntervalEvent;
         event EventHandler CalRedopantEvent;
         void SetRedopantBindingSource(BindingSource stockList);
 

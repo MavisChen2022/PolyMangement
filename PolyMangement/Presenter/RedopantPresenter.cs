@@ -22,24 +22,26 @@ namespace PolyMangement.Presenter
             this.redopantRepository = redopantRepository;
             this.redopantView = redopantView;
 
-            this.redopantView.CalTimeIntervalEvent += CalTimeInterval;
+            this.redopantView.CalculateTimeIntervalEvent += CalculateTimeInterval;
             //this.redopantView.CalRedopantEvent += CalRedopant;
-            //this.redopantView.SetRedopantBindingSource(redopantBindingSource);
-            //ShowCorrespondRecipeRule();
+            this.redopantView.SetRedopantBindingSource(redopantBindingSource);
+            ShowCorrespondRecipeRule();
             redopantView.Show();
         }
 
-        private void ShowCorrespondRecipeRule()
+        private void ShowCorrespondRecipeRule()   //指定秀出RecipeA還沒有實作，目前吐回來的是全部的rule
         {
-            throw new NotImplementedException();
+            redopantsRecipe=redopantRepository.ShowCorrespondRecipe("RecipeA");
+            redopantBindingSource.DataSource = redopantsRecipe;
         }
 
-        private void CalTimeInterval(object sender, EventArgs e) 
+        private void CalculateTimeInterval(object sender, EventArgs e) 
         {
             string startTime = redopantRepository.ChangeTimeFormat(redopantView.StartYearText, redopantView.StartMonthDayText, redopantView.StartHourMinsText);
             string endTime = redopantRepository.ChangeTimeFormat(redopantView.EndYearText, redopantView.EndMonthDayText, redopantView.EndHourMinsText);
             redopantView.RealText = Math.Round(redopantRepository.CalculateTimeInterval(startTime, endTime), 2).ToString();
             redopantView.RemeltText = Math.Floor(redopantRepository.CalculateTimeInterval(startTime, endTime)).ToString();
+
         }
 
         private void CalRedopant(object sender, EventArgs e)

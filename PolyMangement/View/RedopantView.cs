@@ -17,7 +17,7 @@ namespace PolyMangement.View
             InitializeComponent();
             btnRecipe1.Click += delegate
             {
-                CalTimeIntervalEvent?.Invoke(this, EventArgs.Empty);
+                CalculateTimeIntervalEvent?.Invoke(this, EventArgs.Empty);
                 ShowCorrespondRecipeEvent?.Invoke(this, EventArgs.Empty);
                 CalRedopantEvent?.Invoke(this, EventArgs.Empty);
             };
@@ -71,7 +71,7 @@ namespace PolyMangement.View
             set => txtEndHM.Text = value;
         }
         public event EventHandler ShowCorrespondRecipeEvent;
-        public event EventHandler CalTimeIntervalEvent;
+        public event EventHandler CalculateTimeIntervalEvent;
         public event EventHandler CalRedopantEvent;
 
 

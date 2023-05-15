@@ -11,7 +11,7 @@ namespace PolyMangement.Model
         string ChangeTimeFormat(string year, string monthDay, string hourMins);
         void CalRedopant(string timeInterval);
         double CalculateTimeInterval(string startTime, string endTime);
-        void ShowCorrespondRecipe(string recipeName);
+        IEnumerable<RedopantModel> ShowCorrespondRecipe(string recipeName);
 
 
     }

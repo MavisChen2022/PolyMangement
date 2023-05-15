@@ -9,16 +9,12 @@ namespace PolyMangement.Model
 {
     public class RedopantModel
     {
-        DateTime year;
-        DateTime monthDay;
-        DateTime hourMins;
-        string recipeName;
-        int redopant;
+        private int hour;
+        private string recipeA;
+        private string recipeB;
 
-        public DateTime Year { get => year; set => year = value; }
-        public DateTime MonthDay { get => monthDay; set => monthDay = value; }
-        public DateTime HourMins { get => hourMins; set => hourMins = value; }
-        public string RecipeName { get => recipeName; set => recipeName = value; }
-        public int Redopant { get => redopant; set => redopant = value; }
+        public int Hour { get => hour; set => hour = value; }
+        public string RecipeA { get => recipeA; set => recipeA = value; }
+        public string RecipeB { get => recipeB; set => recipeB = value; }
     }
 }
