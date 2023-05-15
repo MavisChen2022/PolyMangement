@@ -10,6 +10,20 @@ namespace PolyMangement.Repositories
 {
     public class RedopantRepository:BaseRepository,IRedopantRepository
     {
+        private string realTime;
+        private string ruleTime;
+
+        public string realTimeText 
+        {
+            get => realTime;
+            set => realTime=value; 
+        }
+        public string ruleTimeText 
+        { 
+            get => ruleTime;
+            set => ruleTime=value;
+        }
+
         public RedopantRepository(string connection)
         {
             connectionString=connection;
@@ -57,6 +71,26 @@ namespace PolyMangement.Repositories
                 }
             }
             return rule;
+        }
+
+        public void StartTimeFormat(string year, string monthDay, string hourMins)
+        {
+            var hourMin = hourMins.Insert(2, ":");
+            realTime = year + "/" + monthDay + " " + hourMin;
+        }
+        public void EndTimeFormat(string year, string monthDay, string hourMins)
+        {
+            var hourMin = hourMins.Insert(2, ":");
+            ruleTime = year + "/" + monthDay + " " + hourMin;
+        }
+        public void CalTimeInterval()
+        {
+            var s = Convert.ToDateTime(realTime);
+            var e = Convert.ToDateTime(ruleTime);
+            TimeSpan ts = e - s;
+            double hrs = ts.TotalSeconds / 3600;
+            realTimeText =Math.Round(hrs, 2).ToString();
+            ruleTimeText= Math.Floor(hrs).ToString();
         }
     }
 }

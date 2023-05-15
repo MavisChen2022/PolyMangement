@@ -48,7 +48,7 @@ namespace PolyMangement.View
             get => lbReal.Text;
             set => lbReal.Text=value;
         }
-        public string RemeltText 
+        public string RuleText 
         { 
             get => lbRedopantTime.Text;
             set => lbRedopantTime.Text=value;

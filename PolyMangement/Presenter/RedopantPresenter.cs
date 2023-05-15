@@ -1,4 +1,5 @@
 ﻿using PolyMangement.Model;
+using PolyMangement.Repositories;
 using PolyMangement.View;
 using System;
 using System.Collections.Generic;
@@ -37,10 +38,17 @@ namespace PolyMangement.Presenter
 
         private void CalculateTimeInterval(object sender, EventArgs e) 
         {
-            string startTime = redopantRepository.ChangeTimeFormat(redopantView.StartYearText, redopantView.StartMonthDayText, redopantView.StartHourMinsText);
-            string endTime = redopantRepository.ChangeTimeFormat(redopantView.EndYearText, redopantView.EndMonthDayText, redopantView.EndHourMinsText);
-            redopantView.RealText = Math.Round(redopantRepository.CalculateTimeInterval(startTime, endTime), 2).ToString();
-            redopantView.RemeltText = Math.Floor(redopantRepository.CalculateTimeInterval(startTime, endTime)).ToString();
+            //string startTime = redopantRepository.ChangeTimeFormat(redopantView.StartYearText, redopantView.StartMonthDayText, redopantView.StartHourMinsText);
+            //string endTime = redopantRepository.ChangeTimeFormat(redopantView.EndYearText, redopantView.EndMonthDayText, redopantView.EndHourMinsText);
+            //redopantView.RealText = Math.Round(redopantRepository.CalculateTimeInterval(startTime, endTime), 2).ToString();
+            //redopantView.RuleText = Math.Floor(redopantRepository.CalculateTimeInterval(startTime, endTime)).ToString();
+
+
+            redopantRepository.StartTimeFormat(redopantView.StartYearText, redopantView.StartMonthDayText, redopantView.StartHourMinsText);
+            redopantRepository.EndTimeFormat(redopantView.EndYearText, redopantView.EndMonthDayText, redopantView.EndHourMinsText);
+            redopantRepository.CalTimeInterval();
+            redopantView.RealText = redopantRepository.realTimeText;
+            redopantView.RuleText = redopantRepository.ruleTimeText;
 
         }
 

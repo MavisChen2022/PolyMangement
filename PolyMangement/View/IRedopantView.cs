@@ -17,7 +17,7 @@ namespace PolyMangement.View
         string EndHourMinsText { get; set; }
         string NeckTimes { get; set; }
         string RealText { get; set; }
-        string RemeltText { get; set; }
+        string RuleText { get; set; }
 
         event EventHandler ShowCorrespondRecipeEvent;
         event EventHandler CalculateTimeIntervalEvent;
