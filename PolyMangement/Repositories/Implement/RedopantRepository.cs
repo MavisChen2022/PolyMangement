@@ -35,7 +35,7 @@ namespace PolyMangement.Repositories
         {
             throw new NotImplementedException();
         }
-        public DataTable ShowCorrespondRecipe(string recipeName)  //指定秀出RecipeA還沒有實作，目前裡面的實際功能是一次秀全部
+        public DataTable ShowCorrespondRecipe(string recipeName)  
         {
             DataTable dataTable = new DataTable();
             using (var conn = new SQLiteConnection(connectionString))

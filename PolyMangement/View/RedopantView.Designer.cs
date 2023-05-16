@@ -221,7 +221,7 @@
             this.btnRecipe1.Name = "btnRecipe1";
             this.btnRecipe1.Size = new System.Drawing.Size(156, 49);
             this.btnRecipe1.TabIndex = 17;
-            this.btnRecipe1.Text = "Recipe1";
+            this.btnRecipe1.Text = "RecipeA";
             this.btnRecipe1.UseVisualStyleBackColor = true;
             // 
             // btnRecipe2
@@ -231,7 +231,7 @@
             this.btnRecipe2.Name = "btnRecipe2";
             this.btnRecipe2.Size = new System.Drawing.Size(156, 49);
             this.btnRecipe2.TabIndex = 18;
-            this.btnRecipe2.Text = "Recipe2";
+            this.btnRecipe2.Text = "RecipeB";
             this.btnRecipe2.UseVisualStyleBackColor = true;
             // 
             // btnRecipe3

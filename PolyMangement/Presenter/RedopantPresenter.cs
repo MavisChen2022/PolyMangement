@@ -13,6 +13,7 @@ namespace PolyMangement.Presenter
 {
     public class RedopantPresenter
     {
+        public RedopantView view;
         private IRedopantRepository redopantRepository;
         private IRedopantView redopantView;
         private BindingSource redopantBindingSource;
@@ -23,18 +24,18 @@ namespace PolyMangement.Presenter
             this.redopantBindingSource=new BindingSource();
             this.redopantRepository = redopantRepository;
             this.redopantView = redopantView;
-            this.redopantView.CalculateTimeIntervalEvent += CalculateTimeInterval;
+           
+            //this.redopantView.CalculateTimeIntervalEvent += CalculateTimeInterval;  已完成
+            this.redopantView.ShowCorrespondRecipeEvent += ShowCorrespondRecipeRule; //已完成
             //this.redopantView.CalRedopantEvent += CalRedopant;
             this.redopantView.SetRedopantBindingSource(redopantBindingSource);
-            ShowCorrespondRecipeRule();
             redopantView.Show();
         }
 
-        private void ShowCorrespondRecipeRule()   //指定秀出RecipeA還沒有實作，目前吐回來的是全部的rule
+        private void ShowCorrespondRecipeRule(object sender, EventArgs e)  
         {
-            redopantsRecipe=redopantRepository.ShowCorrespondRecipe("RecipeB");
+            redopantsRecipe =redopantRepository.ShowCorrespondRecipe(redopantView.RecipeName);
             redopantBindingSource.DataSource = redopantsRecipe;
-
         }
 
         private void CalculateTimeInterval(object sender, EventArgs e) 
@@ -49,7 +50,7 @@ namespace PolyMangement.Presenter
 
         private void CalRedopant(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+           throw new NotImplementedException();
         }
     }
 }

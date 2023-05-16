@@ -12,17 +12,25 @@ namespace PolyMangement.View
 {
     public partial class RedopantView : Form,IRedopantView
     {
+        private string recipeName;
         public RedopantView()
         {
             InitializeComponent();
             btnRecipe1.Click += delegate
             {
+                recipeName = btnRecipe1.Text;
+                CalculateTimeIntervalEvent?.Invoke(this, EventArgs.Empty);
+                ShowCorrespondRecipeEvent?.Invoke(this, EventArgs.Empty);
+                CalRedopantEvent?.Invoke(this, EventArgs.Empty);
+            };
+            btnRecipe2.Click += delegate
+            {
+                recipeName= btnRecipe2.Text;
                 CalculateTimeIntervalEvent?.Invoke(this, EventArgs.Empty);
                 ShowCorrespondRecipeEvent?.Invoke(this, EventArgs.Empty);
                 CalRedopantEvent?.Invoke(this, EventArgs.Empty);
             };
         }
-
         public string StartYearText 
         {
             get => txtStartYear.Text;
@@ -69,6 +77,11 @@ namespace PolyMangement.View
         {
             get => txtEndHM.Text;
             set => txtEndHM.Text = value;
+        }
+        
+        public string RecipeName 
+        {
+            get => recipeName;
         }
 
         public event EventHandler ShowCorrespondRecipeEvent;
