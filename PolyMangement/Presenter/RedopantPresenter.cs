@@ -3,6 +3,7 @@ using PolyMangement.Repositories;
 using PolyMangement.View;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace PolyMangement.Presenter
         private IRedopantRepository redopantRepository;
         private IRedopantView redopantView;
         private BindingSource redopantBindingSource;
-        private IEnumerable<RedopantModel> redopantsRecipe;
+        private DataTable redopantsRecipe;
 
         public RedopantPresenter(IRedopantView redopantView, IRedopantRepository redopantRepository)
         {
@@ -31,18 +32,13 @@ namespace PolyMangement.Presenter
 
         private void ShowCorrespondRecipeRule()   //指定秀出RecipeA還沒有實作，目前吐回來的是全部的rule
         {
-            redopantsRecipe=redopantRepository.ShowCorrespondRecipe("RecipeA");
+            redopantsRecipe=redopantRepository.ShowCorrespondRecipe("RecipeB");
             redopantBindingSource.DataSource = redopantsRecipe;
+
         }
 
         private void CalculateTimeInterval(object sender, EventArgs e) 
         {
-            //string startTime = redopantRepository.ChangeTimeFormat(redopantView.StartYearText, redopantView.StartMonthDayText, redopantView.StartHourMinsText);
-            //string endTime = redopantRepository.ChangeTimeFormat(redopantView.EndYearText, redopantView.EndMonthDayText, redopantView.EndHourMinsText);
-            //redopantView.RealText = Math.Round(redopantRepository.CalculateTimeInterval(startTime, endTime), 2).ToString();
-            //redopantView.RuleText = Math.Floor(redopantRepository.CalculateTimeInterval(startTime, endTime)).ToString();
-
-
             redopantRepository.StartTimeFormat(redopantView.StartYearText, redopantView.StartMonthDayText, redopantView.StartHourMinsText);
             redopantRepository.EndTimeFormat(redopantView.EndYearText, redopantView.EndMonthDayText, redopantView.EndHourMinsText);
             redopantRepository.CalTimeInterval();

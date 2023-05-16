@@ -70,6 +70,7 @@ namespace PolyMangement.View
             get => txtEndHM.Text;
             set => txtEndHM.Text = value;
         }
+
         public event EventHandler ShowCorrespondRecipeEvent;
         public event EventHandler CalculateTimeIntervalEvent;
         public event EventHandler CalRedopantEvent;

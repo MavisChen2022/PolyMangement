@@ -19,6 +19,8 @@ namespace PolyMangement.View
         string RealText { get; set; }
         string RuleText { get; set; }
 
+
+
         event EventHandler ShowCorrespondRecipeEvent;
         event EventHandler CalculateTimeIntervalEvent;
         event EventHandler CalRedopantEvent;
