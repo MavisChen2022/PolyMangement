@@ -18,11 +18,14 @@ namespace PolyMangement.View
         string NeckTimes { get; set; }
         string RealText { get; set; }
         string RuleText { get; set; }
-        string RecipeName { get;  }
+        string RecipeName { get;}
+        string RecipeNameText { get; set; }
+
 
         event EventHandler ShowCorrespondRecipeEvent;
         event EventHandler CalculateTimeIntervalEvent;
         event EventHandler CalRedopantEvent;
+        event EventHandler UpdateRecipeNameEvent;
         void SetRedopantBindingSource(BindingSource stockList);
 
         void Show();

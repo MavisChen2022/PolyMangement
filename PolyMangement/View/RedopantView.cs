@@ -21,6 +21,7 @@ namespace PolyMangement.View
                 recipeName = btnRecipe1.Text;
                 CalculateTimeIntervalEvent?.Invoke(this, EventArgs.Empty);
                 ShowCorrespondRecipeEvent?.Invoke(this, EventArgs.Empty);
+                UpdateRecipeNameEvent?.Invoke(this, EventArgs.Empty);
                 CalRedopantEvent?.Invoke(this, EventArgs.Empty);
             };
             btnRecipe2.Click += delegate
@@ -28,6 +29,7 @@ namespace PolyMangement.View
                 recipeName= btnRecipe2.Text;
                 CalculateTimeIntervalEvent?.Invoke(this, EventArgs.Empty);
                 ShowCorrespondRecipeEvent?.Invoke(this, EventArgs.Empty);
+                UpdateRecipeNameEvent?.Invoke(this, EventArgs.Empty);
                 CalRedopantEvent?.Invoke(this, EventArgs.Empty);
             };
         }
@@ -78,16 +80,20 @@ namespace PolyMangement.View
             get => txtEndHM.Text;
             set => txtEndHM.Text = value;
         }
-        
         public string RecipeName 
         {
             get => recipeName;
+        }
+        public string RecipeNameText
+        {
+            get => lbRecipeName.Text;
+            set => lbRecipeName.Text = value;
         }
 
         public event EventHandler ShowCorrespondRecipeEvent;
         public event EventHandler CalculateTimeIntervalEvent;
         public event EventHandler CalRedopantEvent;
-
+        public event EventHandler UpdateRecipeNameEvent;
 
         public void SetRedopantBindingSource(BindingSource redopantRecipe)
         {
