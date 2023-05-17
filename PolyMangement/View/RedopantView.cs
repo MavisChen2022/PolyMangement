@@ -16,6 +16,7 @@ namespace PolyMangement.View
         public RedopantView()
         {
             InitializeComponent();
+            comboboxNeckTimes.SelectedItem = "1";
             btnRecipe1.Click += delegate
             {
                 recipeName = btnRecipe1.Text;
@@ -88,6 +89,11 @@ namespace PolyMangement.View
         {
             get => lbRecipeName.Text;
             set => lbRecipeName.Text = value;
+        }
+        public string RedopantWeightText 
+        { 
+            get => lbRedopantWeight.Text; 
+            set => lbRedopantWeight.Text=value;
         }
 
         public event EventHandler ShowCorrespondRecipeEvent;

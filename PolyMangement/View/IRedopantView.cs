@@ -20,7 +20,7 @@ namespace PolyMangement.View
         string RuleText { get; set; }
         string RecipeName { get;}
         string RecipeNameText { get; set; }
-
+        string RedopantWeightText { get; set; }
 
         event EventHandler ShowCorrespondRecipeEvent;
         event EventHandler CalculateTimeIntervalEvent;

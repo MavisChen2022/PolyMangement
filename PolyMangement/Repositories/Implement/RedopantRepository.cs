@@ -30,22 +30,7 @@ namespace PolyMangement.Repositories
         {
             connectionString=connection;
         }
-
-        public void CalRedopant(string timeInterval)
-        {
-            throw new NotImplementedException();
-        }
-        public DataTable ShowCorrespondRecipe(string recipeName)  
-        {
-            DataTable dataTable = new DataTable();
-            using (var conn = new SQLiteConnection(connectionString))
-            using (var adapter = new SQLiteDataAdapter($"SELECT hour,{recipeName} FROM redopantTest", conn))
-            {
-                adapter.Fill(dataTable);
-            }
-            return dataTable;
-        }
-
+        
         public void StartTimeFormat(string year, string monthDay, string hourMins)
         {
             var hourMin = hourMins.Insert(2, ":");
@@ -64,6 +49,35 @@ namespace PolyMangement.Repositories
             double hrs = ts.TotalSeconds / 3600;
             realTimeText =Math.Round(hrs, 2).ToString();
             ruleTimeText= Math.Floor(hrs).ToString();
+        }
+        public DataTable ShowCorrespondRecipe(string recipeName, string neckTimes)
+        {
+            DataTable dataTable = new DataTable();
+            using (var conn = new SQLiteConnection(connectionString))
+            using (var adapter = new SQLiteDataAdapter($"SELECT hour,{recipeName + neckTimes} FROM redopantTest", conn))
+            {
+                adapter.Fill(dataTable);
+            }
+            return dataTable;
+        }
+        public string CalRedopant(string recipeName, string hour,string neckTimes)
+        {
+            string correspondRedopantWeight="";
+            using(var conn=new SQLiteConnection(connectionString))
+            using (var cmd = new SQLiteCommand())
+            {
+                conn.Open();
+                cmd.Connection = conn;
+                cmd.CommandText = $"SELECT {recipeName+ neckTimes} FROM redopantTest WHERE {hour}=hour";
+                using (var dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        correspondRedopantWeight = dr[0].ToString();
+                    }
+                }
+            }
+            return correspondRedopantWeight;
         }
     }
 }

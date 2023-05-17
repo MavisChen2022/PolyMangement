@@ -10,7 +10,8 @@ namespace PolyMangement.Model
     public class RedopantModel
     {
         public int hour { get ; set; }
-        public string recipeA { get; set; }
+        public string recipeA1 { get; set; }
+        public string recipeA2 { get; set; }
         public string recipeB { get; set; }
     }
 }

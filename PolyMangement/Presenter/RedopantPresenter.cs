@@ -25,10 +25,10 @@ namespace PolyMangement.Presenter
             this.redopantRepository = redopantRepository;
             this.redopantView = redopantView;
            
-            //this.redopantView.CalculateTimeIntervalEvent += CalculateTimeInterval;  已完成
-            this.redopantView.ShowCorrespondRecipeEvent += ShowCorrespondRecipeRule; //已完成
+            this.redopantView.CalculateTimeIntervalEvent += CalculateTimeInterval;  //測完季的記得取消註解+改回來
+            this.redopantView.ShowCorrespondRecipeEvent += ShowCorrespondRecipeRule; 
             this.redopantView.UpdateRecipeNameEvent += UpdateRecipeName;
-            //this.redopantView.CalRedopantEvent += CalRedopant;
+            this.redopantView.CalRedopantEvent += CalRedopant;
             this.redopantView.SetRedopantBindingSource(redopantBindingSource);
             redopantView.Show();
         }
@@ -37,7 +37,7 @@ namespace PolyMangement.Presenter
         {
             redopantView.RecipeNameText = redopantView.RecipeName;
         }
-        private void CalculateTimeInterval(object sender, EventArgs e)
+        private void CalculateTimeInterval(object sender, EventArgs e) 
         {
             redopantRepository.StartTimeFormat(redopantView.StartYearText, redopantView.StartMonthDayText, redopantView.StartHourMinsText);
             redopantRepository.EndTimeFormat(redopantView.EndYearText, redopantView.EndMonthDayText, redopantView.EndHourMinsText);
@@ -48,15 +48,17 @@ namespace PolyMangement.Presenter
         }
         private void ShowCorrespondRecipeRule(object sender, EventArgs e)  
         {
-            redopantsRecipe =redopantRepository.ShowCorrespondRecipe(redopantView.RecipeName);
+            string recipeName = redopantView.RecipeName;
+            string neckTimes = redopantView.NeckTimes;
+            redopantsRecipe =redopantRepository.ShowCorrespondRecipe(recipeName, neckTimes);
             redopantBindingSource.DataSource = redopantsRecipe;
         }
-
-        
-
         private void CalRedopant(object sender, EventArgs e)
         {
-           throw new NotImplementedException();
+            string recipeName = redopantView.RecipeName;
+            string hour = redopantView.RuleText;
+            string neckTimes = redopantView.NeckTimes;
+            redopantView.RedopantWeightText = redopantRepository.CalRedopant(recipeName,hour, neckTimes);
         }
     }
 }

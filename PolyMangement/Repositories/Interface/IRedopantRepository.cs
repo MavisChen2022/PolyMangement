@@ -15,9 +15,9 @@ namespace PolyMangement.Model
         void EndTimeFormat(string year, string monthDay, string hourMins);
         void CalTimeInterval();
         
-        void CalRedopant(string timeInterval);
+        string CalRedopant(string recipeName, string hour,string neckTimes);
 
-        DataTable ShowCorrespondRecipe(string recipeName);
+        DataTable ShowCorrespondRecipe(string recipeName, string neckTimes);
 
 
     }
