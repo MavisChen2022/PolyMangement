@@ -59,6 +59,8 @@ namespace PolyMangement.View
                 instance.MdiParent = parenterContainer;
                 instance.FormBorderStyle = FormBorderStyle.None;
                 instance.Dock = DockStyle.Fill;
+                instance.AutoSize = true;
+                instance.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             }
             else
             {

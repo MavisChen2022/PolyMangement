@@ -86,6 +86,7 @@
             this.IsMdiContainer = true;
             this.Name = "MainView";
             this.Text = "MainView";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

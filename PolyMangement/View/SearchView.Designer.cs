@@ -45,7 +45,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(24, 80);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1224, 456);
+            this.dataGridView1.Size = new System.Drawing.Size(1224, 625);
             this.dataGridView1.TabIndex = 0;
             // 
             // dateTimePicker1
@@ -55,8 +55,9 @@
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("新細明體", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dateTimePicker1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dateTimePicker1.Location = new System.Drawing.Point(115, 24);
+            this.dateTimePicker1.MinimumSize = new System.Drawing.Size(250, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(235, 39);
+            this.dateTimePicker1.Size = new System.Drawing.Size(250, 39);
             this.dateTimePicker1.TabIndex = 1;
             // 
             // comboBoxDayNight
@@ -70,6 +71,7 @@
             "日班",
             "夜班"});
             this.comboBoxDayNight.Location = new System.Drawing.Point(411, 24);
+            this.comboBoxDayNight.MinimumSize = new System.Drawing.Size(150, 0);
             this.comboBoxDayNight.Name = "comboBoxDayNight";
             this.comboBoxDayNight.Size = new System.Drawing.Size(177, 39);
             this.comboBoxDayNight.TabIndex = 2;
@@ -78,10 +80,11 @@
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.AutoSize = true;
             this.btnSearch.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnSearch.Location = new System.Drawing.Point(638, 24);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(105, 39);
+            this.btnSearch.Size = new System.Drawing.Size(105, 41);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "搜尋";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -90,8 +93,9 @@
             // 
             this.btnExportExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportExcel.AutoSize = true;
             this.btnExportExcel.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnExportExcel.Location = new System.Drawing.Point(1140, 24);
+            this.btnExportExcel.Location = new System.Drawing.Point(1000, 24);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(108, 35);
             this.btnExportExcel.TabIndex = 4;
@@ -110,8 +114,10 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "SearchView";
             this.Text = "SearchView";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

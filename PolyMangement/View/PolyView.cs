@@ -220,13 +220,15 @@ namespace PolyMangement.View
                 instance = new PolyView();
                 instance.MdiParent = parenterContainer;
                 instance.FormBorderStyle=FormBorderStyle.None;
-                instance.Dock = DockStyle.Fill;
+                instance.Dock=DockStyle.Fill;
+                instance.AutoSize = true;
+                instance.AutoSizeMode=AutoSizeMode.GrowAndShrink;
             }
             else
             {
                 if (instance.WindowState==FormWindowState.Minimized)
                 {
-                    instance.WindowState = FormWindowState.Maximized;
+                    instance.WindowState = FormWindowState.Normal;
                 }
                 instance.BringToFront();
                 
