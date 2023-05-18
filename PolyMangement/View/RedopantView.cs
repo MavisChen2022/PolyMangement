@@ -14,6 +14,7 @@ namespace PolyMangement.View
     public partial class RedopantView : Form,IRedopantView
     {
         private string recipeName;
+        private string message;
         public RedopantView()
         {
             InitializeComponent();
@@ -59,27 +60,30 @@ namespace PolyMangement.View
         }
         private void ButtonActions()
         {
+            ValidInputValueEvent?.Invoke(this, EventArgs.Empty);
             CalculateTimeIntervalEvent?.Invoke(this, EventArgs.Empty);
             ShowCorrespondRecipeEvent?.Invoke(this, EventArgs.Empty);
             UpdateRecipeNameEvent?.Invoke(this, EventArgs.Empty);
             CalRedopantEvent?.Invoke(this, EventArgs.Empty);
+            MessageBox.Show(message);
         }
 
-        [StringLength(4)]
+
+        [StringLength(4,ErrorMessage ="請輸入Dopant年份")]
         public string StartYearText 
         {
             get => txtStartYear.Text;
             set => txtStartYear.Text=value;
         }
 
-        [StringLength(5,MinimumLength =3)]
+        [StringLength(5,MinimumLength =3, ErrorMessage = "請輸入Dopant日期")]
         public string StartMonthDayText 
         { 
             get => txtStartMD.Text;
             set => txtStartMD.Text=value;
         }
 
-        [StringLength(5, MinimumLength = 4)]
+        [StringLength(5, MinimumLength = 4, ErrorMessage = "請輸入Dopant時間")]
         public string StartHourMinsText 
         { 
             get => txtStartHM.Text;
@@ -101,21 +105,21 @@ namespace PolyMangement.View
             set => lbRedopantTime.Text=value;
         }
 
-        [StringLength(4)]
+        [StringLength(4, ErrorMessage = "請輸入熔完年份")]
         public string EndYearText 
         {
             get => txtEndYear.Text;
             set => txtEndYear.Text=value;
         }
 
-        [StringLength(5, MinimumLength = 3)]
+        [StringLength(5, MinimumLength = 3, ErrorMessage = "請輸入熔完日期")]
         public string EndMonthDayText 
         { 
             get => txtEndMD.Text;
             set => txtEndMD.Text = value;
         }
 
-        [StringLength(5, MinimumLength = 4)]
+        [StringLength(5, MinimumLength = 4, ErrorMessage = "請輸入熔完時間")]
         public string EndHourMinsText 
         {
             get => txtEndHM.Text;
@@ -135,17 +139,25 @@ namespace PolyMangement.View
             get => lbRedopantWeight.Text; 
             set => lbRedopantWeight.Text=value;
         }
+        public string Message 
+        { 
+            get => message; 
+            set => message=value;
+        }
 
         public event EventHandler ShowCorrespondRecipeEvent;
         public event EventHandler CalculateTimeIntervalEvent;
         public event EventHandler CalRedopantEvent;
         public event EventHandler UpdateRecipeNameEvent;
+        public event EventHandler ValidInputValueEvent;
 
         public void SetRedopantBindingSource(BindingSource redopantRecipe)
         {
             dataGridView1.DataSource = redopantRecipe;
         }
         private static RedopantView instance;
+
+
         public static RedopantView GetInstance(Form parenterContainer)
         {
             if (instance == null || instance.IsDisposed)

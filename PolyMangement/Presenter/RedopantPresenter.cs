@@ -18,21 +18,50 @@ namespace PolyMangement.Presenter
         private IRedopantView redopantView;
         private BindingSource redopantBindingSource;
         private DataTable redopantsRecipe;
+        private bool isEmpty;
 
         public RedopantPresenter(IRedopantView redopantView, IRedopantRepository redopantRepository)
         {
             this.redopantBindingSource=new BindingSource();
             this.redopantRepository = redopantRepository;
             this.redopantView = redopantView;
-           
-            this.redopantView.CalculateTimeIntervalEvent += CalculateTimeInterval;  //測完季的記得取消註解+改回來
-            this.redopantView.ShowCorrespondRecipeEvent += ShowCorrespondRecipeRule; 
+
+            this.redopantView.ValidInputValueEvent += ValidationInputValue;
+            this.redopantView.ShowCorrespondRecipeEvent += ShowCorrespondRecipeRule;
             this.redopantView.UpdateRecipeNameEvent += UpdateRecipeName;
-            this.redopantView.CalRedopantEvent += CalRedopant;
+
+            //this.redopantView.CalculateTimeIntervalEvent += CalculateTimeInterval;  
+            //this.redopantView.CalRedopantEvent += CalRedopant;
             this.redopantView.SetRedopantBindingSource(redopantBindingSource);
             redopantView.Show();
         }
 
+        private void ValidationInputValue(object sender, EventArgs e) //未完成，因為和時間和Dopant量的功能有衝突
+        {
+            var model = new testModel();
+            model.startYear = redopantView.StartYearText;
+            model.startMonthDay = redopantView.StartMonthDayText;
+            model.startHourMins = redopantView.StartHourMinsText;
+            model.endYear = redopantView.EndYearText;
+            model.endMonthDay = redopantView.EndMonthDayText;
+            model.endHourMins = redopantView.EndHourMinsText;
+            try
+            {
+                new Coo.ModelDataValidtion().Validate(model);
+                isEmpty = false;
+                redopantView.Message = "計算完成";
+            }
+            catch (Exception ex)
+            {
+                redopantView.Message = ex.Message;
+            }
+            //if (!isEmpty)
+            //{
+            //    this.redopantView.ShowCorrespondRecipeEvent += ShowCorrespondRecipeRule;
+            //    this.redopantView.UpdateRecipeNameEvent += UpdateRecipeName;
+            //    this.redopantView.CalRedopantEvent += CalRedopant;
+            //}
+        }
         private void UpdateRecipeName(object sender, EventArgs e)
         {
             redopantView.RecipeNameText = redopantView.RecipeName;

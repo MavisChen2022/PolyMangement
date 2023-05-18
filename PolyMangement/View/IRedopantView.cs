@@ -21,11 +21,13 @@ namespace PolyMangement.View
         string RecipeName { get;}
         string RecipeNameText { get; set; }
         string RedopantWeightText { get; set; }
+        string Message { get; set; }
 
         event EventHandler ShowCorrespondRecipeEvent;
         event EventHandler CalculateTimeIntervalEvent;
         event EventHandler CalRedopantEvent;
         event EventHandler UpdateRecipeNameEvent;
+        event EventHandler ValidInputValueEvent;
         void SetRedopantBindingSource(BindingSource stockList);
 
         void Show();

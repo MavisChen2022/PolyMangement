@@ -63,6 +63,7 @@ namespace PolyMangement.Repositories
         public string CalRedopant(string recipeName, string hour,string neckTimes)
         {
             string correspondRedopantWeight="";
+            neckTimes=neckTimes == "1" ? "1" : "2";
             using(var conn=new SQLiteConnection(connectionString))
             using (var cmd = new SQLiteCommand())
             {
