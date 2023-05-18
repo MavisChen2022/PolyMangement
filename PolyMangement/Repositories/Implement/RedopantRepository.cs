@@ -53,6 +53,7 @@ namespace PolyMangement.Repositories
         public DataTable ShowCorrespondRecipe(string recipeName, string neckTimes)
         {
             DataTable dataTable = new DataTable();
+            neckTimes = neckTimes == "1" ? "1" : "2";
             using (var conn = new SQLiteConnection(connectionString))
             using (var adapter = new SQLiteDataAdapter($"SELECT hour,{recipeName + neckTimes} FROM redopantTest", conn))
             {
