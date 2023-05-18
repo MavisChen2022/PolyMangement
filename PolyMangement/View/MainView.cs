@@ -20,13 +20,33 @@ namespace PolyMangement.View
 
         private void ButtonFunctionCollection()
         {
-            btnCharge.Click += delegate { ShowStockListEvent?.Invoke(this, EventArgs.Empty); };
-            btnSearch.Click+=delegate { SearchStockListEvent?.Invoke(this, EventArgs.Empty); };
-            btnRedopant.Click+=delegate { CalculateRedopantEvent?.Invoke(this, EventArgs.Empty); }; 
+            btnCharge.Click += delegate 
+            {
+                CloseOtherForms();
+                ShowStockListEvent?.Invoke(this, EventArgs.Empty);
+            };
+            btnSearch.Click+=delegate 
+            {
+                CloseOtherForms();
+                SearchStockListEvent?.Invoke(this, EventArgs.Empty); 
+            };
+            btnRedopant.Click+=delegate 
+            {
+                CloseOtherForms();
+                CalculateRedopantEvent?.Invoke(this, EventArgs.Empty); 
+            }; 
         }
-
+        
         public event EventHandler ShowStockListEvent;
         public event EventHandler SearchStockListEvent;
         public event EventHandler CalculateRedopantEvent;
+        public void CloseOtherForms()
+        {
+            foreach (Form form in MdiChildren)
+            {
+                form.Close();
+                form.Dispose();
+            }
+        }
     }
 }

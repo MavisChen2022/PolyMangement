@@ -58,6 +58,7 @@ namespace PolyMangement.View
                 instance = new SearchView();
                 instance.MdiParent = parenterContainer;
                 instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
             }
             else
             {

@@ -241,7 +241,7 @@
             this.btnRecipe3.Name = "btnRecipe3";
             this.btnRecipe3.Size = new System.Drawing.Size(156, 49);
             this.btnRecipe3.TabIndex = 19;
-            this.btnRecipe3.Text = "Recipe3";
+            this.btnRecipe3.Text = "RecipeC";
             this.btnRecipe3.UseVisualStyleBackColor = true;
             // 
             // btnRecipe4
@@ -251,7 +251,7 @@
             this.btnRecipe4.Name = "btnRecipe4";
             this.btnRecipe4.Size = new System.Drawing.Size(156, 49);
             this.btnRecipe4.TabIndex = 20;
-            this.btnRecipe4.Text = "Recipe4";
+            this.btnRecipe4.Text = "RecipeD";
             this.btnRecipe4.UseVisualStyleBackColor = true;
             // 
             // btnRecipe5
@@ -261,7 +261,7 @@
             this.btnRecipe5.Name = "btnRecipe5";
             this.btnRecipe5.Size = new System.Drawing.Size(156, 49);
             this.btnRecipe5.TabIndex = 21;
-            this.btnRecipe5.Text = "Recipe5";
+            this.btnRecipe5.Text = "RecipeE";
             this.btnRecipe5.UseVisualStyleBackColor = true;
             // 
             // lbRecipeName

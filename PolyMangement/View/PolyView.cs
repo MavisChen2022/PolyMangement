@@ -21,11 +21,11 @@ namespace PolyMangement.View
         public PolyView()
         {
             InitializeComponent();
-            ButtonFunctionList();
+            ButtonCollections();
             tabControl1.TabPages.Remove(ChargeDetail);
         }
 
-        private void ButtonFunctionList()
+        private void ButtonCollections()
         {
             btnAdd.Click += delegate 
             {
@@ -220,14 +220,16 @@ namespace PolyMangement.View
                 instance = new PolyView();
                 instance.MdiParent = parenterContainer;
                 instance.FormBorderStyle=FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
             }
             else
             {
                 if (instance.WindowState==FormWindowState.Minimized)
                 {
-                    instance.WindowState = FormWindowState.Normal;
+                    instance.WindowState = FormWindowState.Maximized;
                 }
                 instance.BringToFront();
+                
             }
             return instance;
         }
