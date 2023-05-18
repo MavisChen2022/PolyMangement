@@ -60,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IsExternalInit.cs" />
-    <Compile Include="Model\testModel.cs" />
+    <Compile Include="Model\ValidationModel.cs" />
     <Compile Include="Presenter\Coo\ModelDataValidtion.cs" />
     <Compile Include="Repositories\Interface\IPolyRepository.cs" />
     <Compile Include="Repositories\Interface\IRedopantRepository.cs" />

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PolyMangement.Model
 {
-    public class testModel
+    public class ValidationModel
     {
         [DisplayName("Dopant年份")]
         [Required(ErrorMessage = "請輸入Dopant年份")]
