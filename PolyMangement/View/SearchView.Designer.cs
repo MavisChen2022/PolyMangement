@@ -64,16 +64,16 @@
             // 
             this.comboBoxDayNight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBoxDayNight.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.comboBoxDayNight.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.comboBoxDayNight.FormattingEnabled = true;
             this.comboBoxDayNight.Items.AddRange(new object[] {
             "當班使用情況",
             "日班",
             "夜班"});
-            this.comboBoxDayNight.Location = new System.Drawing.Point(411, 24);
+            this.comboBoxDayNight.Location = new System.Drawing.Point(384, 24);
             this.comboBoxDayNight.MinimumSize = new System.Drawing.Size(150, 0);
             this.comboBoxDayNight.Name = "comboBoxDayNight";
-            this.comboBoxDayNight.Size = new System.Drawing.Size(177, 39);
+            this.comboBoxDayNight.Size = new System.Drawing.Size(200, 34);
             this.comboBoxDayNight.TabIndex = 2;
             // 
             // btnSearch

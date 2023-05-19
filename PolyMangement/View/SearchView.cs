@@ -15,9 +15,13 @@ namespace PolyMangement.View
         public SearchView()
         {
             InitializeComponent();
+            Default();
             ButtonFunctionCollection();
         }
-
+        private void Default()
+        {
+            comboBoxDayNight.Text = "當班使用情況";
+        }
         private void ButtonFunctionCollection()
         {
             btnSearch.Click +=delegate{ SearchEvent?.Invoke(this, EventArgs.Empty); };
