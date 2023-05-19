@@ -40,12 +40,10 @@ namespace PolyMangement.Repositories
                 DataTable table = new DataTable();
                 adapter.Fill(table);
 
-                // 建立一個Excel物件
                 Excel.Application excel = new Excel.Application();
                 Excel.Workbook workbook = excel.Workbooks.Add();
                 Excel.Worksheet worksheet = workbook.ActiveSheet;
 
-                // 將DataGridView中的資料輸出到Excel檔案中
                 for (int i = 0; i < table.Columns.Count; i++)
                 {
                     worksheet.Cells[1, i + 1] = table.Columns[i].ColumnName;
@@ -57,8 +55,7 @@ namespace PolyMangement.Repositories
                         worksheet.Cells[i + 2, j + 1] = table.Rows[i][j].ToString();
                     }
                 }
-                workbook.SaveAs("output.xlsx");  // 儲存Excel檔案
-                // 關閉所有物件
+                workbook.SaveAs("output.xlsx");  
                 workbook.Close();
                 excel.Quit();
                 conn.Close();
@@ -92,7 +89,10 @@ namespace PolyMangement.Repositories
                 targetStart = shift == "日班" ? selectedTime.ToString("yyyy-MM-dd 08:00:00") : selectedTime.ToString("yyyy-MM-dd 20:00:00");
                 targetEnd = shift == "日班" ? selectedTime.ToString("yyyy-MM-dd 20:00:00") : selectedTime.AddDays(1).ToString("yyyy-MM-dd 08:00:00");
             }
-            return $"SELECT * FROM  test WHERE time>='{targetStart}' AND time<'{targetEnd}'";
+            return $@"SELECT id,machine,SUM(pca),SUM(xinhua),SUM(aSpoly),SUM(aRpoly),SUM(hemlock),
+                    SUM(asDopant),SUM(phDopant),SUM(bDopant),SUM(aqm) ,SUM(yoxing),SUM(aqmG3),SUM(mejing),time
+                    FROM  test
+                    WHERE time>='{targetStart}' AND time<'{targetEnd}' GROUP BY machine";
         }
     }
 }

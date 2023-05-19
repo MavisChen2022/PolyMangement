@@ -42,6 +42,7 @@ namespace PolyMangement.View
         string RemainAQMG3 { get; set; }
         string RemainMeJing { get; set; }
 
+
         event EventHandler AddEvent;
         event EventHandler EditEvent;
         event EventHandler DeleteEvent;
