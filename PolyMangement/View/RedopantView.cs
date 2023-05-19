@@ -155,9 +155,8 @@ namespace PolyMangement.View
         {
             dataGridView1.DataSource = redopantRecipe;
         }
+
         private static RedopantView instance;
-
-
         public static RedopantView GetInstance(Form parenterContainer)
         {
             if (instance == null || instance.IsDisposed)

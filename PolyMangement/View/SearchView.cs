@@ -34,6 +34,7 @@ namespace PolyMangement.View
             get => comboBoxDayNight.Text;
             set => comboBoxDayNight.Text=value;
         }
+        private bool isExportCurrentFile;
         public bool IsExportCurrentFile 
         { 
             get => isExportCurrentFile;
@@ -49,8 +50,6 @@ namespace PolyMangement.View
         }
 
         private static SearchView instance;
-        private bool isExportCurrentFile;
-
         public static SearchView GetInstance(Form parenterContainer)
         {
             if (instance == null || instance.IsDisposed)

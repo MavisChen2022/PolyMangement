@@ -77,6 +77,10 @@
     <Compile Include="Repositories\Implement\PolyRepository.cs" />
     <Compile Include="Repositories\Implement\RedopantRepository.cs" />
     <Compile Include="Repositories\Implement\SearchRepository.cs" />
+    <Compile Include="View\BaseView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\IBaseView.cs" />
     <Compile Include="View\IMainView.cs" />
     <Compile Include="View\IPolyView.cs" />
     <Compile Include="View\IRedopantView.cs" />

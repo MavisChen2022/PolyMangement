@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PolyMangement.View
 {
-    public partial class PolyView : Form,IPolyView
+    public partial class PolyView : Form, IPolyView
     {
         private bool isEdit;
         private bool aqmRad;
@@ -199,6 +199,7 @@ namespace PolyMangement.View
             get => lbMejing.Text;
             set => lbMejing.Text=value;
         }
+        
 
         public event EventHandler AddEvent;
         public event EventHandler EditEvent;
@@ -210,30 +211,29 @@ namespace PolyMangement.View
         {
             dataGridView1.DataSource = stockList;
         }
-
-
-        private static PolyView instance;
+        public static PolyView instance;
         public static PolyView GetInstance(Form parenterContainer)
         {
-            if (instance==null || instance.IsDisposed)
+            if (instance == null || instance.IsDisposed)
             {
                 instance = new PolyView();
                 instance.MdiParent = parenterContainer;
-                instance.FormBorderStyle=FormBorderStyle.None;
-                instance.Dock=DockStyle.Fill;
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
                 instance.AutoSize = true;
-                instance.AutoSizeMode=AutoSizeMode.GrowAndShrink;
+                instance.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             }
             else
             {
-                if (instance.WindowState==FormWindowState.Minimized)
+                if (instance.WindowState == FormWindowState.Minimized)
                 {
                     instance.WindowState = FormWindowState.Normal;
                 }
                 instance.BringToFront();
-                
+
             }
             return instance;
         }
+
     }
 }
