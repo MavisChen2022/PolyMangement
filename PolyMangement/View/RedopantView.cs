@@ -27,8 +27,12 @@ namespace PolyMangement.View
             comboboxNeckTimes.SelectedItem = "1";
             txtStartYear.Text = DateTime.Now.Year.ToString();
             txtEndYear.Text = DateTime.Now.Year.ToString();
+            txtStartYear.MaxLength = 4;
             txtStartMD.MaxLength = 5;
             txtStartHM.MaxLength = 4;
+            txtEndYear.MaxLength = 4;
+            txtEndMD.MaxLength = 5;
+            txtEndHM.MaxLength = 4;
         }
         private void ButtonCollections()
         {
@@ -67,23 +71,19 @@ namespace PolyMangement.View
             CalRedopantEvent?.Invoke(this, EventArgs.Empty);
             MessageBox.Show(message);
         }
-
-
-        [StringLength(4,ErrorMessage ="請輸入Dopant年份")]
+        
         public string StartYearText 
         {
             get => txtStartYear.Text;
             set => txtStartYear.Text=value;
         }
 
-        [StringLength(5,MinimumLength =3, ErrorMessage = "請輸入Dopant日期")]
         public string StartMonthDayText 
         { 
             get => txtStartMD.Text;
             set => txtStartMD.Text=value;
         }
 
-        [StringLength(5, MinimumLength = 4, ErrorMessage = "請輸入Dopant時間")]
         public string StartHourMinsText 
         { 
             get => txtStartHM.Text;
@@ -105,21 +105,18 @@ namespace PolyMangement.View
             set => lbRedopantTime.Text=value;
         }
 
-        [StringLength(4, ErrorMessage = "請輸入熔完年份")]
         public string EndYearText 
         {
             get => txtEndYear.Text;
             set => txtEndYear.Text=value;
         }
 
-        [StringLength(5, MinimumLength = 3, ErrorMessage = "請輸入熔完日期")]
         public string EndMonthDayText 
         { 
             get => txtEndMD.Text;
             set => txtEndMD.Text = value;
         }
 
-        [StringLength(5, MinimumLength = 4, ErrorMessage = "請輸入熔完時間")]
         public string EndHourMinsText 
         {
             get => txtEndHM.Text;
