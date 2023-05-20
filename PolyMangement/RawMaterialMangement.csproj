@@ -80,11 +80,18 @@
     <Compile Include="View\BaseView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\IBaseView.cs" />
-    <Compile Include="View\IMainView.cs" />
-    <Compile Include="View\IPolyView.cs" />
-    <Compile Include="View\IRedopantView.cs" />
-    <Compile Include="View\ISearchView.cs" />
+    <Compile Include="View\Interface\CorrectView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Interface\CorrectView.Designer.cs">
+      <DependentUpon>CorrectView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Interface\IBaseView.cs" />
+    <Compile Include="View\Interface\ICorrectAmount.cs" />
+    <Compile Include="View\Interface\IMainView.cs" />
+    <Compile Include="View\Interface\IPolyView.cs" />
+    <Compile Include="View\Interface\IRedopantView.cs" />
+    <Compile Include="View\Interface\ISearchView.cs" />
     <Compile Include="View\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +125,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Interface\CorrectView.resx">
+      <DependentUpon>CorrectView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
