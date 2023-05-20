@@ -26,7 +26,6 @@ namespace PolyMangement.Presenter
             this.polyView.EditEvent += EditPoly;
             this.polyView.DeleteEvent += DeleteRecord;
             this.polyView.SaveEvent += SaveRecord;
-            this.polyView.CancelEvent += CancelAction;
             this.polyView.SetPolyBindingSource(polyBindingSource);
             UpdateRemainingStock();
             LoadAllStockList();
@@ -104,7 +103,6 @@ namespace PolyMangement.Presenter
 
             if (polyView.IsEdit)
             {
-                
                 poly.id = int.TryParse(polyView.idText, out _) ? Convert.ToInt32(polyView.idText) : 0;
                 poly.specifiedTime = Convert.ToDateTime(polyView.chargeTime);
                 polyRepository.Edit(poly);

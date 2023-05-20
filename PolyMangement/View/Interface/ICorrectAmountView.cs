@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace PolyMangement.View.Interface
 {
-    public interface ICorrectAmount
+    public interface ICorrectAmountView
     {
+        string machineNum { get; set; }
         string PCAText { get; set; }
         string XinhuaText { get; set; }
         string ASText { get; set; }
@@ -39,7 +40,6 @@ namespace PolyMangement.View.Interface
         string RemainMeJing { get; set; }
 
         event EventHandler CorrectEvent;
-        event EventHandler CancelEvent;
-
+        void Show();
     }
 }

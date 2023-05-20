@@ -10,13 +10,20 @@ using System.Windows.Forms;
 
 namespace PolyMangement.View.Interface
 {
-    public partial class CorrectView : Form,ICorrectAmount
+    public partial class CorrectAmountView : Form,ICorrectAmountView
     {
-        public CorrectView()
+        public CorrectAmountView()
         {
             InitializeComponent();
+            btnCorrect.Click += delegate { CorrectEvent?.Invoke(this, EventArgs.Empty); };
+            btnCancel.Click += delegate { this.Close(); };
         }
-
+        private string defaultLabel = "修正數量";
+        public string machineNum 
+        {
+            get => defaultLabel;
+            set => defaultLabel=value;
+        }
         public string PCAText 
         {
             get => txtPca.Text;
@@ -143,8 +150,31 @@ namespace PolyMangement.View.Interface
             get => lbMeijing.Text;
             set => lbMeijing.Text=value;
         }
+        
 
         public event EventHandler CorrectEvent;
-        public event EventHandler CancelEvent;
+        public static CorrectAmountView instance;
+        public static CorrectAmountView GetInstance(Form parenterContainer)
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new CorrectAmountView();
+                instance.MdiParent = parenterContainer;
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
+                instance.AutoSize = true;
+                instance.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            }
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                {
+                    instance.WindowState = FormWindowState.Normal;
+                }
+                instance.BringToFront();
+
+            }
+            return instance;
+        }
     }
 }

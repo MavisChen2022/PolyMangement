@@ -51,7 +51,6 @@ namespace PolyMangement.View
             };
             btnCancel.Click += delegate 
             { 
-                CancelEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(ChargeDetail);
                 tabControl1.TabPages.Add(ChargeList);
             };
@@ -205,7 +204,6 @@ namespace PolyMangement.View
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
         public event EventHandler SaveEvent;
-        public event EventHandler CancelEvent;
 
         public void SetPolyBindingSource(BindingSource stockList)
         {

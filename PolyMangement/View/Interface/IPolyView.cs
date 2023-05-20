@@ -47,7 +47,6 @@ namespace PolyMangement.View
         event EventHandler EditEvent;
         event EventHandler DeleteEvent;
         event EventHandler SaveEvent;
-        event EventHandler CancelEvent;
 
         void SetPolyBindingSource(BindingSource stockList);
 

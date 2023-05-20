@@ -62,6 +62,9 @@
     <Compile Include="IsExternalInit.cs" />
     <Compile Include="Model\ValidationModel.cs" />
     <Compile Include="Presenter\Coo\ModelDataValidtion.cs" />
+    <Compile Include="Presenter\CorrectAmountPresenter.cs" />
+    <Compile Include="Repositories\Implement\CorrectAmountRepository.cs" />
+    <Compile Include="Repositories\Interface\ICorrectAmountRepository.cs" />
     <Compile Include="Repositories\Interface\IPolyRepository.cs" />
     <Compile Include="Repositories\Interface\IRedopantRepository.cs" />
     <Compile Include="Repositories\Interface\ISearchRepository.cs" />
@@ -80,14 +83,14 @@
     <Compile Include="View\BaseView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Interface\CorrectView.cs">
+    <Compile Include="View\CorrectAmountView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Interface\CorrectView.Designer.cs">
-      <DependentUpon>CorrectView.cs</DependentUpon>
+    <Compile Include="View\CorrectAmountView.Designer.cs">
+      <DependentUpon>CorrectAmountView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Interface\IBaseView.cs" />
-    <Compile Include="View\Interface\ICorrectAmount.cs" />
+    <Compile Include="View\Interface\ICorrectAmountView.cs" />
     <Compile Include="View\Interface\IMainView.cs" />
     <Compile Include="View\Interface\IPolyView.cs" />
     <Compile Include="View\Interface\IRedopantView.cs" />
@@ -125,8 +128,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Interface\CorrectView.resx">
-      <DependentUpon>CorrectView.cs</DependentUpon>
+    <EmbeddedResource Include="View\CorrectAmountView.resx">
+      <DependentUpon>CorrectAmountView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>

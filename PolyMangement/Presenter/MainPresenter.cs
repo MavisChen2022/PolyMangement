@@ -1,6 +1,9 @@
 ﻿using PolyMangement.Model;
 using PolyMangement.Repositories;
+using PolyMangement.Repositories.Implement;
+using PolyMangement.Repositories.Interface;
 using PolyMangement.View;
+using PolyMangement.View.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +25,10 @@ namespace PolyMangement.Presenter
             this.mainview.ShowStockListEvent += ShowStockListView;
             this.mainview.SearchStockListEvent += SearchStockListView;
             this.mainview.CalculateRedopantEvent += CalculateRedopantView;
+            this.mainview.CorrectAmountEvent += CorrectStockAmountView;
         }
+
+       
 
         private void CalculateRedopantView(object sender, EventArgs e)
         {
@@ -43,6 +49,12 @@ namespace PolyMangement.Presenter
             IPolyRepository polyRepository = new PolyRepository(sqliteConnectionString);
             IPolyView polyView = PolyView.GetInstance((Form)mainview);
             new PolyPresenter(polyView, polyRepository);
+        }
+        private void CorrectStockAmountView(object sender, EventArgs e)
+        {
+            ICorrectAmountRepository correctAmountRepository=new CorrectAmountRepository(sqliteConnectionString);
+            ICorrectAmountView correctAmountView= CorrectAmountView.GetInstance((Form)mainview);
+            new CorrectAmountPresenter(correctAmountView, correctAmountRepository);
         }
     }
 }

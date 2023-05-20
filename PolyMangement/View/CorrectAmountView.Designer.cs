@@ -1,6 +1,6 @@
 ﻿namespace PolyMangement.View.Interface
 {
-    partial class CorrectView
+    partial class CorrectAmountView
     {
         /// <summary>
         /// Required designer variable.
@@ -490,7 +490,7 @@
             this.txtMeijing.Size = new System.Drawing.Size(100, 35);
             this.txtMeijing.TabIndex = 43;
             // 
-            // CorrectView
+            // CorrectAmountView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -539,7 +539,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "CorrectView";
+            this.Name = "CorrectAmountView";
             this.Text = "CorrectView";
             this.ResumeLayout(false);
             this.PerformLayout();

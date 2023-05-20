@@ -32,11 +32,13 @@
             this.btnRedopant = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnCharge = new System.Windows.Forms.Button();
+            this.btnCorrectAmount = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnCorrectAmount);
             this.panel1.Controls.Add(this.btnRedopant);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.btnCharge);
@@ -76,6 +78,16 @@
             this.btnCharge.Text = "領進/出";
             this.btnCharge.UseVisualStyleBackColor = true;
             // 
+            // btnCorrectAmount
+            // 
+            this.btnCorrectAmount.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnCorrectAmount.Location = new System.Drawing.Point(0, 325);
+            this.btnCorrectAmount.Name = "btnCorrectAmount";
+            this.btnCorrectAmount.Size = new System.Drawing.Size(118, 53);
+            this.btnCorrectAmount.TabIndex = 3;
+            this.btnCorrectAmount.Text = "修正\r\n庫存數量\r\n";
+            this.btnCorrectAmount.UseVisualStyleBackColor = true;
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -98,5 +110,6 @@
         private System.Windows.Forms.Button btnRedopant;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnCharge;
+        private System.Windows.Forms.Button btnCorrectAmount;
     }
 }

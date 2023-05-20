@@ -34,12 +34,19 @@ namespace PolyMangement.View
             {
                 CloseOtherForms();
                 CalculateRedopantEvent?.Invoke(this, EventArgs.Empty); 
-            }; 
+            };
+            btnCorrectAmount.Click += delegate
+            {
+                CloseOtherForms();
+                CorrectAmountEvent?.Invoke(this, EventArgs.Empty);
+            };
         }
         
         public event EventHandler ShowStockListEvent;
         public event EventHandler SearchStockListEvent;
         public event EventHandler CalculateRedopantEvent;
+        public event EventHandler CorrectAmountEvent;
+
         public void CloseOtherForms()
         {
             foreach (Form form in MdiChildren)
