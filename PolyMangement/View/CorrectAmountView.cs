@@ -150,10 +150,10 @@ namespace PolyMangement.View.Interface
             get => lbMeijing.Text;
             set => lbMeijing.Text=value;
         }
-        
 
         public event EventHandler CorrectEvent;
         public static CorrectAmountView instance;
+        
         public static CorrectAmountView GetInstance(Form parenterContainer)
         {
             if (instance == null || instance.IsDisposed)

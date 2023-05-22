@@ -27,11 +27,11 @@ namespace PolyMangement.Presenter
             correctAmountView.Show();
         }
 
-        private void CorrectAmount(object sender, EventArgs e)  //暫時先寫成指定只有修正PCA
+        private void CorrectAmount(object sender, EventArgs e)  
         {
-            string pca = correctAmountView.PCAText;
-            string realpca = correctAmountView.RemainPCA;
-            correctAmountRepository.Correct(pca, realpca);
+            List<string> inventoryRecord= new List<string> { correctAmountView.PCAText, correctAmountView.XinhuaText, correctAmountView.ASText, correctAmountView.ARText, correctAmountView.HemlockText,correctAmountView.ASDopantText, correctAmountView.PHDopantText, correctAmountView.BDopantText, correctAmountView.AqmText, correctAmountView.YoxingText, correctAmountView.AqmG3Text, correctAmountView.MejingText };
+            List<string> endingInventory = new List<string> { correctAmountView.RemainPCA, correctAmountView.RemainXinhua, correctAmountView.RemainAS, correctAmountView.RemainAR, correctAmountView.RemainHemLock, correctAmountView.RemainASDopant, correctAmountView.RemainPHDopant, correctAmountView.RemainBDopant, correctAmountView.RemainAQM, correctAmountView.RemainYoXing, correctAmountView.RemainAQMG3, correctAmountView.RemainMeJing };
+            correctAmountRepository.Correct(inventoryRecord, endingInventory);
             UpdateRemainingStock();
         }
         private void UpdateRemainingStock()

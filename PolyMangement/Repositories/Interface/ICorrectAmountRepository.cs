@@ -10,6 +10,6 @@ namespace PolyMangement.Repositories.Interface
     public interface ICorrectAmountRepository
     {
         int UpdateRemainStock(string stockName);
-        void Correct(string poly, string realpoly);
+        void Correct(List<string> inventoryRecord, List<string> endingInventory);
     }
 }
