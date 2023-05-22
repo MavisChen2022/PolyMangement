@@ -21,8 +21,14 @@ namespace PolyMangement.View
         public PolyView()
         {
             InitializeComponent();
+            Default();
             ButtonCollections();
             tabControl1.TabPages.Remove(ChargeDetail);
+        }
+
+        private void Default()
+        {
+            comboBoxMachine.Text = "K01";
         }
 
         private void ButtonCollections()

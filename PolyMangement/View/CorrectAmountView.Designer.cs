@@ -76,6 +76,8 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.Location = new System.Drawing.Point(183, 51);
@@ -86,9 +88,11 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(357, 51);
+            this.label2.Location = new System.Drawing.Point(366, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 31);
             this.label2.TabIndex = 1;
@@ -96,9 +100,11 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(571, 51);
+            this.label3.Location = new System.Drawing.Point(578, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 31);
             this.label3.TabIndex = 2;
@@ -106,6 +112,8 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label4.Location = new System.Drawing.Point(782, 51);
@@ -116,6 +124,8 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label5.Location = new System.Drawing.Point(970, 51);
@@ -128,7 +138,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(200, 236);
+            this.label6.Location = new System.Drawing.Point(190, 236);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 31);
             this.label6.TabIndex = 5;
@@ -138,7 +148,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label7.Location = new System.Drawing.Point(357, 236);
+            this.label7.Location = new System.Drawing.Point(366, 236);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 31);
             this.label7.TabIndex = 6;
@@ -228,7 +238,7 @@
             // 
             this.lbBdopant.AutoSize = true;
             this.lbBdopant.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbBdopant.Location = new System.Drawing.Point(549, 291);
+            this.lbBdopant.Location = new System.Drawing.Point(578, 291);
             this.lbBdopant.Name = "lbBdopant";
             this.lbBdopant.Size = new System.Drawing.Size(114, 31);
             this.lbBdopant.TabIndex = 15;
@@ -238,7 +248,7 @@
             // 
             this.lbPhdopant.AutoSize = true;
             this.lbPhdopant.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbPhdopant.Location = new System.Drawing.Point(338, 291);
+            this.lbPhdopant.Location = new System.Drawing.Point(357, 291);
             this.lbPhdopant.Name = "lbPhdopant";
             this.lbPhdopant.Size = new System.Drawing.Size(129, 31);
             this.lbPhdopant.TabIndex = 16;
@@ -248,7 +258,7 @@
             // 
             this.lbAsdopant.AutoSize = true;
             this.lbAsdopant.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbAsdopant.Location = new System.Drawing.Point(156, 291);
+            this.lbAsdopant.Location = new System.Drawing.Point(183, 291);
             this.lbAsdopant.Name = "lbAsdopant";
             this.lbAsdopant.Size = new System.Drawing.Size(122, 31);
             this.lbAsdopant.TabIndex = 17;
@@ -258,7 +268,7 @@
             // 
             this.lbHemlock.AutoSize = true;
             this.lbHemlock.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbHemlock.Location = new System.Drawing.Point(970, 95);
+            this.lbHemlock.Location = new System.Drawing.Point(1009, 95);
             this.lbHemlock.Name = "lbHemlock";
             this.lbHemlock.Size = new System.Drawing.Size(113, 31);
             this.lbHemlock.TabIndex = 18;
@@ -268,7 +278,7 @@
             // 
             this.lbArpoly.AutoSize = true;
             this.lbArpoly.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbArpoly.Location = new System.Drawing.Point(767, 95);
+            this.lbArpoly.Location = new System.Drawing.Point(775, 95);
             this.lbArpoly.Name = "lbArpoly";
             this.lbArpoly.Size = new System.Drawing.Size(87, 31);
             this.lbArpoly.TabIndex = 19;
@@ -278,7 +288,7 @@
             // 
             this.lbAspoly.AutoSize = true;
             this.lbAspoly.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbAspoly.Location = new System.Drawing.Point(556, 95);
+            this.lbAspoly.Location = new System.Drawing.Point(578, 95);
             this.lbAspoly.Name = "lbAspoly";
             this.lbAspoly.Size = new System.Drawing.Size(89, 31);
             this.lbAspoly.TabIndex = 20;
@@ -288,7 +298,7 @@
             // 
             this.lbXinhua.AutoSize = true;
             this.lbXinhua.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbXinhua.Location = new System.Drawing.Point(348, 95);
+            this.lbXinhua.Location = new System.Drawing.Point(366, 95);
             this.lbXinhua.Name = "lbXinhua";
             this.lbXinhua.Size = new System.Drawing.Size(92, 31);
             this.lbXinhua.TabIndex = 21;
@@ -298,7 +308,7 @@
             // 
             this.lbPca.AutoSize = true;
             this.lbPca.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbPca.Location = new System.Drawing.Point(183, 95);
+            this.lbPca.Location = new System.Drawing.Point(190, 95);
             this.lbPca.Name = "lbPca";
             this.lbPca.Size = new System.Drawing.Size(55, 31);
             this.lbPca.TabIndex = 22;
@@ -308,7 +318,7 @@
             // 
             this.lbMeijing.AutoSize = true;
             this.lbMeijing.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbMeijing.Location = new System.Drawing.Point(759, 504);
+            this.lbMeijing.Location = new System.Drawing.Point(782, 504);
             this.lbMeijing.Name = "lbMeijing";
             this.lbMeijing.Size = new System.Drawing.Size(103, 31);
             this.lbMeijing.TabIndex = 23;
@@ -318,7 +328,7 @@
             // 
             this.lbAqmG3.AutoSize = true;
             this.lbAqmG3.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbAqmG3.Location = new System.Drawing.Point(557, 504);
+            this.lbAqmG3.Location = new System.Drawing.Point(578, 504);
             this.lbAqmG3.Name = "lbAqmG3";
             this.lbAqmG3.Size = new System.Drawing.Size(98, 31);
             this.lbAqmG3.TabIndex = 24;
@@ -328,7 +338,7 @@
             // 
             this.lbYoxing.AutoSize = true;
             this.lbYoxing.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbYoxing.Location = new System.Drawing.Point(347, 504);
+            this.lbYoxing.Location = new System.Drawing.Point(366, 504);
             this.lbYoxing.Name = "lbYoxing";
             this.lbYoxing.Size = new System.Drawing.Size(93, 31);
             this.lbYoxing.TabIndex = 25;
@@ -338,7 +348,7 @@
             // 
             this.lbAqm.AutoSize = true;
             this.lbAqm.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbAqm.Location = new System.Drawing.Point(172, 504);
+            this.lbAqm.Location = new System.Drawing.Point(183, 504);
             this.lbAqm.Name = "lbAqm";
             this.lbAqm.Size = new System.Drawing.Size(66, 31);
             this.lbAqm.TabIndex = 26;
@@ -376,8 +386,9 @@
             // 
             // btnCorrect
             // 
+            this.btnCorrect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCorrect.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnCorrect.Location = new System.Drawing.Point(1154, 197);
+            this.btnCorrect.Location = new System.Drawing.Point(1154, 269);
             this.btnCorrect.Name = "btnCorrect";
             this.btnCorrect.Size = new System.Drawing.Size(118, 53);
             this.btnCorrect.TabIndex = 30;
@@ -386,8 +397,9 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnCancel.Location = new System.Drawing.Point(1154, 342);
+            this.btnCancel.Location = new System.Drawing.Point(1154, 461);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(118, 53);
             this.btnCancel.TabIndex = 31;
@@ -429,7 +441,7 @@
             // txtHemlock
             // 
             this.txtHemlock.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtHemlock.Location = new System.Drawing.Point(983, 149);
+            this.txtHemlock.Location = new System.Drawing.Point(976, 149);
             this.txtHemlock.Name = "txtHemlock";
             this.txtHemlock.Size = new System.Drawing.Size(100, 35);
             this.txtHemlock.TabIndex = 36;
@@ -541,6 +553,7 @@
             this.Controls.Add(this.label1);
             this.Name = "CorrectAmountView";
             this.Text = "CorrectView";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 
