@@ -18,12 +18,6 @@ namespace PolyMangement.View.Interface
             btnCorrect.Click += delegate { CorrectEvent?.Invoke(this, EventArgs.Empty); };
             btnCancel.Click += delegate { this.Close(); };
         }
-        private string defaultLabel = "修正數量";
-        public string machineNum 
-        {
-            get => defaultLabel;
-            set => defaultLabel=value;
-        }
         public string PCAText 
         {
             get => txtPca.Text;

@@ -8,7 +8,6 @@ namespace PolyMangement.View.Interface
 {
     public interface ICorrectAmountView
     {
-        string machineNum { get; set; }
         string PCAText { get; set; }
         string XinhuaText { get; set; }
         string ASText { get; set; }

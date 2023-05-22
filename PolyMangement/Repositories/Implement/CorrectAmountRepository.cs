@@ -41,7 +41,7 @@ namespace PolyMangement.Repositories.Implement
                         cmd.Parameters.Add(stockNameList[i], DbType.Int32).Value = different;
                     }
                 }
-                cmd.Parameters.Add("@machine", DbType.String).Value = "修正";
+                cmd.Parameters.Add("@machine", DbType.String).Value = "修正數量";
                 cmd.Parameters.Add("@time", DbType.DateTime).Value = DateTime.Now;
                 cmd.ExecuteNonQuery();
             }
