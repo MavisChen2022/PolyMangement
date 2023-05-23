@@ -21,6 +21,9 @@ namespace PolyMangement.Presenter
             this.passwordValidtionView = passwordValidtionView;
             this.passwordValidationRepository = passwordValidationRepository;
             passwordValidtionView.PasswordValidationEvent += PasswordValidation;
+        }
+        public void Show()
+        {
             passwordValidtionView.Show();
         }
         private void PasswordValidation(object sender, EventArgs e)

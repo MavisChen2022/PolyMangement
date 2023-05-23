@@ -17,50 +17,92 @@ namespace PolyMangement.Presenter
     {
         private IMainView mainview;
         private readonly string sqliteConnectionString;
+        private PolyPresenter _polyPresenter;
+        private SearchPresenter _searchPresenter;
+        private RedopantPresenter _redopantPresenter;
+        private PasswordValidationPresenter _passwordValidationPresenter;
 
         public MainPresenter(IMainView mainview, string sqliteConnectionString)
         {
             this.mainview = mainview;
             this.sqliteConnectionString = sqliteConnectionString;
-            mainview.ShowStockListEvent += ShowStockListView;
+            mainview.ShowStockListEvent += StockListView;
             mainview.SearchStockListEvent += SearchStockListView;
             mainview.CalculateRedopantEvent += CalculateRedopantView;
             mainview.PasswordValidEvent += PasswordValidView;
         }
 
-       
-
-        private void CalculateRedopantView(object sender, EventArgs e)
+        private void StockListView(object sender, EventArgs e)
         {
-            IRedopantRepository redopantRepository = new RedopantRepository(sqliteConnectionString);
-            IRedopantView redopantView = RedopantView.GetInstance((Form)mainview);
-            new RedopantPresenter(redopantView, redopantRepository);
+            SetStockPresenter();
+            ShowStockListView();
+        }
+        private void SetStockPresenter()
+        {
+            IPolyRepository polyRepository = new PolyRepository(sqliteConnectionString);
+            IPolyView polyView = PolyView.GetInstance((Form)mainview);
+            _polyPresenter = new PolyPresenter(polyView, polyRepository);
+        }
+        private void ShowStockListView()
+        {
+            _polyPresenter.Show();
         }
 
         private void SearchStockListView(object sender, EventArgs e)
         {
-            ISearchRepository searchRepository=new SearchRepository(sqliteConnectionString);
+            SetSearchPresenter();
+            ShowSearchView();
+        }
+        private void SetSearchPresenter()
+        {
+            ISearchRepository searchRepository = new SearchRepository(sqliteConnectionString);
             ISearchView searchView = SearchView.GetInstance((Form)mainview);
-            new SearchPresenter(searchView, searchRepository);
+            _searchPresenter = new SearchPresenter(searchView, searchRepository);
+        }
+        private void ShowSearchView()
+        {
+            _searchPresenter.Show();
         }
 
-        private void ShowStockListView(object sender, EventArgs e)
+        private void CalculateRedopantView(object sender, EventArgs e)
         {
-            IPolyRepository polyRepository = new PolyRepository(sqliteConnectionString);
-            IPolyView polyView = PolyView.GetInstance((Form)mainview);
-            new PolyPresenter(polyView, polyRepository);
+            SetRedopantPresenter();
+            ShowRedopantView();
         }
-        private void CorrectStockAmountView(object sender, EventArgs e)
+        private void SetRedopantPresenter()
+        {
+            IRedopantRepository redopantRepository = new RedopantRepository(sqliteConnectionString);
+            IRedopantView redopantView = RedopantView.GetInstance((Form)mainview);
+            _redopantPresenter = new RedopantPresenter(redopantView, redopantRepository);
+        }
+        private void ShowRedopantView()
+        {
+            _redopantPresenter.Show();
+        }
+        
+        private void PasswordValidView(object sender, EventArgs e)
+        {
+            SetPasswordValidationPresenter();
+            ShowPasswordValidationView();
+        }
+        private void SetPasswordValidationPresenter()
+        {
+            IPasswordValidationRepository passwordValidationRepository = new PasswordValidationRepository(sqliteConnectionString);
+            IPasswordValidtionView passwordValidtionView = new PasswordValidtionView();
+            _passwordValidationPresenter = new PasswordValidationPresenter(passwordValidtionView, passwordValidationRepository);
+        }
+        private void ShowPasswordValidationView()
+        {
+            _passwordValidationPresenter.Show();
+        }
+
+
+        private void CorrectStockAmountView(object sender, EventArgs e)  //先行保留
         {
             ICorrectAmountRepository correctAmountRepository = new CorrectAmountRepository(sqliteConnectionString);
             ICorrectAmountView correctAmountView = CorrectAmountView.GetInstance((Form)mainview);
             new CorrectAmountPresenter(correctAmountView, correctAmountRepository);
         }
-        private void PasswordValidView(object sender, EventArgs e)
-        {
-            IPasswordValidationRepository passwordValidationRepository = new PasswordValidationRepository(sqliteConnectionString);
-            IPasswordValidtionView passwordValidtionView = new PasswordValidtionView();
-            new PasswordValidationPresenter(passwordValidtionView, passwordValidationRepository);
-        }
+
     }
 }

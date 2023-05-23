@@ -53,7 +53,7 @@
             this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("新細明體", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dateTimePicker1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(52, 20);
+            this.dateTimePicker1.Location = new System.Drawing.Point(95, 20);
             this.dateTimePicker1.MinimumSize = new System.Drawing.Size(250, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(250, 39);
@@ -89,7 +89,7 @@
             // 
             this.btnExportExcel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnExportExcel.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnExportExcel.Location = new System.Drawing.Point(1085, 20);
+            this.btnExportExcel.Location = new System.Drawing.Point(1040, 19);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(163, 39);
             this.btnExportExcel.TabIndex = 4;

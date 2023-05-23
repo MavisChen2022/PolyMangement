@@ -30,9 +30,12 @@ namespace PolyMangement.Presenter
             redopantView.ShowCorrespondRecipeEvent += ShowCorrespondRecipeRule;
             redopantView.UpdateRecipeNameEvent += UpdateRecipeName;
             redopantView.SetRedopantBindingSource(redopantBindingSource);
+            
+        }
+        public void Show()
+        {
             redopantView.Show();
         }
-
         private void HavingCompleteInformationCanDo()
         {
             if (isEmpty==false)

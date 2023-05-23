@@ -24,6 +24,9 @@ namespace PolyMangement.Presenter
 
             UpdateRemainingStock();
             correctAmountView.CorrectEvent += CorrectAmount;
+        }
+        public void Show()
+        {
             correctAmountView.Show();
         }
 

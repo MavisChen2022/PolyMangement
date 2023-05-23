@@ -27,6 +27,9 @@ namespace PolyMangement.Presenter
 
             searchView.SetSearchBindingSource(SearchBindingSource);
             LoadCurrentCondition();
+        }
+        public void Show()
+        {
             searchView.Show();
         }
 

@@ -14,6 +14,7 @@ namespace PolyMangement.Repositories.Implement
 {
     public class PasswordValidationRepository : BaseRepository,IPasswordValidationRepository
     {
+        private CorrectAmountPresenter _correctAmountPresenter;
         public PasswordValidationRepository(string connection)
         {
             connectionString = connection;
@@ -37,11 +38,20 @@ namespace PolyMangement.Repositories.Implement
             return hashedPwd;
         }
 
-        public void ShowCorrectAmountWindows()  
+        public void ShowCorrectAmountWindows()
+        {
+            SetCorrectAmountPresenter();
+            ShowCorrectAmountView();
+        }
+        private void SetCorrectAmountPresenter()
         {
             ICorrectAmountRepository correctAmountRepository = new CorrectAmountRepository(connectionString);
             ICorrectAmountView correctAmountView = new CorrectAmountView();
-            new CorrectAmountPresenter(correctAmountView, correctAmountRepository);
+            _correctAmountPresenter=new CorrectAmountPresenter(correctAmountView, correctAmountRepository);
+        }
+        private void ShowCorrectAmountView()
+        {
+            _correctAmountPresenter.Show();
         }
     }
 }

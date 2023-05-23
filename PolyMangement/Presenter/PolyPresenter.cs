@@ -29,6 +29,9 @@ namespace PolyMangement.Presenter
             polyView.SetPolyBindingSource(polyBindingSource);
             UpdateRemainingStock();
             LoadAllStockList();
+        }
+        public void Show()
+        {
             polyView.Show();
         }
 
