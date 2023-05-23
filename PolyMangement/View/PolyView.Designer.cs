@@ -58,16 +58,6 @@
             this.ChargeList = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
             this.ChargeDetail = new System.Windows.Forms.TabPage();
             this.lbId = new System.Windows.Forms.Label();
             this.lbTime = new System.Windows.Forms.Label();
@@ -106,8 +96,6 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.Location = new System.Drawing.Point(19, 44);
@@ -118,11 +106,9 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(406, 44);
+            this.label2.Location = new System.Drawing.Point(322, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 24);
             this.label2.TabIndex = 1;
@@ -130,11 +116,9 @@
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(101, 44);
+            this.label5.Location = new System.Drawing.Point(88, 44);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 24);
             this.label5.TabIndex = 4;
@@ -142,12 +126,10 @@
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(544, 44);
+            this.label6.Location = new System.Drawing.Point(479, 44);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 24);
             this.label6.TabIndex = 5;
@@ -155,12 +137,10 @@
             // 
             // label7
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label7.ForeColor = System.Drawing.Color.Green;
-            this.label7.Location = new System.Drawing.Point(761, 44);
+            this.label7.Location = new System.Drawing.Point(629, 44);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(29, 24);
             this.label7.TabIndex = 6;
@@ -168,12 +148,10 @@
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label8.ForeColor = System.Drawing.Color.Blue;
-            this.label8.Location = new System.Drawing.Point(650, 44);
+            this.label8.Location = new System.Drawing.Point(551, 44);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 24);
             this.label8.TabIndex = 7;
@@ -185,7 +163,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label9.Location = new System.Drawing.Point(841, 44);
+            this.label9.Location = new System.Drawing.Point(721, 44);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 24);
             this.label9.TabIndex = 8;
@@ -197,7 +175,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label10.Location = new System.Drawing.Point(1185, 44);
+            this.label10.Location = new System.Drawing.Point(1075, 44);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 24);
             this.label10.TabIndex = 9;
@@ -209,7 +187,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label11.Location = new System.Drawing.Point(1028, 44);
+            this.label11.Location = new System.Drawing.Point(909, 44);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(122, 24);
             this.label11.TabIndex = 10;
@@ -221,7 +199,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label12.Location = new System.Drawing.Point(949, 44);
+            this.label12.Location = new System.Drawing.Point(819, 44);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(48, 24);
             this.label12.TabIndex = 11;
@@ -229,8 +207,6 @@
             // 
             // lbPCA
             // 
-            this.lbPCA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbPCA.AutoSize = true;
             this.lbPCA.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbPCA.Location = new System.Drawing.Point(29, 81);
@@ -238,19 +214,19 @@
             this.lbPCA.Size = new System.Drawing.Size(21, 24);
             this.lbPCA.TabIndex = 12;
             this.lbPCA.Text = "0";
+            this.lbPCA.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbAsDopant
             // 
-            this.lbAsDopant.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbAsDopant.AutoSize = true;
             this.lbAsDopant.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbAsDopant.ForeColor = System.Drawing.Color.Red;
-            this.lbAsDopant.Location = new System.Drawing.Point(552, 81);
+            this.lbAsDopant.Location = new System.Drawing.Point(470, 81);
             this.lbAsDopant.Name = "lbAsDopant";
             this.lbAsDopant.Size = new System.Drawing.Size(21, 24);
             this.lbAsDopant.TabIndex = 13;
             this.lbAsDopant.Text = "0";
+            this.lbAsDopant.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbYoXin
             // 
@@ -258,37 +234,36 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbYoXin.AutoSize = true;
             this.lbYoXin.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbYoXin.Location = new System.Drawing.Point(965, 81);
+            this.lbYoXin.Location = new System.Drawing.Point(832, 81);
             this.lbYoXin.Name = "lbYoXin";
             this.lbYoXin.Size = new System.Drawing.Size(21, 24);
             this.lbYoXin.TabIndex = 14;
             this.lbYoXin.Text = "0";
+            this.lbYoXin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbBDopant
             // 
-            this.lbBDopant.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbBDopant.AutoSize = true;
             this.lbBDopant.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbBDopant.ForeColor = System.Drawing.Color.Green;
-            this.lbBDopant.Location = new System.Drawing.Point(769, 81);
+            this.lbBDopant.Location = new System.Drawing.Point(629, 81);
             this.lbBDopant.Name = "lbBDopant";
             this.lbBDopant.Size = new System.Drawing.Size(21, 24);
             this.lbBDopant.TabIndex = 15;
             this.lbBDopant.Text = "0";
+            this.lbBDopant.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbPhDopant
             // 
-            this.lbPhDopant.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbPhDopant.AutoSize = true;
             this.lbPhDopant.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbPhDopant.ForeColor = System.Drawing.Color.Blue;
-            this.lbPhDopant.Location = new System.Drawing.Point(658, 81);
+            this.lbPhDopant.Location = new System.Drawing.Point(542, 81);
             this.lbPhDopant.Name = "lbPhDopant";
             this.lbPhDopant.Size = new System.Drawing.Size(21, 24);
             this.lbPhDopant.TabIndex = 16;
             this.lbPhDopant.Text = "0";
+            this.lbPhDopant.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbAQM
             // 
@@ -296,59 +271,56 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbAQM.AutoSize = true;
             this.lbAQM.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbAQM.Location = new System.Drawing.Point(859, 81);
+            this.lbAQM.Location = new System.Drawing.Point(739, 81);
             this.lbAQM.Name = "lbAQM";
             this.lbAQM.Size = new System.Drawing.Size(21, 24);
             this.lbAQM.TabIndex = 17;
             this.lbAQM.Text = "0";
+            this.lbAQM.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbHemLock
             // 
-            this.lbHemLock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbHemLock.AutoSize = true;
             this.lbHemLock.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbHemLock.Location = new System.Drawing.Point(444, 81);
+            this.lbHemLock.Location = new System.Drawing.Point(355, 81);
             this.lbHemLock.Name = "lbHemLock";
             this.lbHemLock.Size = new System.Drawing.Size(21, 24);
             this.lbHemLock.TabIndex = 18;
             this.lbHemLock.Text = "0";
+            this.lbHemLock.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbAR
             // 
-            this.lbAR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbAR.AutoSize = true;
             this.lbAR.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbAR.Location = new System.Drawing.Point(324, 81);
+            this.lbAR.Location = new System.Drawing.Point(257, 81);
             this.lbAR.Name = "lbAR";
             this.lbAR.Size = new System.Drawing.Size(21, 24);
             this.lbAR.TabIndex = 19;
             this.lbAR.Text = "0";
+            this.lbAR.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbAS
             // 
-            this.lbAS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbAS.AutoSize = true;
             this.lbAS.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbAS.Location = new System.Drawing.Point(222, 81);
+            this.lbAS.Location = new System.Drawing.Point(180, 81);
             this.lbAS.Name = "lbAS";
             this.lbAS.Size = new System.Drawing.Size(21, 24);
             this.lbAS.TabIndex = 20;
             this.lbAS.Text = "0";
+            this.lbAS.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbXinhua
             // 
-            this.lbXinhua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbXinhua.AutoSize = true;
             this.lbXinhua.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbXinhua.Location = new System.Drawing.Point(111, 81);
+            this.lbXinhua.Location = new System.Drawing.Point(104, 81);
             this.lbXinhua.Name = "lbXinhua";
             this.lbXinhua.Size = new System.Drawing.Size(21, 24);
             this.lbXinhua.TabIndex = 21;
             this.lbXinhua.Text = "0";
+            this.lbXinhua.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbMejing
             // 
@@ -356,11 +328,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbMejing.AutoSize = true;
             this.lbMejing.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbMejing.Location = new System.Drawing.Point(1202, 81);
+            this.lbMejing.Location = new System.Drawing.Point(1089, 81);
             this.lbMejing.Name = "lbMejing";
             this.lbMejing.Size = new System.Drawing.Size(21, 24);
             this.lbMejing.TabIndex = 22;
             this.lbMejing.Text = "0";
+            this.lbMejing.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lbAQMG3
             // 
@@ -368,11 +341,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbAQMG3.AutoSize = true;
             this.lbAQMG3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbAQMG3.Location = new System.Drawing.Point(1084, 81);
+            this.lbAQMG3.Location = new System.Drawing.Point(952, 81);
             this.lbAQMG3.Name = "lbAQMG3";
             this.lbAQMG3.Size = new System.Drawing.Size(21, 24);
             this.lbAQMG3.TabIndex = 23;
             this.lbAQMG3.Text = "0";
+            this.lbAQMG3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // dataGridView1
             // 
@@ -434,16 +408,6 @@
             // 
             this.ChargeList.Controls.Add(this.label4);
             this.ChargeList.Controls.Add(this.label3);
-            this.ChargeList.Controls.Add(this.label38);
-            this.ChargeList.Controls.Add(this.label37);
-            this.ChargeList.Controls.Add(this.label36);
-            this.ChargeList.Controls.Add(this.label34);
-            this.ChargeList.Controls.Add(this.label33);
-            this.ChargeList.Controls.Add(this.label35);
-            this.ChargeList.Controls.Add(this.label32);
-            this.ChargeList.Controls.Add(this.label31);
-            this.ChargeList.Controls.Add(this.label30);
-            this.ChargeList.Controls.Add(this.label29);
             this.ChargeList.Controls.Add(this.dataGridView1);
             this.ChargeList.Controls.Add(this.lbPCA);
             this.ChargeList.Controls.Add(this.lbXinhua);
@@ -480,11 +444,9 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(222, 44);
+            this.label4.Location = new System.Drawing.Point(180, 44);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 24);
             this.label4.TabIndex = 41;
@@ -492,135 +454,13 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(324, 44);
+            this.label3.Location = new System.Drawing.Point(257, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 24);
             this.label3.TabIndex = 40;
             this.label3.Text = "AR";
-            // 
-            // label38
-            // 
-            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label38.Location = new System.Drawing.Point(1164, 18);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(80, 17);
-            this.label38.TabIndex = 39;
-            this.label38.Text = "100100068";
-            // 
-            // label37
-            // 
-            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label37.Location = new System.Drawing.Point(1052, 18);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(80, 17);
-            this.label37.TabIndex = 38;
-            this.label37.Text = "100100068";
-            // 
-            // label36
-            // 
-            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label36.Location = new System.Drawing.Point(932, 18);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(80, 17);
-            this.label36.TabIndex = 37;
-            this.label36.Text = "100100068";
-            // 
-            // label34
-            // 
-            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label34.Location = new System.Drawing.Point(831, 18);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(80, 17);
-            this.label34.TabIndex = 36;
-            this.label34.Text = "100100068";
-            // 
-            // label33
-            // 
-            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label33.Location = new System.Drawing.Point(407, 18);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(80, 17);
-            this.label33.TabIndex = 35;
-            this.label33.Text = "100100068";
-            // 
-            // label35
-            // 
-            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label35.Location = new System.Drawing.Point(89, 18);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(80, 17);
-            this.label35.TabIndex = 34;
-            this.label35.Text = "100100068";
-            // 
-            // label32
-            // 
-            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label32.Location = new System.Drawing.Point(521, 18);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(80, 17);
-            this.label32.TabIndex = 31;
-            this.label32.Text = "100100068";
-            // 
-            // label31
-            // 
-            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label31.Location = new System.Drawing.Point(626, 18);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(80, 17);
-            this.label31.TabIndex = 30;
-            this.label31.Text = "100100068";
-            // 
-            // label30
-            // 
-            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label30.Location = new System.Drawing.Point(732, 18);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(80, 17);
-            this.label30.TabIndex = 29;
-            this.label30.Text = "100100068";
-            // 
-            // label29
-            // 
-            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label29.Location = new System.Drawing.Point(3, 18);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(80, 17);
-            this.label29.TabIndex = 28;
-            this.label29.Text = "100100068";
             // 
             // ChargeDetail
             // 
@@ -1022,16 +862,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RadioButton radioButtonMejing;

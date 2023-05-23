@@ -138,6 +138,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
             this.label6.Location = new System.Drawing.Point(190, 236);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 31);
@@ -148,6 +149,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label7.ForeColor = System.Drawing.Color.Blue;
             this.label7.Location = new System.Drawing.Point(366, 236);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 31);
@@ -158,6 +160,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label8.ForeColor = System.Drawing.Color.Green;
             this.label8.Location = new System.Drawing.Point(578, 236);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 31);
@@ -238,31 +241,37 @@
             // 
             this.lbBdopant.AutoSize = true;
             this.lbBdopant.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbBdopant.Location = new System.Drawing.Point(578, 291);
+            this.lbBdopant.ForeColor = System.Drawing.Color.Green;
+            this.lbBdopant.Location = new System.Drawing.Point(562, 291);
             this.lbBdopant.Name = "lbBdopant";
             this.lbBdopant.Size = new System.Drawing.Size(114, 31);
             this.lbBdopant.TabIndex = 15;
             this.lbBdopant.Text = "bdopant";
+            this.lbBdopant.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbPhdopant
             // 
             this.lbPhdopant.AutoSize = true;
             this.lbPhdopant.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbPhdopant.ForeColor = System.Drawing.Color.Blue;
             this.lbPhdopant.Location = new System.Drawing.Point(357, 291);
             this.lbPhdopant.Name = "lbPhdopant";
             this.lbPhdopant.Size = new System.Drawing.Size(129, 31);
             this.lbPhdopant.TabIndex = 16;
             this.lbPhdopant.Text = "phdopant";
+            this.lbPhdopant.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbAsdopant
             // 
             this.lbAsdopant.AutoSize = true;
             this.lbAsdopant.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbAsdopant.ForeColor = System.Drawing.Color.Red;
             this.lbAsdopant.Location = new System.Drawing.Point(183, 291);
             this.lbAsdopant.Name = "lbAsdopant";
             this.lbAsdopant.Size = new System.Drawing.Size(122, 31);
             this.lbAsdopant.TabIndex = 17;
             this.lbAsdopant.Text = "asdopant";
+            this.lbAsdopant.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbHemlock
             // 
@@ -283,6 +292,7 @@
             this.lbArpoly.Size = new System.Drawing.Size(87, 31);
             this.lbArpoly.TabIndex = 19;
             this.lbArpoly.Text = "arpoly";
+            this.lbArpoly.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbAspoly
             // 
@@ -293,6 +303,7 @@
             this.lbAspoly.Size = new System.Drawing.Size(89, 31);
             this.lbAspoly.TabIndex = 20;
             this.lbAspoly.Text = "aspoly";
+            this.lbAspoly.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbXinhua
             // 
@@ -303,6 +314,7 @@
             this.lbXinhua.Size = new System.Drawing.Size(92, 31);
             this.lbXinhua.TabIndex = 21;
             this.lbXinhua.Text = "xinhua";
+            this.lbXinhua.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbPca
             // 
@@ -313,6 +325,7 @@
             this.lbPca.Size = new System.Drawing.Size(55, 31);
             this.lbPca.TabIndex = 22;
             this.lbPca.Text = "pca";
+            this.lbPca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbMeijing
             // 
@@ -323,6 +336,7 @@
             this.lbMeijing.Size = new System.Drawing.Size(103, 31);
             this.lbMeijing.TabIndex = 23;
             this.lbMeijing.Text = "meijing";
+            this.lbMeijing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbAqmG3
             // 
@@ -333,6 +347,7 @@
             this.lbAqmG3.Size = new System.Drawing.Size(98, 31);
             this.lbAqmG3.TabIndex = 24;
             this.lbAqmG3.Text = "aqmG3";
+            this.lbAqmG3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbYoxing
             // 
@@ -343,6 +358,7 @@
             this.lbYoxing.Size = new System.Drawing.Size(93, 31);
             this.lbYoxing.TabIndex = 25;
             this.lbYoxing.Text = "yoxing";
+            this.lbYoxing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbAqm
             // 
@@ -353,6 +369,7 @@
             this.lbAqm.Size = new System.Drawing.Size(66, 31);
             this.lbAqm.TabIndex = 26;
             this.lbAqm.Text = "aqm";
+            this.lbAqm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label28
             // 
