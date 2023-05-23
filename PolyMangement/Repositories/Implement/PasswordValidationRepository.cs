@@ -18,6 +18,7 @@ namespace PolyMangement.Repositories.Implement
         {
             connectionString = connection;
         }
+        //密碼:123
         private readonly string Password = "2WNA7gXfRKzo8ePz3XnqRbhOouNsl6FIM0XvTUa/l2g=";
         public bool IsPasswordIncorrect(string password)  
         {
@@ -36,9 +37,8 @@ namespace PolyMangement.Repositories.Implement
             return hashedPwd;
         }
 
-        public void ShowCorrectAmountWindows()  //待塞回parenterContainer
+        public void ShowCorrectAmountWindows()  
         {
-            IMainView mainview;
             ICorrectAmountRepository correctAmountRepository = new CorrectAmountRepository(connectionString);
             ICorrectAmountView correctAmountView = new CorrectAmountView();
             new CorrectAmountPresenter(correctAmountView, correctAmountRepository);

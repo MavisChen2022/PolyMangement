@@ -25,7 +25,8 @@ namespace PolyMangement.Presenter
         }
         private void PasswordValidation(object sender, EventArgs e)
         {
-            string password=passwordValidtionView.PasswordText;
+            //密碼:123
+            string password =passwordValidtionView.PasswordText;
             bool validationResult=passwordValidationRepository.IsPasswordIncorrect(password);
             if (!validationResult)
             {
