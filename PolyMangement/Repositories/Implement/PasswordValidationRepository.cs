@@ -46,8 +46,8 @@ namespace PolyMangement.Repositories.Implement
         private void SetCorrectAmountPresenter()
         {
             ICorrectAmountRepository correctAmountRepository = new CorrectAmountRepository(connectionString);
-            ICorrectAmountView correctAmountView = new CorrectAmountView();
-            _correctAmountPresenter=new CorrectAmountPresenter(correctAmountView, correctAmountRepository);
+            ICorrectAmountView correctAmountView = CorrectAmountView.GetInstance((Form)MainPresenter.mainview);
+            _correctAmountPresenter =new CorrectAmountPresenter(correctAmountView, correctAmountRepository);
         }
         private void ShowCorrectAmountView()
         {

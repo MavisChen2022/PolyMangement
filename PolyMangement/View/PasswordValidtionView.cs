@@ -37,5 +37,28 @@ namespace PolyMangement.View
         {
             this.Close();
         }
+        public static PasswordValidtionView instance;
+        public static PasswordValidtionView GetInstance(Form parenterContainer)
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new PasswordValidtionView();
+                instance.MdiParent = parenterContainer;
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
+                instance.AutoSize = true;
+                instance.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            }
+            else
+            {
+                if (instance.WindowState == FormWindowState.Minimized)
+                {
+                    instance.WindowState = FormWindowState.Normal;
+                }
+                instance.BringToFront();
+
+            }
+            return instance;
+        }
     }
 }
