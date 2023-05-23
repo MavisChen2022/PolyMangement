@@ -78,12 +78,6 @@ namespace PolyMangement.View.Interface
             get => txtMeijing.Text;
             set => txtMeijing.Text=value;
         }
-
-        public bool IsEdit 
-        { 
-            get => throw new NotImplementedException(); 
-            set => throw new NotImplementedException(); 
-        }
         public string RemainPCA 
         {
             get => lbPca.Text;
@@ -146,8 +140,9 @@ namespace PolyMangement.View.Interface
         }
 
         public event EventHandler CorrectEvent;
+
+
         public static CorrectAmountView instance;
-        
         public static CorrectAmountView GetInstance(Form parenterContainer)
         {
             if (instance == null || instance.IsDisposed)
