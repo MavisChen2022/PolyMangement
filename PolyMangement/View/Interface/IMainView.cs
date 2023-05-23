@@ -12,5 +12,6 @@ namespace PolyMangement.View
         event EventHandler SearchStockListEvent;
         event EventHandler CalculateRedopantEvent;
         event EventHandler CorrectAmountEvent;
+        event EventHandler PasswordValidEvent;
     }
 }

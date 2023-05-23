@@ -22,11 +22,11 @@ namespace PolyMangement.Presenter
             this.polyView = polyView;
             this.polyRepository = polyRepository;
 
-            this.polyView.AddEvent += AddPoly;
-            this.polyView.EditEvent += EditPoly;
-            this.polyView.DeleteEvent += DeleteRecord;
-            this.polyView.SaveEvent += SaveRecord;
-            this.polyView.SetPolyBindingSource(polyBindingSource);
+            polyView.AddEvent += AddPoly;
+            polyView.EditEvent += EditPoly;
+            polyView.DeleteEvent += DeleteRecord;
+            polyView.SaveEvent += SaveRecord;
+            polyView.SetPolyBindingSource(polyBindingSource);
             UpdateRemainingStock();
             LoadAllStockList();
             polyView.Show();

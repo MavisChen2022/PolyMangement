@@ -22,12 +22,12 @@ namespace PolyMangement.Presenter
             this.searchView = searchView;
             this.searchRepository = searchRepository;
 
-            this.searchView.SearchEvent += SearchSpecifiedDate;
-            this.searchView.ExportExcelEvent += ExportExcelFile;
+            searchView.SearchEvent += SearchSpecifiedDate;
+            searchView.ExportExcelEvent += ExportExcelFile;
 
-            this.searchView.SetSearchBindingSource(SearchBindingSource);
+            searchView.SetSearchBindingSource(SearchBindingSource);
             LoadCurrentCondition();
-            this.searchView.Show();
+            searchView.Show();
         }
 
         private void LoadCurrentCondition()

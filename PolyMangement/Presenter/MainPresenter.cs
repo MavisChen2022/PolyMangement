@@ -22,10 +22,10 @@ namespace PolyMangement.Presenter
         {
             this.mainview = mainview;
             this.sqliteConnectionString = sqliteConnectionString;
-            this.mainview.ShowStockListEvent += ShowStockListView;
-            this.mainview.SearchStockListEvent += SearchStockListView;
-            this.mainview.CalculateRedopantEvent += CalculateRedopantView;
-            this.mainview.CorrectAmountEvent += CorrectStockAmountView;
+            mainview.ShowStockListEvent += ShowStockListView;
+            mainview.SearchStockListEvent += SearchStockListView;
+            mainview.CalculateRedopantEvent += CalculateRedopantView;
+            mainview.PasswordValidEvent += PasswordValidView;
         }
 
        
@@ -52,9 +52,15 @@ namespace PolyMangement.Presenter
         }
         private void CorrectStockAmountView(object sender, EventArgs e)
         {
-            ICorrectAmountRepository correctAmountRepository=new CorrectAmountRepository(sqliteConnectionString);
-            ICorrectAmountView correctAmountView= CorrectAmountView.GetInstance((Form)mainview);
+            ICorrectAmountRepository correctAmountRepository = new CorrectAmountRepository(sqliteConnectionString);
+            ICorrectAmountView correctAmountView = CorrectAmountView.GetInstance((Form)mainview);
             new CorrectAmountPresenter(correctAmountView, correctAmountRepository);
+        }
+        private void PasswordValidView(object sender, EventArgs e)
+        {
+            IPasswordValidationRepository passwordValidationRepository = new PasswordValidationRepository(sqliteConnectionString);
+            IPasswordValidtionView passwordValidtionView = new PasswordValidtionView();
+            new PasswordValidationPresenter(passwordValidtionView, passwordValidationRepository);
         }
     }
 }

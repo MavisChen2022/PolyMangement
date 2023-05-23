@@ -26,10 +26,10 @@ namespace PolyMangement.Presenter
             this.redopantRepository = redopantRepository;
             this.redopantView = redopantView;
 
-            this.redopantView.ValidInputValueEvent += ValidationInputValue;
-            this.redopantView.ShowCorrespondRecipeEvent += ShowCorrespondRecipeRule;
-            this.redopantView.UpdateRecipeNameEvent += UpdateRecipeName;
-            this.redopantView.SetRedopantBindingSource(redopantBindingSource);
+            redopantView.ValidInputValueEvent += ValidationInputValue;
+            redopantView.ShowCorrespondRecipeEvent += ShowCorrespondRecipeRule;
+            redopantView.UpdateRecipeNameEvent += UpdateRecipeName;
+            redopantView.SetRedopantBindingSource(redopantBindingSource);
             redopantView.Show();
         }
 

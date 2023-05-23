@@ -63,8 +63,11 @@
     <Compile Include="Model\ValidationModel.cs" />
     <Compile Include="Presenter\Coo\ModelDataValidtion.cs" />
     <Compile Include="Presenter\CorrectAmountPresenter.cs" />
+    <Compile Include="Presenter\PasswordValidationPresenter.cs" />
     <Compile Include="Repositories\Implement\CorrectAmountRepository.cs" />
+    <Compile Include="Repositories\Implement\PasswordValidationRepository.cs" />
     <Compile Include="Repositories\Interface\ICorrectAmountRepository.cs" />
+    <Compile Include="Repositories\Interface\IPasswordValidationRepository.cs" />
     <Compile Include="Repositories\Interface\IPolyRepository.cs" />
     <Compile Include="Repositories\Interface\IRedopantRepository.cs" />
     <Compile Include="Repositories\Interface\ISearchRepository.cs" />
@@ -92,6 +95,7 @@
     <Compile Include="View\Interface\IBaseView.cs" />
     <Compile Include="View\Interface\ICorrectAmountView.cs" />
     <Compile Include="View\Interface\IMainView.cs" />
+    <Compile Include="View\Interface\IPasswordValidtionView.cs" />
     <Compile Include="View\Interface\IPolyView.cs" />
     <Compile Include="View\Interface\IRedopantView.cs" />
     <Compile Include="View\Interface\ISearchView.cs" />
@@ -100,6 +104,12 @@
     </Compile>
     <Compile Include="View\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PasswordValidtionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PasswordValidtionView.Designer.cs">
+      <DependentUpon>PasswordValidtionView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\PolyView.cs">
       <SubType>Form</SubType>
@@ -133,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PasswordValidtionView.resx">
+      <DependentUpon>PasswordValidtionView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PolyView.resx">
       <DependentUpon>PolyView.cs</DependentUpon>

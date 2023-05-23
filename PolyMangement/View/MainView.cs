@@ -35,10 +35,10 @@ namespace PolyMangement.View
                 CloseOtherForms();
                 CalculateRedopantEvent?.Invoke(this, EventArgs.Empty); 
             };
-            btnCorrectAmount.Click += delegate
+            btnCorrectAndValid.Click += delegate
             {
                 CloseOtherForms();
-                CorrectAmountEvent?.Invoke(this, EventArgs.Empty);
+                PasswordValidEvent?.Invoke(this, EventArgs.Empty);
             };
         }
         
@@ -46,6 +46,7 @@ namespace PolyMangement.View
         public event EventHandler SearchStockListEvent;
         public event EventHandler CalculateRedopantEvent;
         public event EventHandler CorrectAmountEvent;
+        public event EventHandler PasswordValidEvent;
 
         public void CloseOtherForms()
         {
