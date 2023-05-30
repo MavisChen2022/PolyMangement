@@ -23,8 +23,6 @@ namespace PolyMangement.View.Interface
         string MejingText { get; set; }
 
 
-        bool IsEdit { get; set; }
-
         string RemainPCA { get; set; }
         string RemainXinhua { get; set; }
         string RemainAS { get; set; }

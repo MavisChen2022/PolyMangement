@@ -15,16 +15,16 @@ namespace PolyMangement.Presenter
 {
     public class MainPresenter
     {
-        private IMainView mainview;
+        public static IMainView mainview;
         private readonly string sqliteConnectionString;
         private PolyPresenter _polyPresenter;
         private SearchPresenter _searchPresenter;
         private RedopantPresenter _redopantPresenter;
         private PasswordValidationPresenter _passwordValidationPresenter;
 
-        public MainPresenter(IMainView mainview, string sqliteConnectionString)
+        public MainPresenter(IMainView mainvieww, string sqliteConnectionString)
         {
-            this.mainview = mainview;
+            mainview = mainvieww;
             this.sqliteConnectionString = sqliteConnectionString;
             mainview.ShowStockListEvent += StockListView;
             mainview.SearchStockListEvent += SearchStockListView;
@@ -95,14 +95,5 @@ namespace PolyMangement.Presenter
         {
             _passwordValidationPresenter.Show();
         }
-
-
-        private void CorrectStockAmountView(object sender, EventArgs e)  //先行保留
-        {
-            ICorrectAmountRepository correctAmountRepository = new CorrectAmountRepository(sqliteConnectionString);
-            ICorrectAmountView correctAmountView = CorrectAmountView.GetInstance((Form)mainview);
-            new CorrectAmountPresenter(correctAmountView, correctAmountRepository);
-        }
-
     }
 }
