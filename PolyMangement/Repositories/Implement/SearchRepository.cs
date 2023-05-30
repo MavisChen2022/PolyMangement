@@ -92,7 +92,8 @@ namespace PolyMangement.Repositories
             return $@"SELECT id,machine,SUM(pca),SUM(xinhua),SUM(aSpoly),SUM(aRpoly),SUM(hemlock),
                     SUM(asDopant),SUM(phDopant),SUM(bDopant),SUM(aqm) ,SUM(yoxing),SUM(aqmG3),SUM(mejing),time
                     FROM  test
-                    WHERE time>='{targetStart}' AND time<'{targetEnd}' GROUP BY machine";
+                    WHERE time>='{targetStart}' AND time<'{targetEnd}' 
+                    GROUP BY machine";
         }
     }
 }

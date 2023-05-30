@@ -85,6 +85,7 @@
             this.txtStartYear.Name = "txtStartYear";
             this.txtStartYear.Size = new System.Drawing.Size(62, 22);
             this.txtStartYear.TabIndex = 2;
+            this.txtStartYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumberAndBacksapce);
             // 
             // txtStartMD
             // 
@@ -92,6 +93,7 @@
             this.txtStartMD.Name = "txtStartMD";
             this.txtStartMD.Size = new System.Drawing.Size(100, 22);
             this.txtStartMD.TabIndex = 3;
+            this.txtStartMD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlySlashAndNumberAndBacksapce);
             // 
             // txtStartHM
             // 
@@ -99,6 +101,7 @@
             this.txtStartHM.Name = "txtStartHM";
             this.txtStartHM.Size = new System.Drawing.Size(100, 22);
             this.txtStartHM.TabIndex = 4;
+            this.txtStartHM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumberAndBacksapce);
             // 
             // txtEndHM
             // 
@@ -106,6 +109,7 @@
             this.txtEndHM.Name = "txtEndHM";
             this.txtEndHM.Size = new System.Drawing.Size(100, 22);
             this.txtEndHM.TabIndex = 7;
+            this.txtEndHM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumberAndBacksapce);
             // 
             // txtEndMD
             // 
@@ -113,6 +117,7 @@
             this.txtEndMD.Name = "txtEndMD";
             this.txtEndMD.Size = new System.Drawing.Size(100, 22);
             this.txtEndMD.TabIndex = 6;
+            this.txtEndMD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlySlashAndNumberAndBacksapce);
             // 
             // txtEndYear
             // 
@@ -120,6 +125,7 @@
             this.txtEndYear.Name = "txtEndYear";
             this.txtEndYear.Size = new System.Drawing.Size(62, 22);
             this.txtEndYear.TabIndex = 5;
+            this.txtEndYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumberAndBacksapce);
             // 
             // dataGridView1
             // 

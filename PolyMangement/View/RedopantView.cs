@@ -175,5 +175,25 @@ namespace PolyMangement.View
             }
             return instance;
         }
+
+        private void OnlySlashAndNumberAndBacksapce(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (Char)48 || e.KeyChar == (Char)49 ||
+               e.KeyChar == (Char)50 || e.KeyChar == (Char)51 ||
+               e.KeyChar == (Char)52 || e.KeyChar == (Char)53 ||
+               e.KeyChar == (Char)54 || e.KeyChar == (Char)55 ||
+               e.KeyChar == (Char)56 || e.KeyChar == (Char)57 ||
+               e.KeyChar == (Char)111 || e.KeyChar == (Char)8)
+            {
+                e.Handled = false;
+            }
+        }
+        private void OnlyNumberAndBacksapce(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8 && !Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
