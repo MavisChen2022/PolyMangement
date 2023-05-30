@@ -585,6 +585,7 @@
             this.radioButtonMejing.TabStop = true;
             this.radioButtonMejing.Text = "美晶";
             this.radioButtonMejing.UseVisualStyleBackColor = true;
+            this.radioButtonMejing.Click += new System.EventHandler(this.mejingRadChecked);
             // 
             // radioButtonAQMG3
             // 
@@ -597,6 +598,7 @@
             this.radioButtonAQMG3.TabStop = true;
             this.radioButtonAQMG3.Text = "G3 AQM(短)";
             this.radioButtonAQMG3.UseVisualStyleBackColor = true;
+            this.radioButtonAQMG3.Click += new System.EventHandler(this.aqmG3RadChecked);
             // 
             // radioButtonYoXin
             // 
@@ -609,6 +611,7 @@
             this.radioButtonYoXin.TabStop = true;
             this.radioButtonYoXin.Text = "佑鑫";
             this.radioButtonYoXin.UseVisualStyleBackColor = true;
+            this.radioButtonYoXin.Click += new System.EventHandler(this.yoxingRadChecked);
             // 
             // radioButtonAQM
             // 
@@ -621,6 +624,7 @@
             this.radioButtonAQM.TabStop = true;
             this.radioButtonAQM.Text = "AQM";
             this.radioButtonAQM.UseVisualStyleBackColor = true;
+            this.radioButtonAQM.Click += new System.EventHandler(this.aqmRadChecked);
             // 
             // txtASDopant
             // 

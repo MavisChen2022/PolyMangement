@@ -13,10 +13,10 @@ namespace PolyMangement.View
     public partial class PolyView : Form, IPolyView
     {
         private bool isEdit;
-        private bool aqmRad;
-        private bool yoxingRad;
-        private bool aqmG3Rad;
-        private bool mejingRad;
+        private bool aqmRad=false;
+        private bool yoxingRad = false;
+        private bool aqmG3Rad = false;
+        private bool mejingRad = false;
 
         public PolyView()
         {
@@ -87,7 +87,6 @@ namespace PolyMangement.View
             get => txtHemLock.Text; 
             set => txtHemLock.Text=value;
         }
-        
         public string machineNum 
         {
             get => comboBoxMachine.Text;
@@ -125,22 +124,22 @@ namespace PolyMangement.View
         }
         public bool AqmRadio 
         {
-            get => radioButtonAQM.Checked;
-            set => aqmRad=value;
+            get => aqmRad;
+            set => aqmRad = value;
         }
         public bool YoxingRad 
         {
-            get => radioButtonYoXin.Checked;
+            get => yoxingRad;
             set => yoxingRad=value;
         }
         public bool AqmG3Rad 
         {
-            get => radioButtonAQMG3.Checked;
+            get => aqmG3Rad;
             set => aqmG3Rad=value;
         }
         public bool MejingRad 
         {
-            get => radioButtonMejing.Checked;
+            get => mejingRad;
             set => mejingRad=value;
         }
 
@@ -215,6 +214,8 @@ namespace PolyMangement.View
         {
             dataGridView1.DataSource = stockList;
         }
+        
+        
         public static PolyView instance;
         public static PolyView GetInstance(Form parenterContainer)
         {
@@ -238,6 +239,70 @@ namespace PolyMangement.View
             }
             return instance;
         }
+        private void aqmRadChecked(object sender, EventArgs e)
+        {
+            if (aqmRad)
+            {
+                radioButtonAQM.Checked = false;
+                aqmRad = false;
+            }
+            else
+            {
+                radioButtonAQM.Checked = true;
+                aqmRad = true;
+                yoxingRad = false;
+                aqmG3Rad = false;
+                mejingRad = false;
+            }
+        }
+        private void yoxingRadChecked(object sender, EventArgs e)
+        {
+            if (yoxingRad)
+            {
+                radioButtonYoXin.Checked = false;
+                yoxingRad = false;
+            }
+            else
+            {
+                radioButtonYoXin.Checked = true;
+                yoxingRad = true;
+                aqmRad = false;
+                aqmG3Rad = false;
+                mejingRad = false;
+            }
+        }
+        private void aqmG3RadChecked(object sender, EventArgs e)
+        {
+            if (aqmG3Rad)
+            {
+                radioButtonAQMG3.Checked = false;
+                aqmG3Rad = false;
 
+            }
+            else
+            {
+                radioButtonAQMG3.Checked = true;
+                aqmG3Rad = true;
+                yoxingRad = false;
+                aqmRad = false;
+                mejingRad = false;
+            }
+        }
+        private void mejingRadChecked(object sender, EventArgs e)
+        {
+            if (mejingRad)
+            {
+                radioButtonMejing.Checked = false;
+                mejingRad = false;
+            }
+            else
+            {
+                radioButtonMejing.Checked = true;
+                mejingRad = true;
+                aqmG3Rad = false;
+                yoxingRad = false;
+                aqmRad = false;
+            }
+        }
     }
 }

@@ -77,13 +77,11 @@ namespace PolyMangement.View
             get => txtStartYear.Text;
             set => txtStartYear.Text=value;
         }
-
         public string StartMonthDayText 
         { 
             get => txtStartMD.Text;
             set => txtStartMD.Text=value;
         }
-
         public string StartHourMinsText 
         { 
             get => txtStartHM.Text;
@@ -104,19 +102,16 @@ namespace PolyMangement.View
             get => lbRedopantTime.Text;
             set => lbRedopantTime.Text=value;
         }
-
         public string EndYearText 
         {
             get => txtEndYear.Text;
             set => txtEndYear.Text=value;
         }
-
         public string EndMonthDayText 
         { 
             get => txtEndMD.Text;
             set => txtEndMD.Text = value;
         }
-
         public string EndHourMinsText 
         {
             get => txtEndHM.Text;
