@@ -13,10 +13,10 @@ namespace PolyMangement.View
     public partial class PolyView : Form, IPolyView
     {
         private bool isEdit;
-        private bool aqmRad=false;
-        private bool yoxingRad = false;
-        private bool aqmG3Rad = false;
-        private bool mejingRad = false;
+        private bool cru1Rad=false;
+        private bool cru2Rad = false;
+        private bool cru3Rad = false;
+        private bool cru4Rad = false;
 
         public PolyView()
         {
@@ -62,30 +62,30 @@ namespace PolyMangement.View
             };
         }
 
-        public string PCAText 
+        public string poly1Text
         { 
-            get => txtPCA.Text;
-            set => txtPCA.Text=value;
+            get => txtPoly1.Text;
+            set => txtPoly1.Text=value;
         }
-        public string XinhuaText 
+        public string poly2Text
         {
-            get => txtXinhua.Text;
-            set => txtXinhua.Text = value;
+            get => txtPoly2.Text;
+            set => txtPoly2.Text = value;
         }
-        public string ASText 
+        public string poly3Text
         {
-            get => txtAS.Text;
-            set => txtAS.Text=value;    
+            get => txtPoly3.Text;
+            set => txtPoly3.Text=value;    
         }
-        public string ARText 
+        public string poly4Text
         { 
-            get => txtAR.Text;
-            set => txtAR.Text = value;
+            get => txtPoly4.Text;
+            set => txtPoly4.Text = value;
         }
-        public string HemlockText 
+        public string poly5Text
         {
-            get => txtHemLock.Text; 
-            set => txtHemLock.Text=value;
+            get => txtPoly5.Text; 
+            set => txtPoly5.Text=value;
         }
         public string machineNum 
         {
@@ -107,101 +107,101 @@ namespace PolyMangement.View
             get => lbId.Text;
             set => lbId.Text=value;
         }
-        public string ASDopantText 
+        public string dopant1Text
         {
-            get => txtASDopant.Text;
-            set => txtASDopant.Text=value;
+            get => txtDopant1.Text;
+            set => txtDopant1.Text=value;
         }
-        public string PHDopantText 
+        public string dopant2Text
         { 
-            get => txtPhDopant.Text;
-            set => txtPhDopant.Text=value;
+            get => txtDopant2.Text;
+            set => txtDopant2.Text=value;
         }
-        public string BDopantText 
+        public string dopant3Text
         { 
-            get => txtBDopant.Text;
-            set => txtBDopant.Text=value;
+            get => txtDopant3.Text;
+            set => txtDopant3.Text=value;
         }
-        public bool AqmRadio 
+        public bool crucible1Rad
         {
-            get => aqmRad;
-            set => aqmRad = value;
+            get => cru1Rad;
+            set => cru1Rad = value;
         }
-        public bool YoxingRad 
+        public bool crucible2Rad
         {
-            get => yoxingRad;
-            set => yoxingRad=value;
+            get => cru2Rad;
+            set => cru2Rad=value;
         }
-        public bool AqmG3Rad 
+        public bool crucible3Rad
         {
-            get => aqmG3Rad;
-            set => aqmG3Rad=value;
+            get => cru3Rad;
+            set => cru3Rad=value;
         }
-        public bool MejingRad 
+        public bool crucible4Rad
         {
-            get => mejingRad;
-            set => mejingRad=value;
+            get => cru4Rad;
+            set => cru4Rad=value;
         }
 
-        public string RemainPCA
+        public string RemainPoly1
         {
-            get => lbPCA.Text;
-            set => lbPCA.Text = value;
+            get => lbPoly1.Text;
+            set => lbPoly1.Text = value;
         }
-        public string RemainXinhua
+        public string RemainPoly2
         {
-            get => lbXinhua.Text;
-            set => lbXinhua.Text = value;
+            get => lbPoly2.Text;
+            set => lbPoly2.Text = value;
         }
-        public string RemainAS
+        public string RemainPoly3
         {
-            get => lbAS.Text;
-            set => lbAS.Text = value;
+            get => lbPoly3.Text;
+            set => lbPoly3.Text = value;
         }
-        public string RemainAR
+        public string RemainPoly4
         {
-            get => lbAR.Text;
-            set => lbAR.Text = value;
+            get => lbPoly4.Text;
+            set => lbPoly4.Text = value;
         }
-        public string RemainHemLock
+        public string RemainPoly5
         {
-            get => lbHemLock.Text;
-            set => lbHemLock.Text = value;
+            get => lbPoly5.Text;
+            set => lbPoly5.Text = value;
         }
-        public string RemainASDopant 
+        public string RemainDopant1 
         {
-            get => lbAsDopant.Text; 
-            set => lbAsDopant.Text=value;
+            get => lbDopant1.Text; 
+            set => lbDopant1.Text=value;
         }
-        public string RemainPHDopant 
+        public string RemainDopant2 
         {
-            get => lbPhDopant.Text;
-            set => lbPhDopant.Text=value;
+            get => lbDopant2.Text;
+            set => lbDopant2.Text=value;
         }
-        public string RemainBDopant 
+        public string RemainDopant3 
         { 
-            get => lbBDopant.Text;
-            set => lbBDopant.Text=value;
+            get => lbDopant3.Text;
+            set => lbDopant3.Text=value;
         }
-        public string RemainAQM 
+        public string RemainCrucible1 
         {
-            get => lbAQM.Text;
-            set => lbAQM.Text=value;
+            get => lbCrucible1.Text;
+            set => lbCrucible1.Text=value;
         }
-        public string RemainYoXing 
+        public string RemainCrucible2 
         {
-            get => lbYoXin.Text;
-            set => lbYoXin.Text=value;
+            get => lbCrucible2.Text;
+            set => lbCrucible2.Text=value;
         }
-        public string RemainAQMG3 
+        public string RemainCrucible3 
         {
-            get => lbAQMG3.Text;
-            set => lbAQMG3.Text=value;
+            get => lbCrucible3.Text;
+            set => lbCrucible3.Text=value;
         }
-        public string RemainMeJing 
+        public string RemainCrucible4 
         { 
-            get => lbMejing.Text;
-            set => lbMejing.Text=value;
+            get => lbCrucible4.Text;
+            set => lbCrucible4.Text=value;
         }
         
 
@@ -239,69 +239,69 @@ namespace PolyMangement.View
             }
             return instance;
         }
-        private void aqmRadChecked(object sender, EventArgs e)
+        private void cru1RadChecked(object sender, EventArgs e)
         {
-            if (aqmRad)
+            if (cru1Rad)
             {
-                radioButtonAQM.Checked = false;
-                aqmRad = false;
+                radioButtonCrucible1.Checked = false;
+                cru1Rad = false;
             }
             else
             {
-                radioButtonAQM.Checked = true;
-                aqmRad = true;
-                yoxingRad = false;
-                aqmG3Rad = false;
-                mejingRad = false;
+                radioButtonCrucible1.Checked = true;
+                cru1Rad = true;
+                cru2Rad = false;
+                cru3Rad = false;
+                cru4Rad = false;
             }
         }
-        private void yoxingRadChecked(object sender, EventArgs e)
+        private void cru2RadChecked(object sender, EventArgs e)
         {
-            if (yoxingRad)
+            if (cru2Rad)
             {
-                radioButtonYoXin.Checked = false;
-                yoxingRad = false;
+                radioButtonCrucible2.Checked = false;
+                cru2Rad = false;
             }
             else
             {
-                radioButtonYoXin.Checked = true;
-                yoxingRad = true;
-                aqmRad = false;
-                aqmG3Rad = false;
-                mejingRad = false;
+                radioButtonCrucible2.Checked = true;
+                cru2Rad = true;
+                cru1Rad = false;
+                cru3Rad = false;
+                cru4Rad = false;
             }
         }
-        private void aqmG3RadChecked(object sender, EventArgs e)
+        private void cru3RadChecked(object sender, EventArgs e)
         {
-            if (aqmG3Rad)
+            if (cru3Rad)
             {
-                radioButtonAQMG3.Checked = false;
-                aqmG3Rad = false;
+                radioButtonCrucible3.Checked = false;
+                cru3Rad = false;
 
             }
             else
             {
-                radioButtonAQMG3.Checked = true;
-                aqmG3Rad = true;
-                yoxingRad = false;
-                aqmRad = false;
-                mejingRad = false;
+                radioButtonCrucible3.Checked = true;
+                cru3Rad = true;
+                cru2Rad = false;
+                cru1Rad = false;
+                cru4Rad = false;
             }
         }
-        private void mejingRadChecked(object sender, EventArgs e)
+        private void cru4RadChecked(object sender, EventArgs e)
         {
-            if (mejingRad)
+            if (cru4Rad)
             {
-                radioButtonMejing.Checked = false;
-                mejingRad = false;
+                radioButtonCrucible4.Checked = false;
+                cru4Rad = false;
             }
             else
             {
-                radioButtonMejing.Checked = true;
-                mejingRad = true;
-                aqmG3Rad = false;
-                yoxingRad = false;
-                aqmRad = false;
+                radioButtonCrucible4.Checked = true;
+                cru4Rad = true;
+                cru3Rad = false;
+                cru2Rad = false;
+                cru1Rad = false;
             }
         }
     }

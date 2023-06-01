@@ -37,20 +37,20 @@ namespace PolyMangement.Presenter
 
         private void UpdateRemainingStock()  
         {
-            polyView.RemainPCA = polyRepository.UpdateRemainStock("pca").ToString();
-            polyView.RemainXinhua = polyRepository.UpdateRemainStock("xinhua").ToString();
-            polyView.RemainAS = polyRepository.UpdateRemainStock("aspoly").ToString();
-            polyView.RemainAR = polyRepository.UpdateRemainStock("arpoly").ToString();
-            polyView.RemainHemLock = polyRepository.UpdateRemainStock("hemlock").ToString();
+            polyView.RemainPoly1 = polyRepository.UpdateRemainStock("poly1").ToString();
+            polyView.RemainPoly2 = polyRepository.UpdateRemainStock("poly2").ToString();
+            polyView.RemainPoly3 = polyRepository.UpdateRemainStock("poly3").ToString();
+            polyView.RemainPoly4 = polyRepository.UpdateRemainStock("poly4").ToString();
+            polyView.RemainPoly5 = polyRepository.UpdateRemainStock("poly5").ToString();
 
-            polyView.RemainASDopant = polyRepository.UpdateRemainStock("asdopant").ToString();
-            polyView.RemainPHDopant = polyRepository.UpdateRemainStock("phdopant").ToString();
-            polyView.RemainBDopant = polyRepository.UpdateRemainStock("bdopant").ToString();
+            polyView.RemainDopant1 = polyRepository.UpdateRemainStock("dopant1").ToString();
+            polyView.RemainDopant2 = polyRepository.UpdateRemainStock("dopant2").ToString();
+            polyView.RemainDopant3 = polyRepository.UpdateRemainStock("dopant3").ToString();
 
-            polyView.RemainAQM = polyRepository.UpdateRemainStock("aqm").ToString();
-            polyView.RemainYoXing = polyRepository.UpdateRemainStock("yoxing").ToString();
-            polyView.RemainAQMG3 = polyRepository.UpdateRemainStock("aqmg3").ToString();
-            polyView.RemainMeJing = polyRepository.UpdateRemainStock("mejing").ToString();
+            polyView.RemainCrucible1 = polyRepository.UpdateRemainStock("crucible1").ToString();
+            polyView.RemainCrucible2 = polyRepository.UpdateRemainStock("crucible2").ToString();
+            polyView.RemainCrucible3 = polyRepository.UpdateRemainStock("crucible3").ToString();
+            polyView.RemainCrucible4 = polyRepository.UpdateRemainStock("crucible4").ToString();
         }
 
         private void LoadAllStockList()
@@ -68,20 +68,20 @@ namespace PolyMangement.Presenter
             var poly = (StockModel)polyBindingSource.Current;
             polyView.idText=poly.id.ToString();
             polyView.machineNum= poly.machine;
-            polyView.PCAText=poly.pca.ToString();
-            polyView.XinhuaText=poly.xinhua.ToString();
-            polyView.ASText=poly.aSpoly.ToString();
-            polyView.ARText=poly.aRpoly.ToString();
-            polyView.HemlockText=poly.hemlock.ToString();
-            polyView.ASDopantText=poly.asDopant.ToString();
-            polyView.PHDopantText = poly.phDopant.ToString();
-            polyView.BDopantText = poly.bDopant.ToString();
+            polyView.poly1Text = poly.poly1.ToString();
+            polyView.poly2Text = poly.poly2.ToString();
+            polyView.poly3Text = poly.poly3.ToString();
+            polyView.poly4Text = poly.poly4.ToString();
+            polyView.poly5Text = poly.poly5.ToString();
+            polyView.dopant1Text = poly.dopant1.ToString();
+            polyView.dopant2Text = poly.dopant2.ToString();
+            polyView.dopant3Text = poly.dopant3.ToString();
             polyView.chargeTime= poly.specifiedTime.ToString();
 
-            polyView.AqmRadio = poly.aqm!=0;
-            polyView.YoxingRad = poly.yoxing != 0;
-            polyView.AqmG3Rad= poly.aqmG3 != 0;
-            polyView.MejingRad= poly.mejing != 0;
+            polyView.crucible1Rad = poly.crucible1!= 0;
+            polyView.crucible2Rad = poly.crucible2!= 0;
+            polyView.crucible3Rad= poly.crucible3!= 0;
+            polyView.crucible4Rad= poly.crucible4!= 0;
 
             polyView.IsEdit=true;
         }
@@ -90,19 +90,19 @@ namespace PolyMangement.Presenter
             var poly = new StockModel();
            
             poly.machine = polyView.machineNum;
-            poly.pca = int.TryParse(polyView.PCAText, out _) ? Convert.ToInt32(polyView.PCAText) : 0;
-            poly.xinhua = int.TryParse(polyView.XinhuaText, out _) ? Convert.ToInt32(polyView.XinhuaText) : 0;
-            poly.aSpoly = int.TryParse(polyView.ASText, out _) ? Convert.ToInt32(polyView.ASText) : 0;
-            poly.aRpoly = int.TryParse(polyView.ARText, out _) ? Convert.ToInt32(polyView.ARText) : 0;
-            poly.hemlock = int.TryParse(polyView.HemlockText, out _) ? Convert.ToInt32(polyView.HemlockText) : 0;
-            poly.asDopant = int.TryParse(polyView.ASDopantText, out _) ? Convert.ToInt32(polyView.ASDopantText) : 0;
-            poly.phDopant = int.TryParse(polyView.PHDopantText, out _) ? Convert.ToInt32(polyView.PHDopantText) : 0;
-            poly.bDopant = int.TryParse(polyView.BDopantText, out _) ? Convert.ToInt32(polyView.BDopantText) : 0;
+            poly.poly1 = int.TryParse(polyView.poly1Text, out _) ? Convert.ToInt32(polyView.poly1Text) : 0;
+            poly.poly2 = int.TryParse(polyView.poly2Text, out _) ? Convert.ToInt32(polyView.poly2Text) : 0;
+            poly.poly3 = int.TryParse(polyView.poly3Text, out _) ? Convert.ToInt32(polyView.poly3Text) : 0;
+            poly.poly4 = int.TryParse(polyView.poly4Text, out _) ? Convert.ToInt32(polyView.poly4Text) : 0;
+            poly.poly5 = int.TryParse(polyView.poly5Text, out _) ? Convert.ToInt32(polyView.poly5Text) : 0;
+            poly.dopant1 = int.TryParse(polyView.dopant1Text, out _) ? Convert.ToInt32(polyView.dopant1Text) : 0;
+            poly.dopant2 = int.TryParse(polyView.dopant2Text, out _) ? Convert.ToInt32(polyView.dopant2Text) : 0;
+            poly.dopant3 = int.TryParse(polyView.dopant3Text, out _) ? Convert.ToInt32(polyView.dopant3Text) : 0;
 
-            poly.aqm = Convert.ToInt32(polyView.AqmRadio);
-            poly.yoxing = Convert.ToInt32(polyView.YoxingRad);
-            poly.aqmG3 = Convert.ToInt32(polyView.AqmG3Rad);
-            poly.mejing = Convert.ToInt32(polyView.MejingRad);
+            poly.crucible1 = Convert.ToInt32(polyView.crucible1Rad);
+            poly.crucible2 = Convert.ToInt32(polyView.crucible2Rad);
+            poly.crucible3 = Convert.ToInt32(polyView.crucible3Rad);
+            poly.crucible4 = Convert.ToInt32(polyView.crucible4Rad);
 
             if (polyView.IsEdit)
             {
@@ -134,15 +134,15 @@ namespace PolyMangement.Presenter
         {
             polyView.idText = null;
             polyView.machineNum = null;
-            polyView.PCAText = null;
-            polyView.XinhuaText = null;
-            polyView.ASText = null;
-            polyView.ARText = null;
-            polyView.HemlockText = null;
+            polyView.poly1Text = null;
+            polyView.poly2Text = null;
+            polyView.poly3Text = null;
+            polyView.poly4Text = null;
+            polyView.poly5Text = null;
             polyView.chargeTime = null;
-            polyView.ASDopantText = null;
-            polyView.PHDopantText = null;
-            polyView.BDopantText = null;
+            polyView.dopant1Text = null;
+            polyView.dopant2Text = null;
+            polyView.dopant3Text = null;
             polyView.IsEdit = false;
         }
     }

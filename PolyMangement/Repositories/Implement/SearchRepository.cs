@@ -89,8 +89,8 @@ namespace PolyMangement.Repositories
                 targetStart = shift == "日班" ? selectedTime.ToString("yyyy-MM-dd 08:00:00") : selectedTime.ToString("yyyy-MM-dd 20:00:00");
                 targetEnd = shift == "日班" ? selectedTime.ToString("yyyy-MM-dd 20:00:00") : selectedTime.AddDays(1).ToString("yyyy-MM-dd 08:00:00");
             }
-            return $@"SELECT id,machine,SUM(pca),SUM(xinhua),SUM(aSpoly),SUM(aRpoly),SUM(hemlock),
-                    SUM(asDopant),SUM(phDopant),SUM(bDopant),SUM(aqm) ,SUM(yoxing),SUM(aqmG3),SUM(mejing),time
+            return $@"SELECT id,machine,SUM(poly1),SUM(poly2),SUM(poly3),SUM(poly4),SUM(poly5),
+                    SUM(dopant1),SUM(dopant2),SUM(dopant3),SUM(crucible1) ,SUM(crucible2),SUM(crucible3),SUM(crucible4),time
                     FROM  test
                     WHERE time>='{targetStart}' AND time<'{targetEnd}' 
                     GROUP BY machine";

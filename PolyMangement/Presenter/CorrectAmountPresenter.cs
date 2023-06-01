@@ -32,27 +32,27 @@ namespace PolyMangement.Presenter
 
         private void CorrectAmount(object sender, EventArgs e)  
         {
-            List<string> inventoryRecord= new List<string> { correctAmountView.PCAText, correctAmountView.XinhuaText, correctAmountView.ASText, correctAmountView.ARText, correctAmountView.HemlockText,correctAmountView.ASDopantText, correctAmountView.PHDopantText, correctAmountView.BDopantText, correctAmountView.AqmText, correctAmountView.YoxingText, correctAmountView.AqmG3Text, correctAmountView.MejingText };
-            List<string> endingInventory = new List<string> { correctAmountView.RemainPCA, correctAmountView.RemainXinhua, correctAmountView.RemainAS, correctAmountView.RemainAR, correctAmountView.RemainHemLock, correctAmountView.RemainASDopant, correctAmountView.RemainPHDopant, correctAmountView.RemainBDopant, correctAmountView.RemainAQM, correctAmountView.RemainYoXing, correctAmountView.RemainAQMG3, correctAmountView.RemainMeJing };
+            List<string> inventoryRecord= new List<string> { correctAmountView.poly1Text, correctAmountView.poly2Text, correctAmountView.poly3Text, correctAmountView.poly4Text, correctAmountView.poly5Text,correctAmountView.dopant1Text, correctAmountView.dopant2Text, correctAmountView.dopant3Text, correctAmountView.crucible1Text, correctAmountView.crucible2Text, correctAmountView.crucible3Text, correctAmountView.crucible4Text };
+            List<string> endingInventory = new List<string> { correctAmountView.RemainPoly1, correctAmountView.RemainPoly2, correctAmountView.RemainPoly3, correctAmountView.RemainPoly4, correctAmountView.RemainPoly5, correctAmountView.RemainDopant1, correctAmountView.RemainDopant2, correctAmountView.RemainDopant3, correctAmountView.RemainCrucible1, correctAmountView.RemainCrucible2, correctAmountView.RemainCrucible3, correctAmountView.RemainCrucible4 };
             correctAmountRepository.Correct(inventoryRecord, endingInventory);
             UpdateRemainingStock();
         }
         private void UpdateRemainingStock()
         {
-            correctAmountView.RemainPCA = correctAmountRepository.UpdateRemainStock("pca").ToString();
-            correctAmountView.RemainXinhua = correctAmountRepository.UpdateRemainStock("xinhua").ToString();
-            correctAmountView.RemainAS = correctAmountRepository.UpdateRemainStock("aspoly").ToString();
-            correctAmountView.RemainAR = correctAmountRepository.UpdateRemainStock("arpoly").ToString();
-            correctAmountView.RemainHemLock = correctAmountRepository.UpdateRemainStock("hemlock").ToString();
+            correctAmountView.RemainPoly1 = correctAmountRepository.UpdateRemainStock("poly1").ToString();
+            correctAmountView.RemainPoly2 = correctAmountRepository.UpdateRemainStock("poly2").ToString();
+            correctAmountView.RemainPoly3 = correctAmountRepository.UpdateRemainStock("poly3").ToString();
+            correctAmountView.RemainPoly4 = correctAmountRepository.UpdateRemainStock("poly4").ToString();
+            correctAmountView.RemainPoly5 = correctAmountRepository.UpdateRemainStock("poly5").ToString();
 
-            correctAmountView.RemainASDopant = correctAmountRepository.UpdateRemainStock("asdopant").ToString();
-            correctAmountView.RemainPHDopant = correctAmountRepository.UpdateRemainStock("phdopant").ToString();
-            correctAmountView.RemainBDopant = correctAmountRepository.UpdateRemainStock("bdopant").ToString();
+            correctAmountView.RemainDopant1 = correctAmountRepository.UpdateRemainStock("dopant1").ToString();
+            correctAmountView.RemainDopant2 = correctAmountRepository.UpdateRemainStock("dopant2").ToString();
+            correctAmountView.RemainDopant3 = correctAmountRepository.UpdateRemainStock("dopant3").ToString();
 
-            correctAmountView.RemainAQM = correctAmountRepository.UpdateRemainStock("aqm").ToString();
-            correctAmountView.RemainYoXing = correctAmountRepository.UpdateRemainStock("yoxing").ToString();
-            correctAmountView.RemainAQMG3 = correctAmountRepository.UpdateRemainStock("aqmg3").ToString();
-            correctAmountView.RemainMeJing = correctAmountRepository.UpdateRemainStock("mejing").ToString();
+            correctAmountView.RemainCrucible1 = correctAmountRepository.UpdateRemainStock("crucible1").ToString();
+            correctAmountView.RemainCrucible2 = correctAmountRepository.UpdateRemainStock("crucible2").ToString();
+            correctAmountView.RemainCrucible3 = correctAmountRepository.UpdateRemainStock("crucible3").ToString();
+            correctAmountView.RemainCrucible4 = correctAmountRepository.UpdateRemainStock("crucible4").ToString();
         }
     }
 }

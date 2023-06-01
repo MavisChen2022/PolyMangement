@@ -10,18 +10,18 @@ namespace PolyMangement.Model
     {
         public int id { get; set; }
         public string machine { get; set; }
-        public int pca { get; set; }
-        public int xinhua { get; set; }
-        public int aSpoly { get; set; }
-        public int aRpoly { get; set; }
-        public int hemlock { get; set; }
-        public int asDopant { get; set; }
-        public int phDopant { get; set; }
-        public int bDopant { get; set; }
-        public int aqm { get; set; }
-        public int yoxing { get; set; }
-        public int aqmG3 { get; set; }
-        public int mejing { get; set; }
+        public int poly1 { get; set; }
+        public int poly2 { get; set; }
+        public int poly3 { get; set; }
+        public int poly4 { get; set; }
+        public int poly5 { get; set; }
+        public int dopant1 { get; set; }
+        public int dopant2 { get; set; }
+        public int dopant3 { get; set; }
+        public int crucible1 { get; set; }
+        public int crucible2 { get; set; }
+        public int crucible3 { get; set; }
+        public int crucible4 { get; set; }
         public DateTime specifiedTime { get; set; }
     }
 }

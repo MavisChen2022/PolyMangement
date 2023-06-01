@@ -43,35 +43,35 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.lbBdopant = new System.Windows.Forms.Label();
-            this.lbPhdopant = new System.Windows.Forms.Label();
-            this.lbAsdopant = new System.Windows.Forms.Label();
-            this.lbHemlock = new System.Windows.Forms.Label();
-            this.lbArpoly = new System.Windows.Forms.Label();
-            this.lbAspoly = new System.Windows.Forms.Label();
-            this.lbXinhua = new System.Windows.Forms.Label();
-            this.lbPca = new System.Windows.Forms.Label();
-            this.lbMeijing = new System.Windows.Forms.Label();
-            this.lbAqmG3 = new System.Windows.Forms.Label();
-            this.lbYoxing = new System.Windows.Forms.Label();
-            this.lbAqm = new System.Windows.Forms.Label();
+            this.lbDopant3 = new System.Windows.Forms.Label();
+            this.lbDopant2 = new System.Windows.Forms.Label();
+            this.lbDopant1 = new System.Windows.Forms.Label();
+            this.lbPoly5 = new System.Windows.Forms.Label();
+            this.lbPoly4 = new System.Windows.Forms.Label();
+            this.lbPoly3 = new System.Windows.Forms.Label();
+            this.lbPoly2 = new System.Windows.Forms.Label();
+            this.lbPoly1 = new System.Windows.Forms.Label();
+            this.lbCrucible4 = new System.Windows.Forms.Label();
+            this.lbCrucible3 = new System.Windows.Forms.Label();
+            this.lbCrucible2 = new System.Windows.Forms.Label();
+            this.lbCrucible1 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.btnCorrect = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.txtPca = new System.Windows.Forms.TextBox();
-            this.txtXinhua = new System.Windows.Forms.TextBox();
-            this.txtAspoly = new System.Windows.Forms.TextBox();
-            this.txtArpoly = new System.Windows.Forms.TextBox();
-            this.txtHemlock = new System.Windows.Forms.TextBox();
-            this.txtAsdopant = new System.Windows.Forms.TextBox();
-            this.txtPhdopant = new System.Windows.Forms.TextBox();
-            this.txtBdopant = new System.Windows.Forms.TextBox();
-            this.txtAqm = new System.Windows.Forms.TextBox();
-            this.txtYoxing = new System.Windows.Forms.TextBox();
-            this.txtAqmG3 = new System.Windows.Forms.TextBox();
-            this.txtMeijing = new System.Windows.Forms.TextBox();
+            this.txtPoly1 = new System.Windows.Forms.TextBox();
+            this.txtPoly2 = new System.Windows.Forms.TextBox();
+            this.txtPoly3 = new System.Windows.Forms.TextBox();
+            this.txtPoly4 = new System.Windows.Forms.TextBox();
+            this.txtPoly5 = new System.Windows.Forms.TextBox();
+            this.txtDopant1 = new System.Windows.Forms.TextBox();
+            this.txtDopant2 = new System.Windows.Forms.TextBox();
+            this.txtDopant3 = new System.Windows.Forms.TextBox();
+            this.txtCrucible1 = new System.Windows.Forms.TextBox();
+            this.txtCrucible2 = new System.Windows.Forms.TextBox();
+            this.txtCrucible3 = new System.Windows.Forms.TextBox();
+            this.txtCrucible4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -80,11 +80,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(183, 51);
+            this.label1.Location = new System.Drawing.Point(172, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 31);
+            this.label1.Size = new System.Drawing.Size(78, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "PCA";
+            this.label1.Text = "Poly1";
             // 
             // label2
             // 
@@ -92,11 +92,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(366, 51);
+            this.label2.Location = new System.Drawing.Point(352, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 31);
+            this.label2.Size = new System.Drawing.Size(78, 31);
             this.label2.TabIndex = 1;
-            this.label2.Text = "鑫華";
+            this.label2.Text = "Poly2";
             // 
             // label3
             // 
@@ -104,11 +104,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(578, 51);
+            this.label3.Location = new System.Drawing.Point(562, 51);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 31);
+            this.label3.Size = new System.Drawing.Size(78, 31);
             this.label3.TabIndex = 2;
-            this.label3.Text = "AS";
+            this.label3.Text = "Poly3";
             // 
             // label4
             // 
@@ -116,11 +116,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(782, 51);
+            this.label4.Location = new System.Drawing.Point(775, 51);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 31);
+            this.label4.Size = new System.Drawing.Size(78, 31);
             this.label4.TabIndex = 3;
-            this.label4.Text = "AR";
+            this.label4.Text = "Poly4";
             // 
             // label5
             // 
@@ -128,84 +128,84 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(970, 51);
+            this.label5.Location = new System.Drawing.Point(985, 51);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 31);
+            this.label5.Size = new System.Drawing.Size(78, 31);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Hemlock";
+            this.label5.Text = "Poly5";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(190, 236);
+            this.label6.Location = new System.Drawing.Point(156, 236);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 31);
+            this.label6.Size = new System.Drawing.Size(115, 31);
             this.label6.TabIndex = 5;
-            this.label6.Text = "砷";
+            this.label6.Text = "Dopant1";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(366, 236);
+            this.label7.Location = new System.Drawing.Point(338, 236);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 31);
+            this.label7.Size = new System.Drawing.Size(115, 31);
             this.label7.TabIndex = 6;
-            this.label7.Text = "紅磷";
+            this.label7.Text = "Dopant2";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label8.ForeColor = System.Drawing.Color.Green;
-            this.label8.Location = new System.Drawing.Point(578, 236);
+            this.label8.Location = new System.Drawing.Point(549, 236);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 31);
+            this.label8.Size = new System.Drawing.Size(115, 31);
             this.label8.TabIndex = 7;
-            this.label8.Text = "硼";
+            this.label8.Text = "Dopant3";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label9.Location = new System.Drawing.Point(172, 440);
+            this.label9.Location = new System.Drawing.Point(156, 440);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 31);
+            this.label9.Size = new System.Drawing.Size(124, 31);
             this.label9.TabIndex = 8;
-            this.label9.Text = "AQM";
+            this.label9.Text = "Crucible1";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label10.Location = new System.Drawing.Point(357, 440);
+            this.label10.Location = new System.Drawing.Point(338, 440);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 31);
+            this.label10.Size = new System.Drawing.Size(124, 31);
             this.label10.TabIndex = 9;
-            this.label10.Text = "佑鑫";
+            this.label10.Text = "Crucible2";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label11.Location = new System.Drawing.Point(516, 440);
+            this.label11.Location = new System.Drawing.Point(549, 440);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(177, 31);
+            this.label11.Size = new System.Drawing.Size(124, 31);
             this.label11.TabIndex = 10;
-            this.label11.Text = "G3 AQM(短版)";
+            this.label11.Text = "Crucible3";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label12.Location = new System.Drawing.Point(767, 440);
+            this.label12.Location = new System.Drawing.Point(756, 440);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 31);
+            this.label12.Size = new System.Drawing.Size(124, 31);
             this.label12.TabIndex = 11;
-            this.label12.Text = "美晶";
+            this.label12.Text = "Crucible4";
             // 
             // label13
             // 
@@ -237,139 +237,139 @@
             this.label15.TabIndex = 14;
             this.label15.Text = "帳上數量";
             // 
-            // lbBdopant
+            // lbDopant3
             // 
-            this.lbBdopant.AutoSize = true;
-            this.lbBdopant.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbBdopant.ForeColor = System.Drawing.Color.Green;
-            this.lbBdopant.Location = new System.Drawing.Point(562, 291);
-            this.lbBdopant.Name = "lbBdopant";
-            this.lbBdopant.Size = new System.Drawing.Size(114, 31);
-            this.lbBdopant.TabIndex = 15;
-            this.lbBdopant.Text = "bdopant";
-            this.lbBdopant.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbDopant3.AutoSize = true;
+            this.lbDopant3.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbDopant3.ForeColor = System.Drawing.Color.Green;
+            this.lbDopant3.Location = new System.Drawing.Point(549, 291);
+            this.lbDopant3.Name = "lbDopant3";
+            this.lbDopant3.Size = new System.Drawing.Size(115, 31);
+            this.lbDopant3.TabIndex = 15;
+            this.lbDopant3.Text = "Dopant3";
+            this.lbDopant3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbPhdopant
+            // lbDopant2
             // 
-            this.lbPhdopant.AutoSize = true;
-            this.lbPhdopant.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbPhdopant.ForeColor = System.Drawing.Color.Blue;
-            this.lbPhdopant.Location = new System.Drawing.Point(357, 291);
-            this.lbPhdopant.Name = "lbPhdopant";
-            this.lbPhdopant.Size = new System.Drawing.Size(129, 31);
-            this.lbPhdopant.TabIndex = 16;
-            this.lbPhdopant.Text = "phdopant";
-            this.lbPhdopant.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbDopant2.AutoSize = true;
+            this.lbDopant2.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbDopant2.ForeColor = System.Drawing.Color.Blue;
+            this.lbDopant2.Location = new System.Drawing.Point(338, 291);
+            this.lbDopant2.Name = "lbDopant2";
+            this.lbDopant2.Size = new System.Drawing.Size(115, 31);
+            this.lbDopant2.TabIndex = 16;
+            this.lbDopant2.Text = "Dopant2";
+            this.lbDopant2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbAsdopant
+            // lbDopant1
             // 
-            this.lbAsdopant.AutoSize = true;
-            this.lbAsdopant.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbAsdopant.ForeColor = System.Drawing.Color.Red;
-            this.lbAsdopant.Location = new System.Drawing.Point(183, 291);
-            this.lbAsdopant.Name = "lbAsdopant";
-            this.lbAsdopant.Size = new System.Drawing.Size(122, 31);
-            this.lbAsdopant.TabIndex = 17;
-            this.lbAsdopant.Text = "asdopant";
-            this.lbAsdopant.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbDopant1.AutoSize = true;
+            this.lbDopant1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbDopant1.ForeColor = System.Drawing.Color.Red;
+            this.lbDopant1.Location = new System.Drawing.Point(156, 291);
+            this.lbDopant1.Name = "lbDopant1";
+            this.lbDopant1.Size = new System.Drawing.Size(115, 31);
+            this.lbDopant1.TabIndex = 17;
+            this.lbDopant1.Text = "Dopant1";
+            this.lbDopant1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbHemlock
+            // lbPoly5
             // 
-            this.lbHemlock.AutoSize = true;
-            this.lbHemlock.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbHemlock.Location = new System.Drawing.Point(1009, 95);
-            this.lbHemlock.Name = "lbHemlock";
-            this.lbHemlock.Size = new System.Drawing.Size(113, 31);
-            this.lbHemlock.TabIndex = 18;
-            this.lbHemlock.Text = "hemlock";
+            this.lbPoly5.AutoSize = true;
+            this.lbPoly5.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbPoly5.Location = new System.Drawing.Point(985, 95);
+            this.lbPoly5.Name = "lbPoly5";
+            this.lbPoly5.Size = new System.Drawing.Size(78, 31);
+            this.lbPoly5.TabIndex = 18;
+            this.lbPoly5.Text = "Poly5";
             // 
-            // lbArpoly
+            // lbPoly4
             // 
-            this.lbArpoly.AutoSize = true;
-            this.lbArpoly.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbArpoly.Location = new System.Drawing.Point(775, 95);
-            this.lbArpoly.Name = "lbArpoly";
-            this.lbArpoly.Size = new System.Drawing.Size(87, 31);
-            this.lbArpoly.TabIndex = 19;
-            this.lbArpoly.Text = "arpoly";
-            this.lbArpoly.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbPoly4.AutoSize = true;
+            this.lbPoly4.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbPoly4.Location = new System.Drawing.Point(775, 95);
+            this.lbPoly4.Name = "lbPoly4";
+            this.lbPoly4.Size = new System.Drawing.Size(78, 31);
+            this.lbPoly4.TabIndex = 19;
+            this.lbPoly4.Text = "Poly4";
+            this.lbPoly4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbAspoly
+            // lbPoly3
             // 
-            this.lbAspoly.AutoSize = true;
-            this.lbAspoly.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbAspoly.Location = new System.Drawing.Point(578, 95);
-            this.lbAspoly.Name = "lbAspoly";
-            this.lbAspoly.Size = new System.Drawing.Size(89, 31);
-            this.lbAspoly.TabIndex = 20;
-            this.lbAspoly.Text = "aspoly";
-            this.lbAspoly.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbPoly3.AutoSize = true;
+            this.lbPoly3.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbPoly3.Location = new System.Drawing.Point(562, 95);
+            this.lbPoly3.Name = "lbPoly3";
+            this.lbPoly3.Size = new System.Drawing.Size(78, 31);
+            this.lbPoly3.TabIndex = 20;
+            this.lbPoly3.Text = "Poly3";
+            this.lbPoly3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbXinhua
+            // lbPoly2
             // 
-            this.lbXinhua.AutoSize = true;
-            this.lbXinhua.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbXinhua.Location = new System.Drawing.Point(366, 95);
-            this.lbXinhua.Name = "lbXinhua";
-            this.lbXinhua.Size = new System.Drawing.Size(92, 31);
-            this.lbXinhua.TabIndex = 21;
-            this.lbXinhua.Text = "xinhua";
-            this.lbXinhua.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbPoly2.AutoSize = true;
+            this.lbPoly2.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbPoly2.Location = new System.Drawing.Point(352, 95);
+            this.lbPoly2.Name = "lbPoly2";
+            this.lbPoly2.Size = new System.Drawing.Size(78, 31);
+            this.lbPoly2.TabIndex = 21;
+            this.lbPoly2.Text = "Poly2";
+            this.lbPoly2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbPca
+            // lbPoly1
             // 
-            this.lbPca.AutoSize = true;
-            this.lbPca.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbPca.Location = new System.Drawing.Point(190, 95);
-            this.lbPca.Name = "lbPca";
-            this.lbPca.Size = new System.Drawing.Size(55, 31);
-            this.lbPca.TabIndex = 22;
-            this.lbPca.Text = "pca";
-            this.lbPca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbPoly1.AutoSize = true;
+            this.lbPoly1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbPoly1.Location = new System.Drawing.Point(172, 95);
+            this.lbPoly1.Name = "lbPoly1";
+            this.lbPoly1.Size = new System.Drawing.Size(78, 31);
+            this.lbPoly1.TabIndex = 22;
+            this.lbPoly1.Text = "Poly1";
+            this.lbPoly1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbMeijing
+            // lbCrucible4
             // 
-            this.lbMeijing.AutoSize = true;
-            this.lbMeijing.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbMeijing.Location = new System.Drawing.Point(782, 504);
-            this.lbMeijing.Name = "lbMeijing";
-            this.lbMeijing.Size = new System.Drawing.Size(103, 31);
-            this.lbMeijing.TabIndex = 23;
-            this.lbMeijing.Text = "meijing";
-            this.lbMeijing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbCrucible4.AutoSize = true;
+            this.lbCrucible4.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbCrucible4.Location = new System.Drawing.Point(756, 504);
+            this.lbCrucible4.Name = "lbCrucible4";
+            this.lbCrucible4.Size = new System.Drawing.Size(124, 31);
+            this.lbCrucible4.TabIndex = 23;
+            this.lbCrucible4.Text = "Crucible4";
+            this.lbCrucible4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbAqmG3
+            // lbCrucible3
             // 
-            this.lbAqmG3.AutoSize = true;
-            this.lbAqmG3.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbAqmG3.Location = new System.Drawing.Point(578, 504);
-            this.lbAqmG3.Name = "lbAqmG3";
-            this.lbAqmG3.Size = new System.Drawing.Size(98, 31);
-            this.lbAqmG3.TabIndex = 24;
-            this.lbAqmG3.Text = "aqmG3";
-            this.lbAqmG3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbCrucible3.AutoSize = true;
+            this.lbCrucible3.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbCrucible3.Location = new System.Drawing.Point(549, 504);
+            this.lbCrucible3.Name = "lbCrucible3";
+            this.lbCrucible3.Size = new System.Drawing.Size(124, 31);
+            this.lbCrucible3.TabIndex = 24;
+            this.lbCrucible3.Text = "Crucible3";
+            this.lbCrucible3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbYoxing
+            // lbCrucible2
             // 
-            this.lbYoxing.AutoSize = true;
-            this.lbYoxing.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbYoxing.Location = new System.Drawing.Point(366, 504);
-            this.lbYoxing.Name = "lbYoxing";
-            this.lbYoxing.Size = new System.Drawing.Size(93, 31);
-            this.lbYoxing.TabIndex = 25;
-            this.lbYoxing.Text = "yoxing";
-            this.lbYoxing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbCrucible2.AutoSize = true;
+            this.lbCrucible2.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbCrucible2.Location = new System.Drawing.Point(338, 504);
+            this.lbCrucible2.Name = "lbCrucible2";
+            this.lbCrucible2.Size = new System.Drawing.Size(124, 31);
+            this.lbCrucible2.TabIndex = 25;
+            this.lbCrucible2.Text = "Crucible2";
+            this.lbCrucible2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbAqm
+            // lbCrucible1
             // 
-            this.lbAqm.AutoSize = true;
-            this.lbAqm.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lbAqm.Location = new System.Drawing.Point(183, 504);
-            this.lbAqm.Name = "lbAqm";
-            this.lbAqm.Size = new System.Drawing.Size(66, 31);
-            this.lbAqm.TabIndex = 26;
-            this.lbAqm.Text = "aqm";
-            this.lbAqm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbCrucible1.AutoSize = true;
+            this.lbCrucible1.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lbCrucible1.Location = new System.Drawing.Point(156, 504);
+            this.lbCrucible1.Name = "lbCrucible1";
+            this.lbCrucible1.Size = new System.Drawing.Size(124, 31);
+            this.lbCrucible1.TabIndex = 26;
+            this.lbCrucible1.Text = "Crucible1";
+            this.lbCrucible1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label28
             // 
@@ -423,136 +423,136 @@
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // txtPca
+            // txtPoly1
             // 
-            this.txtPca.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtPca.Location = new System.Drawing.Point(162, 149);
-            this.txtPca.Name = "txtPca";
-            this.txtPca.Size = new System.Drawing.Size(100, 35);
-            this.txtPca.TabIndex = 32;
+            this.txtPoly1.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtPoly1.Location = new System.Drawing.Point(162, 149);
+            this.txtPoly1.Name = "txtPoly1";
+            this.txtPoly1.Size = new System.Drawing.Size(100, 35);
+            this.txtPoly1.TabIndex = 32;
             // 
-            // txtXinhua
+            // txtPoly2
             // 
-            this.txtXinhua.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtXinhua.Location = new System.Drawing.Point(344, 149);
-            this.txtXinhua.Name = "txtXinhua";
-            this.txtXinhua.Size = new System.Drawing.Size(100, 35);
-            this.txtXinhua.TabIndex = 33;
+            this.txtPoly2.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtPoly2.Location = new System.Drawing.Point(344, 149);
+            this.txtPoly2.Name = "txtPoly2";
+            this.txtPoly2.Size = new System.Drawing.Size(100, 35);
+            this.txtPoly2.TabIndex = 33;
             // 
-            // txtAspoly
+            // txtPoly3
             // 
-            this.txtAspoly.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtAspoly.Location = new System.Drawing.Point(555, 149);
-            this.txtAspoly.Name = "txtAspoly";
-            this.txtAspoly.Size = new System.Drawing.Size(100, 35);
-            this.txtAspoly.TabIndex = 34;
+            this.txtPoly3.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtPoly3.Location = new System.Drawing.Point(555, 149);
+            this.txtPoly3.Name = "txtPoly3";
+            this.txtPoly3.Size = new System.Drawing.Size(100, 35);
+            this.txtPoly3.TabIndex = 34;
             // 
-            // txtArpoly
+            // txtPoly4
             // 
-            this.txtArpoly.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtArpoly.Location = new System.Drawing.Point(762, 149);
-            this.txtArpoly.Name = "txtArpoly";
-            this.txtArpoly.Size = new System.Drawing.Size(100, 35);
-            this.txtArpoly.TabIndex = 35;
+            this.txtPoly4.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtPoly4.Location = new System.Drawing.Point(762, 149);
+            this.txtPoly4.Name = "txtPoly4";
+            this.txtPoly4.Size = new System.Drawing.Size(100, 35);
+            this.txtPoly4.TabIndex = 35;
             // 
-            // txtHemlock
+            // txtPoly5
             // 
-            this.txtHemlock.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtHemlock.Location = new System.Drawing.Point(976, 149);
-            this.txtHemlock.Name = "txtHemlock";
-            this.txtHemlock.Size = new System.Drawing.Size(100, 35);
-            this.txtHemlock.TabIndex = 36;
+            this.txtPoly5.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtPoly5.Location = new System.Drawing.Point(976, 149);
+            this.txtPoly5.Name = "txtPoly5";
+            this.txtPoly5.Size = new System.Drawing.Size(100, 35);
+            this.txtPoly5.TabIndex = 36;
             // 
-            // txtAsdopant
+            // txtDopant1
             // 
-            this.txtAsdopant.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtAsdopant.Location = new System.Drawing.Point(162, 342);
-            this.txtAsdopant.Name = "txtAsdopant";
-            this.txtAsdopant.Size = new System.Drawing.Size(100, 35);
-            this.txtAsdopant.TabIndex = 37;
+            this.txtDopant1.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtDopant1.Location = new System.Drawing.Point(162, 342);
+            this.txtDopant1.Name = "txtDopant1";
+            this.txtDopant1.Size = new System.Drawing.Size(100, 35);
+            this.txtDopant1.TabIndex = 37;
             // 
-            // txtPhdopant
+            // txtDopant2
             // 
-            this.txtPhdopant.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtPhdopant.Location = new System.Drawing.Point(344, 342);
-            this.txtPhdopant.Name = "txtPhdopant";
-            this.txtPhdopant.Size = new System.Drawing.Size(100, 35);
-            this.txtPhdopant.TabIndex = 38;
+            this.txtDopant2.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtDopant2.Location = new System.Drawing.Point(344, 342);
+            this.txtDopant2.Name = "txtDopant2";
+            this.txtDopant2.Size = new System.Drawing.Size(100, 35);
+            this.txtDopant2.TabIndex = 38;
             // 
-            // txtBdopant
+            // txtDopant3
             // 
-            this.txtBdopant.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtBdopant.Location = new System.Drawing.Point(555, 342);
-            this.txtBdopant.Name = "txtBdopant";
-            this.txtBdopant.Size = new System.Drawing.Size(100, 35);
-            this.txtBdopant.TabIndex = 39;
+            this.txtDopant3.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtDopant3.Location = new System.Drawing.Point(555, 342);
+            this.txtDopant3.Name = "txtDopant3";
+            this.txtDopant3.Size = new System.Drawing.Size(100, 35);
+            this.txtDopant3.TabIndex = 39;
             // 
-            // txtAqm
+            // txtCrucible1
             // 
-            this.txtAqm.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtAqm.Location = new System.Drawing.Point(162, 561);
-            this.txtAqm.Name = "txtAqm";
-            this.txtAqm.Size = new System.Drawing.Size(100, 35);
-            this.txtAqm.TabIndex = 40;
+            this.txtCrucible1.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtCrucible1.Location = new System.Drawing.Point(162, 561);
+            this.txtCrucible1.Name = "txtCrucible1";
+            this.txtCrucible1.Size = new System.Drawing.Size(100, 35);
+            this.txtCrucible1.TabIndex = 40;
             // 
-            // txtYoxing
+            // txtCrucible2
             // 
-            this.txtYoxing.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtYoxing.Location = new System.Drawing.Point(344, 561);
-            this.txtYoxing.Name = "txtYoxing";
-            this.txtYoxing.Size = new System.Drawing.Size(100, 35);
-            this.txtYoxing.TabIndex = 41;
+            this.txtCrucible2.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtCrucible2.Location = new System.Drawing.Point(344, 561);
+            this.txtCrucible2.Name = "txtCrucible2";
+            this.txtCrucible2.Size = new System.Drawing.Size(100, 35);
+            this.txtCrucible2.TabIndex = 41;
             // 
-            // txtAqmG3
+            // txtCrucible3
             // 
-            this.txtAqmG3.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtAqmG3.Location = new System.Drawing.Point(555, 561);
-            this.txtAqmG3.Name = "txtAqmG3";
-            this.txtAqmG3.Size = new System.Drawing.Size(100, 35);
-            this.txtAqmG3.TabIndex = 42;
+            this.txtCrucible3.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtCrucible3.Location = new System.Drawing.Point(555, 561);
+            this.txtCrucible3.Name = "txtCrucible3";
+            this.txtCrucible3.Size = new System.Drawing.Size(100, 35);
+            this.txtCrucible3.TabIndex = 42;
             // 
-            // txtMeijing
+            // txtCrucible4
             // 
-            this.txtMeijing.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtMeijing.Location = new System.Drawing.Point(762, 561);
-            this.txtMeijing.Name = "txtMeijing";
-            this.txtMeijing.Size = new System.Drawing.Size(100, 35);
-            this.txtMeijing.TabIndex = 43;
+            this.txtCrucible4.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtCrucible4.Location = new System.Drawing.Point(762, 561);
+            this.txtCrucible4.Name = "txtCrucible4";
+            this.txtCrucible4.Size = new System.Drawing.Size(100, 35);
+            this.txtCrucible4.TabIndex = 43;
             // 
             // CorrectAmountView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 715);
-            this.Controls.Add(this.txtMeijing);
-            this.Controls.Add(this.txtAqmG3);
-            this.Controls.Add(this.txtYoxing);
-            this.Controls.Add(this.txtAqm);
-            this.Controls.Add(this.txtBdopant);
-            this.Controls.Add(this.txtPhdopant);
-            this.Controls.Add(this.txtAsdopant);
-            this.Controls.Add(this.txtHemlock);
-            this.Controls.Add(this.txtArpoly);
-            this.Controls.Add(this.txtAspoly);
-            this.Controls.Add(this.txtXinhua);
-            this.Controls.Add(this.txtPca);
+            this.Controls.Add(this.txtCrucible4);
+            this.Controls.Add(this.txtCrucible3);
+            this.Controls.Add(this.txtCrucible2);
+            this.Controls.Add(this.txtCrucible1);
+            this.Controls.Add(this.txtDopant3);
+            this.Controls.Add(this.txtDopant2);
+            this.Controls.Add(this.txtDopant1);
+            this.Controls.Add(this.txtPoly5);
+            this.Controls.Add(this.txtPoly4);
+            this.Controls.Add(this.txtPoly3);
+            this.Controls.Add(this.txtPoly2);
+            this.Controls.Add(this.txtPoly1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCorrect);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label28);
-            this.Controls.Add(this.lbAqm);
-            this.Controls.Add(this.lbYoxing);
-            this.Controls.Add(this.lbAqmG3);
-            this.Controls.Add(this.lbMeijing);
-            this.Controls.Add(this.lbPca);
-            this.Controls.Add(this.lbXinhua);
-            this.Controls.Add(this.lbAspoly);
-            this.Controls.Add(this.lbArpoly);
-            this.Controls.Add(this.lbHemlock);
-            this.Controls.Add(this.lbAsdopant);
-            this.Controls.Add(this.lbPhdopant);
-            this.Controls.Add(this.lbBdopant);
+            this.Controls.Add(this.lbCrucible1);
+            this.Controls.Add(this.lbCrucible2);
+            this.Controls.Add(this.lbCrucible3);
+            this.Controls.Add(this.lbCrucible4);
+            this.Controls.Add(this.lbPoly1);
+            this.Controls.Add(this.lbPoly2);
+            this.Controls.Add(this.lbPoly3);
+            this.Controls.Add(this.lbPoly4);
+            this.Controls.Add(this.lbPoly5);
+            this.Controls.Add(this.lbDopant1);
+            this.Controls.Add(this.lbDopant2);
+            this.Controls.Add(this.lbDopant3);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -593,34 +593,34 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label lbBdopant;
-        private System.Windows.Forms.Label lbPhdopant;
-        private System.Windows.Forms.Label lbAsdopant;
-        private System.Windows.Forms.Label lbHemlock;
-        private System.Windows.Forms.Label lbArpoly;
-        private System.Windows.Forms.Label lbAspoly;
-        private System.Windows.Forms.Label lbXinhua;
-        private System.Windows.Forms.Label lbPca;
-        private System.Windows.Forms.Label lbMeijing;
-        private System.Windows.Forms.Label lbAqmG3;
-        private System.Windows.Forms.Label lbYoxing;
-        private System.Windows.Forms.Label lbAqm;
+        private System.Windows.Forms.Label lbDopant3;
+        private System.Windows.Forms.Label lbDopant2;
+        private System.Windows.Forms.Label lbDopant1;
+        private System.Windows.Forms.Label lbPoly5;
+        private System.Windows.Forms.Label lbPoly4;
+        private System.Windows.Forms.Label lbPoly3;
+        private System.Windows.Forms.Label lbPoly2;
+        private System.Windows.Forms.Label lbPoly1;
+        private System.Windows.Forms.Label lbCrucible4;
+        private System.Windows.Forms.Label lbCrucible3;
+        private System.Windows.Forms.Label lbCrucible2;
+        private System.Windows.Forms.Label lbCrucible1;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Button btnCorrect;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox txtPca;
-        private System.Windows.Forms.TextBox txtXinhua;
-        private System.Windows.Forms.TextBox txtAspoly;
-        private System.Windows.Forms.TextBox txtArpoly;
-        private System.Windows.Forms.TextBox txtHemlock;
-        private System.Windows.Forms.TextBox txtAsdopant;
-        private System.Windows.Forms.TextBox txtPhdopant;
-        private System.Windows.Forms.TextBox txtBdopant;
-        private System.Windows.Forms.TextBox txtAqm;
-        private System.Windows.Forms.TextBox txtYoxing;
-        private System.Windows.Forms.TextBox txtAqmG3;
-        private System.Windows.Forms.TextBox txtMeijing;
+        private System.Windows.Forms.TextBox txtPoly1;
+        private System.Windows.Forms.TextBox txtPoly2;
+        private System.Windows.Forms.TextBox txtPoly3;
+        private System.Windows.Forms.TextBox txtPoly4;
+        private System.Windows.Forms.TextBox txtPoly5;
+        private System.Windows.Forms.TextBox txtDopant1;
+        private System.Windows.Forms.TextBox txtDopant2;
+        private System.Windows.Forms.TextBox txtDopant3;
+        private System.Windows.Forms.TextBox txtCrucible1;
+        private System.Windows.Forms.TextBox txtCrucible2;
+        private System.Windows.Forms.TextBox txtCrucible3;
+        private System.Windows.Forms.TextBox txtCrucible4;
     }
 }

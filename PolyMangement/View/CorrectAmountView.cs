@@ -18,125 +18,125 @@ namespace PolyMangement.View.Interface
             btnCorrect.Click += delegate { CorrectEvent?.Invoke(this, EventArgs.Empty); };
             btnCancel.Click += delegate { this.Close(); };
         }
-        public string PCAText 
+        public string poly1Text 
         {
-            get => txtPca.Text;
-            set => txtPca.Text = value; 
+            get => txtPoly1.Text;
+            set => txtPoly1.Text = value; 
         }
-        public string XinhuaText 
+        public string poly2Text 
         {
-            get => txtXinhua.Text; 
-            set => txtXinhua.Text=value;
+            get => txtPoly2.Text; 
+            set => txtPoly2.Text=value;
         }
-        public string ASText 
+        public string poly3Text 
         {
-            get => txtAspoly.Text; 
-            set => txtAspoly.Text=value;
+            get => txtPoly3.Text; 
+            set => txtPoly3.Text=value;
         }
-        public string ARText 
+        public string poly4Text 
         {
-            get => txtArpoly.Text;
-            set => txtArpoly.Text=value;
+            get => txtPoly4.Text;
+            set => txtPoly4.Text=value;
         }
-        public string HemlockText 
+        public string poly5Text 
         { 
-            get => txtHemlock.Text;
-            set => txtHemlock.Text=value;
+            get => txtPoly5.Text;
+            set => txtPoly5.Text=value;
         }
-        public string ASDopantText 
+        public string dopant1Text 
         { 
-            get => txtAsdopant.Text;
-            set => txtAsdopant.Text=value;
+            get => txtDopant1.Text;
+            set => txtDopant1.Text=value;
         }
-        public string PHDopantText 
+        public string dopant2Text 
         {
-            get => txtPhdopant.Text; 
-            set => txtPhdopant.Text=value;
+            get => txtDopant2.Text; 
+            set => txtDopant2.Text=value;
         }
-        public string BDopantText 
+        public string dopant3Text 
         {
-            get => txtBdopant.Text;
-            set => txtBdopant.Text=value;
+            get => txtDopant3.Text;
+            set => txtDopant3.Text=value;
         }
-        public string AqmText 
+        public string crucible1Text 
         {
-            get => txtAqm.Text;
-            set => txtAqm.Text = value;
+            get => txtCrucible1.Text;
+            set => txtCrucible1.Text = value;
         }
-        public string YoxingText 
+        public string crucible2Text 
         {
-            get => txtYoxing.Text;
-            set => txtYoxing.Text=value;
+            get => txtCrucible2.Text;
+            set => txtCrucible2.Text=value;
         }
-        public string AqmG3Text 
+        public string crucible3Text 
         {
-            get => txtAqmG3.Text; 
-            set => txtAqmG3.Text=value;
+            get => txtCrucible3.Text; 
+            set => txtCrucible3.Text=value;
         }
-        public string MejingText 
+        public string crucible4Text 
         { 
-            get => txtMeijing.Text;
-            set => txtMeijing.Text=value;
+            get => txtCrucible4.Text;
+            set => txtCrucible4.Text=value;
         }
-        public string RemainPCA 
+        public string RemainPoly1 
         {
-            get => lbPca.Text;
-            set => lbPca.Text=value;
+            get => lbPoly1.Text;
+            set => lbPoly1.Text=value;
         }
-        public string RemainXinhua 
+        public string RemainPoly2 
         { 
-            get => lbXinhua.Text;
-            set => lbXinhua.Text=value;
+            get => lbPoly2.Text;
+            set => lbPoly2.Text=value;
         }
-        public string RemainAS 
+        public string RemainPoly3 
         { 
-            get => lbAspoly.Text;
-            set => lbAspoly.Text=value;
+            get => lbPoly3.Text;
+            set => lbPoly3.Text=value;
         }
-        public string RemainAR 
+        public string RemainPoly4 
         { 
-            get => lbArpoly.Text;
-            set => lbArpoly.Text=value;
+            get => lbPoly4.Text;
+            set => lbPoly4.Text=value;
         }
-        public string RemainHemLock 
+        public string RemainPoly5 
         { 
-            get => lbHemlock.Text;
-            set => lbHemlock.Text=value;
+            get => lbPoly5.Text;
+            set => lbPoly5.Text=value;
         }
-        public string RemainASDopant 
+        public string RemainDopant1 
         {
-            get => lbAsdopant.Text;
-            set => lbAsdopant.Text=value;
+            get => lbDopant1.Text;
+            set => lbDopant1.Text=value;
         }
-        public string RemainPHDopant 
+        public string RemainDopant2 
         { 
-            get => lbPhdopant.Text;
-            set => lbPhdopant.Text=value;
+            get => lbDopant2.Text;
+            set => lbDopant2.Text=value;
         }
-        public string RemainBDopant 
+        public string RemainDopant3 
         { 
-            get => lbBdopant.Text;
-            set => lbBdopant.Text=value;
+            get => lbDopant3.Text;
+            set => lbDopant3.Text=value;
         }
-        public string RemainAQM 
+        public string RemainCrucible1 
         { 
-            get => lbAqm.Text;
-            set => lbAqm.Text=value;
+            get => lbCrucible1.Text;
+            set => lbCrucible1.Text=value;
         }
-        public string RemainYoXing 
+        public string RemainCrucible2 
         { 
-            get => lbYoxing.Text;
-            set => lbYoxing.Text=value;
+            get => lbCrucible2.Text;
+            set => lbCrucible2.Text=value;
         }
-        public string RemainAQMG3 
+        public string RemainCrucible3 
         { 
-            get => lbAqmG3.Text;
-            set => lbAqmG3.Text=value;
+            get => lbCrucible3.Text;
+            set => lbCrucible3.Text=value;
         }
-        public string RemainMeJing 
+        public string RemainCrucible4 
         { 
-            get => lbMeijing.Text;
-            set => lbMeijing.Text=value;
+            get => lbCrucible4.Text;
+            set => lbCrucible4.Text=value;
         }
 
         public event EventHandler CorrectEvent;

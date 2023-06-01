@@ -8,33 +8,33 @@ namespace PolyMangement.View.Interface
 {
     public interface ICorrectAmountView
     {
-        string PCAText { get; set; }
-        string XinhuaText { get; set; }
-        string ASText { get; set; }
-        string ARText { get; set; }
-        string HemlockText { get; set; }
-        string ASDopantText { get; set; }
-        string PHDopantText { get; set; }
-        string BDopantText { get; set; }
+        string poly1Text { get; set; }
+        string poly2Text { get; set; }
+        string poly3Text { get; set; }
+        string poly4Text { get; set; }
+        string poly5Text { get; set; }
+        string dopant1Text { get; set; }
+        string dopant2Text { get; set; }
+        string dopant3Text { get; set; }
 
-        string AqmText { get; set; }
-        string YoxingText { get; set; }
-        string AqmG3Text { get; set; }
-        string MejingText { get; set; }
+        string crucible1Text { get; set; }
+        string crucible2Text { get; set; }
+        string crucible3Text { get; set; }
+        string crucible4Text { get; set; }
 
 
-        string RemainPCA { get; set; }
-        string RemainXinhua { get; set; }
-        string RemainAS { get; set; }
-        string RemainAR { get; set; }
-        string RemainHemLock { get; set; }
-        string RemainASDopant { get; set; }
-        string RemainPHDopant { get; set; }
-        string RemainBDopant { get; set; }
-        string RemainAQM { get; set; }
-        string RemainYoXing { get; set; }
-        string RemainAQMG3 { get; set; }
-        string RemainMeJing { get; set; }
+        string RemainPoly1 { get; set; }
+        string RemainPoly2 { get; set; }
+        string RemainPoly3 { get; set; }
+        string RemainPoly4 { get; set; }
+        string RemainPoly5 { get; set; }
+        string RemainDopant1 { get; set; }
+        string RemainDopant2 { get; set; }
+        string RemainDopant3 { get; set; }
+        string RemainCrucible1 { get; set; }
+        string RemainCrucible2 { get; set; }
+        string RemainCrucible3 { get; set; }
+        string RemainCrucible4 { get; set; }
 
         event EventHandler CorrectEvent;
         void Show();

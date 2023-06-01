@@ -21,14 +21,14 @@ namespace PolyMangement.Repositories.Implement
         }
         public void Correct(List<string> inventoryRecord, List<string> endingInventory)
         {
-            List<string> stockNameList = new List<string> { "pca", "xinhua", "aspoly", "arpoly", "hemlock", "asdopant", "phdopant", "bdopant", "aqm", "yoxing", "aqmG3", "mejing" };
+            List<string> stockNameList = new List<string> { "poly1", "poly2", "poly3", "poly4", "poly5", "dopant1", "dopant2", "dopant3", "crucible1", "crucible2", "crucible3", "crucible4" };
             using (var conn = new SQLiteConnection(connectionString))
             using (var cmd = new SQLiteCommand())
             {
                 conn.Open();
                 cmd.Connection = conn;
-                cmd.CommandText = @"INSERT INTO test(machine,pca,xinhua,aspoly,arpoly,hemlock,asdopant,phdopant,bdopant,aqm,yoxing,aqmG3,mejing,time) 
-                                    VALUES(@machine,@pca,@xinhua,@aspoly,@arpoly,@hemlock,@asdopant,@phdopant,@bdopant,@aqm,@yoxing,@aqmG3,@mejing,@time)";
+                cmd.CommandText = @"INSERT INTO test(machine,poly1,poly2,poly3,poly4,poly5,dopant1,dopant2,dopant3,crucible1,crucible2,crucible3,crucible4,time) 
+                                    VALUES(@machine,@poly1,@poly2,@poly3,@poly4,@poly5,@dopant1,@dopant2,@dopant3,@crucible1,@crucible2,@crucible3,@crucible4,@time)";
                 for (int i = 0; i < stockNameList.Count; i++)
                 {
                     if (inventoryRecord[i] == "")

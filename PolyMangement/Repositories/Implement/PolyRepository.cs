@@ -18,15 +18,15 @@ namespace PolyMangement.Repositories
         }
         public void Add(StockModel stockModel)
         {
-            string addCommand= @"INSERT INTO test(machine,pca,xinhua,aspoly,arpoly,hemlock,asdopant,phdopant,bdopant,aqm,yoxing,aqmG3,mejing,time) 
-                                 VALUES(@machine,@pca,@xinhua,@aspoly,@arpoly,@hemlock,@asdopant,@phdopant,@bdopant,@aqm,@yoxing,@aqmG3,@mejing,@time)";
+            string addCommand= @"INSERT INTO test(machine,poly1,poly2,poly3,poly4,poly5,dopant1,dopant2,dopant3,crucible1,crucible2,crucible3,crucible4,time) 
+                                 VALUES(@machine,@poly1,@poly2,@poly3,@poly4,@poly5,@dopant1,@dopant2,@dopant3,@crucible1,@crucible2,@crucible3,@crucible4,@time)";
             GetDetailFromSQLite(stockModel, addCommand);
         }
         public void Edit(StockModel stockModel)
         {
             string editCommand = @"UPDATE test 
-                                  SET machine=@machine,pca=@pca,xinhua=@xinhua,aspoly=@aspoly,arpoly=@arpoly,hemlock=@hemlock
-                                  ,asdopant=@asdopant,phdopant=@phdopant,bdopant=@bdopant,aqm=@aqm,yoxing=@yoxing,aqmG3=@aqmG3,mejing=@mejing
+                                  SET machine=@machine,poly1=@poly1,poly2=@poly2,poly3=@poly3,poly4=@poly4,poly5=@poly5
+                                  ,dopant1=@dopant1,dopant2=@dopant2,dopant3=@dopant3,crucible1=@crucible1,crucible2=@crucible2,crucible3=@crucible3,crucible4=@crucible4
                                   WHERE id=@id";
             GetDetailFromSQLite(stockModel, editCommand);
         }
@@ -60,20 +60,20 @@ namespace PolyMangement.Repositories
                 cmd.CommandText = action;
                 cmd.Parameters.Add("@id", DbType.Int32).Value = stockModel.id;
                 cmd.Parameters.Add("@machine", DbType.String).Value = stockModel.machine;
-                cmd.Parameters.Add("@pca", DbType.Int32).Value = stockModel.pca;
-                cmd.Parameters.Add("@xinHua", DbType.Int32).Value = stockModel.xinhua;
-                cmd.Parameters.Add("@aspoly", DbType.Int32).Value = stockModel.aSpoly;
-                cmd.Parameters.Add("@arpoly", DbType.Int32).Value = stockModel.aRpoly;
-                cmd.Parameters.Add("@hemlock", DbType.Int32).Value = stockModel.hemlock;
+                cmd.Parameters.Add("@poly1", DbType.Int32).Value = stockModel.poly1;
+                cmd.Parameters.Add("@poly2", DbType.Int32).Value = stockModel.poly2;
+                cmd.Parameters.Add("@poly3", DbType.Int32).Value = stockModel.poly3;
+                cmd.Parameters.Add("@poly4", DbType.Int32).Value = stockModel.poly4;
+                cmd.Parameters.Add("@poly5", DbType.Int32).Value = stockModel.poly5;
 
-                cmd.Parameters.Add("@asdopant", DbType.Int32).Value = stockModel.asDopant;
-                cmd.Parameters.Add("@phdopant", DbType.Int32).Value = stockModel.phDopant;
-                cmd.Parameters.Add("@bdopant", DbType.Int32).Value = stockModel.bDopant;
+                cmd.Parameters.Add("@dopant1", DbType.Int32).Value = stockModel.dopant1;
+                cmd.Parameters.Add("@dopant2", DbType.Int32).Value = stockModel.dopant2;
+                cmd.Parameters.Add("@dopant3", DbType.Int32).Value = stockModel.dopant3;
 
-                cmd.Parameters.Add("@aqm", DbType.Int32).Value = stockModel.aqm;
-                cmd.Parameters.Add("@yoxing", DbType.Int32).Value = stockModel.yoxing;
-                cmd.Parameters.Add("@aqmG3", DbType.Int32).Value = stockModel.aqmG3;
-                cmd.Parameters.Add("@mejing", DbType.Int32).Value = stockModel.mejing;
+                cmd.Parameters.Add("@crucible1", DbType.Int32).Value = stockModel.crucible1;
+                cmd.Parameters.Add("@crucible2", DbType.Int32).Value = stockModel.crucible2;
+                cmd.Parameters.Add("@crucible3", DbType.Int32).Value = stockModel.crucible3;
+                cmd.Parameters.Add("@crucible4", DbType.Int32).Value = stockModel.crucible4;
 
                 cmd.Parameters.Add("@time", DbType.DateTime).Value = stockModel.specifiedTime;
                 cmd.ExecuteNonQuery();
