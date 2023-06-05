@@ -51,7 +51,7 @@
             this.lbCrucible4 = new System.Windows.Forms.Label();
             this.lbCrucible3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnOut = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -110,13 +110,13 @@
             this.txtPoly33 = new System.Windows.Forms.TextBox();
             this.txtPoly44 = new System.Windows.Forms.TextBox();
             this.txtPoly55 = new System.Windows.Forms.TextBox();
-            this.txtPoly66 = new System.Windows.Forms.TextBox();
-            this.txtPoly77 = new System.Windows.Forms.TextBox();
-            this.txtPoly88 = new System.Windows.Forms.TextBox();
-            this.txtPoly99 = new System.Windows.Forms.TextBox();
-            this.txtPoly1010 = new System.Windows.Forms.TextBox();
-            this.txtPoly1111 = new System.Windows.Forms.TextBox();
-            this.txtPoly1212 = new System.Windows.Forms.TextBox();
+            this.txtdopant11 = new System.Windows.Forms.TextBox();
+            this.txtdopant22 = new System.Windows.Forms.TextBox();
+            this.txtdopant33 = new System.Windows.Forms.TextBox();
+            this.txtCrocible11 = new System.Windows.Forms.TextBox();
+            this.txtCrocible22 = new System.Windows.Forms.TextBox();
+            this.txtCrocible33 = new System.Windows.Forms.TextBox();
+            this.txtCrocible44 = new System.Windows.Forms.TextBox();
             this.btnInSave = new System.Windows.Forms.Button();
             this.btnInCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -392,16 +392,16 @@
             this.dataGridView1.Size = new System.Drawing.Size(1100, 554);
             this.dataGridView1.TabIndex = 24;
             // 
-            // btnAdd
+            // btnOut
             // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnAdd.Location = new System.Drawing.Point(1162, 127);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(106, 51);
-            this.btnAdd.TabIndex = 25;
-            this.btnAdd.Text = "領出";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOut.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnOut.Location = new System.Drawing.Point(1162, 127);
+            this.btnOut.Name = "btnOut";
+            this.btnOut.Size = new System.Drawing.Size(106, 51);
+            this.btnOut.TabIndex = 25;
+            this.btnOut.Text = "領出";
+            this.btnOut.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
@@ -449,7 +449,7 @@
             this.ChargeList.Controls.Add(this.lbCrucible3);
             this.ChargeList.Controls.Add(this.lbPoly3);
             this.ChargeList.Controls.Add(this.label5);
-            this.ChargeList.Controls.Add(this.btnAdd);
+            this.ChargeList.Controls.Add(this.btnOut);
             this.ChargeList.Controls.Add(this.lbPoly4);
             this.ChargeList.Controls.Add(this.lbCrucible4);
             this.ChargeList.Controls.Add(this.lbPoly5);
@@ -854,13 +854,13 @@
             // 
             this.ChargeIn.Controls.Add(this.btnInCancel);
             this.ChargeIn.Controls.Add(this.btnInSave);
-            this.ChargeIn.Controls.Add(this.txtPoly1212);
-            this.ChargeIn.Controls.Add(this.txtPoly1111);
-            this.ChargeIn.Controls.Add(this.txtPoly1010);
-            this.ChargeIn.Controls.Add(this.txtPoly99);
-            this.ChargeIn.Controls.Add(this.txtPoly88);
-            this.ChargeIn.Controls.Add(this.txtPoly77);
-            this.ChargeIn.Controls.Add(this.txtPoly66);
+            this.ChargeIn.Controls.Add(this.txtCrocible44);
+            this.ChargeIn.Controls.Add(this.txtCrocible33);
+            this.ChargeIn.Controls.Add(this.txtCrocible22);
+            this.ChargeIn.Controls.Add(this.txtCrocible11);
+            this.ChargeIn.Controls.Add(this.txtdopant33);
+            this.ChargeIn.Controls.Add(this.txtdopant22);
+            this.ChargeIn.Controls.Add(this.txtdopant11);
             this.ChargeIn.Controls.Add(this.txtPoly55);
             this.ChargeIn.Controls.Add(this.txtPoly44);
             this.ChargeIn.Controls.Add(this.txtPoly33);
@@ -1076,54 +1076,54 @@
             this.txtPoly55.Size = new System.Drawing.Size(100, 22);
             this.txtPoly55.TabIndex = 19;
             // 
-            // txtPoly66
+            // txtdopant11
             // 
-            this.txtPoly66.Location = new System.Drawing.Point(188, 271);
-            this.txtPoly66.Name = "txtPoly66";
-            this.txtPoly66.Size = new System.Drawing.Size(100, 22);
-            this.txtPoly66.TabIndex = 20;
+            this.txtdopant11.Location = new System.Drawing.Point(188, 271);
+            this.txtdopant11.Name = "txtdopant11";
+            this.txtdopant11.Size = new System.Drawing.Size(100, 22);
+            this.txtdopant11.TabIndex = 20;
             // 
-            // txtPoly77
+            // txtdopant22
             // 
-            this.txtPoly77.Location = new System.Drawing.Point(357, 271);
-            this.txtPoly77.Name = "txtPoly77";
-            this.txtPoly77.Size = new System.Drawing.Size(100, 22);
-            this.txtPoly77.TabIndex = 21;
+            this.txtdopant22.Location = new System.Drawing.Point(357, 271);
+            this.txtdopant22.Name = "txtdopant22";
+            this.txtdopant22.Size = new System.Drawing.Size(100, 22);
+            this.txtdopant22.TabIndex = 21;
             // 
-            // txtPoly88
+            // txtdopant33
             // 
-            this.txtPoly88.Location = new System.Drawing.Point(535, 271);
-            this.txtPoly88.Name = "txtPoly88";
-            this.txtPoly88.Size = new System.Drawing.Size(100, 22);
-            this.txtPoly88.TabIndex = 22;
+            this.txtdopant33.Location = new System.Drawing.Point(535, 271);
+            this.txtdopant33.Name = "txtdopant33";
+            this.txtdopant33.Size = new System.Drawing.Size(100, 22);
+            this.txtdopant33.TabIndex = 22;
             // 
-            // txtPoly99
+            // txtCrocible11
             // 
-            this.txtPoly99.Location = new System.Drawing.Point(188, 393);
-            this.txtPoly99.Name = "txtPoly99";
-            this.txtPoly99.Size = new System.Drawing.Size(100, 22);
-            this.txtPoly99.TabIndex = 23;
+            this.txtCrocible11.Location = new System.Drawing.Point(188, 393);
+            this.txtCrocible11.Name = "txtCrocible11";
+            this.txtCrocible11.Size = new System.Drawing.Size(100, 22);
+            this.txtCrocible11.TabIndex = 23;
             // 
-            // txtPoly1010
+            // txtCrocible22
             // 
-            this.txtPoly1010.Location = new System.Drawing.Point(357, 393);
-            this.txtPoly1010.Name = "txtPoly1010";
-            this.txtPoly1010.Size = new System.Drawing.Size(100, 22);
-            this.txtPoly1010.TabIndex = 24;
+            this.txtCrocible22.Location = new System.Drawing.Point(357, 393);
+            this.txtCrocible22.Name = "txtCrocible22";
+            this.txtCrocible22.Size = new System.Drawing.Size(100, 22);
+            this.txtCrocible22.TabIndex = 24;
             // 
-            // txtPoly1111
+            // txtCrocible33
             // 
-            this.txtPoly1111.Location = new System.Drawing.Point(535, 393);
-            this.txtPoly1111.Name = "txtPoly1111";
-            this.txtPoly1111.Size = new System.Drawing.Size(100, 22);
-            this.txtPoly1111.TabIndex = 25;
+            this.txtCrocible33.Location = new System.Drawing.Point(535, 393);
+            this.txtCrocible33.Name = "txtCrocible33";
+            this.txtCrocible33.Size = new System.Drawing.Size(100, 22);
+            this.txtCrocible33.TabIndex = 25;
             // 
-            // txtPoly1212
+            // txtCrocible44
             // 
-            this.txtPoly1212.Location = new System.Drawing.Point(704, 393);
-            this.txtPoly1212.Name = "txtPoly1212";
-            this.txtPoly1212.Size = new System.Drawing.Size(100, 22);
-            this.txtPoly1212.TabIndex = 26;
+            this.txtCrocible44.Location = new System.Drawing.Point(704, 393);
+            this.txtCrocible44.Name = "txtCrocible44";
+            this.txtCrocible44.Size = new System.Drawing.Size(100, 22);
+            this.txtCrocible44.TabIndex = 26;
             // 
             // btnInSave
             // 
@@ -1190,7 +1190,7 @@
         private System.Windows.Forms.Label lbCrucible4;
         private System.Windows.Forms.Label lbCrucible3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnOut;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.TabControl tabControl1;
@@ -1245,13 +1245,13 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TextBox txtPoly11;
-        private System.Windows.Forms.TextBox txtPoly1212;
-        private System.Windows.Forms.TextBox txtPoly1111;
-        private System.Windows.Forms.TextBox txtPoly1010;
-        private System.Windows.Forms.TextBox txtPoly99;
-        private System.Windows.Forms.TextBox txtPoly88;
-        private System.Windows.Forms.TextBox txtPoly77;
-        private System.Windows.Forms.TextBox txtPoly66;
+        private System.Windows.Forms.TextBox txtCrocible44;
+        private System.Windows.Forms.TextBox txtCrocible33;
+        private System.Windows.Forms.TextBox txtCrocible22;
+        private System.Windows.Forms.TextBox txtCrocible11;
+        private System.Windows.Forms.TextBox txtdopant33;
+        private System.Windows.Forms.TextBox txtdopant22;
+        private System.Windows.Forms.TextBox txtdopant11;
         private System.Windows.Forms.TextBox txtPoly55;
         private System.Windows.Forms.TextBox txtPoly44;
         private System.Windows.Forms.TextBox txtPoly33;

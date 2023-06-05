@@ -13,6 +13,7 @@ namespace PolyMangement.View
     public partial class PolyView : Form, IPolyView
     {
         private bool isEdit;
+        private bool isChargeIN = false;
         private bool cru1Rad=false;
         private bool cru2Rad = false;
         private bool cru3Rad = false;
@@ -24,6 +25,7 @@ namespace PolyMangement.View
             Default();
             ButtonCollections();
             tabControl1.TabPages.Remove(ChargeDetail);
+            tabControl1.TabPages.Remove(ChargeIn);
         }
 
         private void Default()
@@ -33,13 +35,15 @@ namespace PolyMangement.View
 
         private void ButtonCollections()
         {
-            btnAdd.Click += delegate 
+            btnOut.Click += delegate 
             {
+                isChargeIN = false;
                 tabControl1.TabPages.Remove(ChargeList);
                 tabControl1.TabPages.Add(ChargeDetail);
             };
             btnEdit.Click+=delegate 
-            { 
+            {
+                isChargeIN = false;
                 EditEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(ChargeList);
                 tabControl1.TabPages.Add(ChargeDetail);
@@ -49,15 +53,43 @@ namespace PolyMangement.View
                 DeleteEvent?.Invoke(this, EventArgs.Empty);
 
             };
+            btnIn.Click += delegate
+            {
+                isChargeIN = true;
+                tabControl1.TabPages.Remove(ChargeDetail);
+                tabControl1.TabPages.Remove(ChargeList);
+                tabControl1.TabPages.Add(ChargeIn);
+            };
+
+
             btnOutSave.Click += delegate 
-            { 
+            {
+                isChargeIN = false;
                 SaveEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(ChargeDetail);
+                tabControl1.TabPages.Remove(ChargeIn);
                 tabControl1.TabPages.Add(ChargeList);
             };
             btnOutCancel.Click += delegate 
-            { 
+            {
+                isChargeIN = false;
                 tabControl1.TabPages.Remove(ChargeDetail);
+                tabControl1.TabPages.Remove(ChargeIn);
+                tabControl1.TabPages.Add(ChargeList);
+            };
+            btnInSave.Click += delegate
+            {
+                isChargeIN=true;
+                SaveEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(ChargeDetail);
+                tabControl1.TabPages.Remove(ChargeIn);
+                tabControl1.TabPages.Add(ChargeList);
+            };
+            btnInCancel.Click += delegate
+            {
+                isChargeIN = false;
+                tabControl1.TabPages.Remove(ChargeDetail);
+                tabControl1.TabPages.Remove(ChargeIn);
                 tabControl1.TabPages.Add(ChargeList);
             };
         }
@@ -203,7 +235,71 @@ namespace PolyMangement.View
             get => lbCrucible4.Text;
             set => lbCrucible4.Text=value;
         }
-        
+        public string poly11Text 
+        {
+            get => txtPoly11.Text; 
+            set => txtPoly11.Text=value;
+        }
+        public string poly22Text 
+        { 
+            get => txtPoly22.Text;
+            set => txtPoly22.Text=value;
+        }
+        public string poly33Text 
+        { 
+            get => txtPoly33.Text;
+            set => txtPoly33.Text=value;
+        }
+        public string poly44Text 
+        { 
+            get => txtPoly44.Text;
+            set => txtPoly44.Text=value;
+        }
+        public string poly55Text 
+        { 
+            get => txtPoly55.Text;
+            set => txtPoly55.Text=value;
+        }
+        public string dopant11Text 
+        {
+            get => txtdopant11.Text;
+            set => txtdopant11.Text=value;
+        }
+        public string dopant22Text 
+        { 
+            get => txtdopant22.Text;
+            set => txtdopant22.Text=value;
+        }
+        public string dopant33Text 
+        { 
+            get => txtdopant33.Text;
+            set => txtdopant33.Text=value;
+        }
+        public string crucible11Text 
+        {
+            get => txtCrocible11.Text;
+            set => txtCrocible11.Text=value;
+        }
+        public string crucible22Text 
+        { 
+            get => txtCrocible22.Text;
+            set => txtCrocible22.Text=value;
+        }
+        public string crucible33Text 
+        { 
+            get => txtCrocible33.Text;
+            set => txtCrocible33.Text=value;
+        }
+        public string crucible44Text 
+        { 
+            get => txtCrocible44.Text;
+            set => txtCrocible44.Text=value;
+        }
+        public bool IsChargeIN 
+        { 
+            get => isChargeIN; 
+            set => isChargeIN=value;
+        }
 
         public event EventHandler AddEvent;
         public event EventHandler EditEvent;
@@ -217,6 +313,8 @@ namespace PolyMangement.View
         
         
         public static PolyView instance;
+       
+
         public static PolyView GetInstance(Form parenterContainer)
         {
             if (instance == null || instance.IsDisposed)

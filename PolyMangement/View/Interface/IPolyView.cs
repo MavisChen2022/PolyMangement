@@ -42,6 +42,21 @@ namespace PolyMangement.View
         string RemainCrucible3 { get; set; }
         string RemainCrucible4 { get; set; }
 
+        string poly11Text { get; set; }
+        string poly22Text { get; set; }
+        string poly33Text { get; set; }
+        string poly44Text { get; set; }
+        string poly55Text { get; set; }
+        string dopant11Text { get; set; }
+        string dopant22Text { get; set; }
+        string dopant33Text { get; set; }
+
+        string crucible11Text { get; set; }
+        string crucible22Text { get; set; }
+        string crucible33Text { get; set; }
+        string crucible44Text { get; set; }
+        bool IsChargeIN { get; set; }
+
 
         event EventHandler AddEvent;
         event EventHandler EditEvent;
