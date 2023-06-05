@@ -88,21 +88,21 @@ namespace PolyMangement.Presenter
         private void SaveRecord(object sender, EventArgs e)
         {
             var poly = new StockModel();
-           
             poly.machine = polyView.machineNum;
-            poly.poly1 = int.TryParse(polyView.poly1Text, out _) ? Convert.ToInt32(polyView.poly1Text) : 0;
-            poly.poly2 = int.TryParse(polyView.poly2Text, out _) ? Convert.ToInt32(polyView.poly2Text) : 0;
-            poly.poly3 = int.TryParse(polyView.poly3Text, out _) ? Convert.ToInt32(polyView.poly3Text) : 0;
-            poly.poly4 = int.TryParse(polyView.poly4Text, out _) ? Convert.ToInt32(polyView.poly4Text) : 0;
-            poly.poly5 = int.TryParse(polyView.poly5Text, out _) ? Convert.ToInt32(polyView.poly5Text) : 0;
-            poly.dopant1 = int.TryParse(polyView.dopant1Text, out _) ? Convert.ToInt32(polyView.dopant1Text) : 0;
-            poly.dopant2 = int.TryParse(polyView.dopant2Text, out _) ? Convert.ToInt32(polyView.dopant2Text) : 0;
-            poly.dopant3 = int.TryParse(polyView.dopant3Text, out _) ? Convert.ToInt32(polyView.dopant3Text) : 0;
 
-            poly.crucible1 = Convert.ToInt32(polyView.crucible1Rad);
-            poly.crucible2 = Convert.ToInt32(polyView.crucible2Rad);
-            poly.crucible3 = Convert.ToInt32(polyView.crucible3Rad);
-            poly.crucible4 = Convert.ToInt32(polyView.crucible4Rad);
+            poly.poly1 = int.TryParse(polyView.poly1Text, out _) ? Convert.ToInt32(polyView.poly1Text)* (-1) : 0;
+            poly.poly2 = int.TryParse(polyView.poly2Text, out _) ? Convert.ToInt32(polyView.poly2Text)* (-1) : 0;
+            poly.poly3 = int.TryParse(polyView.poly3Text, out _) ? Convert.ToInt32(polyView.poly3Text)* (-1) : 0;
+            poly.poly4 = int.TryParse(polyView.poly4Text, out _) ? Convert.ToInt32(polyView.poly4Text)* (-1) : 0;
+            poly.poly5 = int.TryParse(polyView.poly5Text, out _) ? Convert.ToInt32(polyView.poly5Text)* (-1) : 0;
+            poly.dopant1 = int.TryParse(polyView.dopant1Text, out _) ? Convert.ToInt32(polyView.dopant1Text)* (-1) : 0;
+            poly.dopant2 = int.TryParse(polyView.dopant2Text, out _) ? Convert.ToInt32(polyView.dopant2Text)* (-1) : 0;
+            poly.dopant3 = int.TryParse(polyView.dopant3Text, out _) ? Convert.ToInt32(polyView.dopant3Text)* (-1) : 0;
+
+            poly.crucible1 = Convert.ToInt32(polyView.crucible1Rad)* (-1);
+            poly.crucible2 = Convert.ToInt32(polyView.crucible2Rad)* (-1);
+            poly.crucible3 = Convert.ToInt32(polyView.crucible3Rad)* (-1);
+            poly.crucible4 = Convert.ToInt32(polyView.crucible4Rad)* (-1);
 
             if (polyView.IsEdit)
             {

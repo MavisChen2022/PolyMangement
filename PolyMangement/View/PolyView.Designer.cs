@@ -62,8 +62,8 @@
             this.lbId = new System.Windows.Forms.Label();
             this.lbTime = new System.Windows.Forms.Label();
             this.comboBoxMachine = new System.Windows.Forms.ComboBox();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnOutCancel = new System.Windows.Forms.Button();
+            this.btnOutSave = new System.Windows.Forms.Button();
             this.radioButtonCrucible4 = new System.Windows.Forms.RadioButton();
             this.radioButtonCrucible3 = new System.Windows.Forms.RadioButton();
             this.radioButtonCrucible2 = new System.Windows.Forms.RadioButton();
@@ -88,10 +88,42 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.btnIn = new System.Windows.Forms.Button();
+            this.ChargeIn = new System.Windows.Forms.TabPage();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.txtPoly11 = new System.Windows.Forms.TextBox();
+            this.txtPoly22 = new System.Windows.Forms.TextBox();
+            this.txtPoly33 = new System.Windows.Forms.TextBox();
+            this.txtPoly44 = new System.Windows.Forms.TextBox();
+            this.txtPoly55 = new System.Windows.Forms.TextBox();
+            this.txtPoly66 = new System.Windows.Forms.TextBox();
+            this.txtPoly77 = new System.Windows.Forms.TextBox();
+            this.txtPoly88 = new System.Windows.Forms.TextBox();
+            this.txtPoly99 = new System.Windows.Forms.TextBox();
+            this.txtPoly1010 = new System.Windows.Forms.TextBox();
+            this.txtPoly1111 = new System.Windows.Forms.TextBox();
+            this.txtPoly1212 = new System.Windows.Forms.TextBox();
+            this.btnInSave = new System.Windows.Forms.Button();
+            this.btnInCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.ChargeList.SuspendLayout();
             this.ChargeDetail.SuspendLayout();
+            this.ChargeIn.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -368,7 +400,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(106, 51);
             this.btnAdd.TabIndex = 25;
-            this.btnAdd.Text = "新增";
+            this.btnAdd.Text = "領出";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // btnEdit
@@ -386,9 +418,9 @@
             // 
             this.btnDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDel.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDel.Location = new System.Drawing.Point(1167, 310);
+            this.btnDel.Location = new System.Drawing.Point(1164, 310);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(106, 51);
+            this.btnDel.Size = new System.Drawing.Size(109, 51);
             this.btnDel.TabIndex = 27;
             this.btnDel.Text = "刪除";
             this.btnDel.UseVisualStyleBackColor = true;
@@ -397,6 +429,7 @@
             // 
             this.tabControl1.Controls.Add(this.ChargeList);
             this.tabControl1.Controls.Add(this.ChargeDetail);
+            this.tabControl1.Controls.Add(this.ChargeIn);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -406,6 +439,7 @@
             // 
             // ChargeList
             // 
+            this.ChargeList.Controls.Add(this.btnIn);
             this.ChargeList.Controls.Add(this.label4);
             this.ChargeList.Controls.Add(this.label3);
             this.ChargeList.Controls.Add(this.dataGridView1);
@@ -467,8 +501,8 @@
             this.ChargeDetail.Controls.Add(this.lbId);
             this.ChargeDetail.Controls.Add(this.lbTime);
             this.ChargeDetail.Controls.Add(this.comboBoxMachine);
-            this.ChargeDetail.Controls.Add(this.btnCancel);
-            this.ChargeDetail.Controls.Add(this.btnSave);
+            this.ChargeDetail.Controls.Add(this.btnOutCancel);
+            this.ChargeDetail.Controls.Add(this.btnOutSave);
             this.ChargeDetail.Controls.Add(this.radioButtonCrucible4);
             this.ChargeDetail.Controls.Add(this.radioButtonCrucible3);
             this.ChargeDetail.Controls.Add(this.radioButtonCrucible2);
@@ -498,7 +532,7 @@
             this.ChargeDetail.Padding = new System.Windows.Forms.Padding(3);
             this.ChargeDetail.Size = new System.Drawing.Size(1276, 689);
             this.ChargeDetail.TabIndex = 1;
-            this.ChargeDetail.Text = "使用明細";
+            this.ChargeDetail.Text = "領出";
             this.ChargeDetail.UseVisualStyleBackColor = true;
             // 
             // lbId
@@ -554,25 +588,25 @@
             this.comboBoxMachine.Size = new System.Drawing.Size(121, 20);
             this.comboBoxMachine.TabIndex = 30;
             // 
-            // btnCancel
+            // btnOutCancel
             // 
-            this.btnCancel.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnCancel.Location = new System.Drawing.Point(935, 356);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(115, 54);
-            this.btnCancel.TabIndex = 29;
-            this.btnCancel.Text = "取消";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnOutCancel.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnOutCancel.Location = new System.Drawing.Point(935, 356);
+            this.btnOutCancel.Name = "btnOutCancel";
+            this.btnOutCancel.Size = new System.Drawing.Size(115, 54);
+            this.btnOutCancel.TabIndex = 29;
+            this.btnOutCancel.Text = "取消";
+            this.btnOutCancel.UseVisualStyleBackColor = true;
             // 
-            // btnSave
+            // btnOutSave
             // 
-            this.btnSave.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnSave.Location = new System.Drawing.Point(935, 270);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(115, 55);
-            this.btnSave.TabIndex = 28;
-            this.btnSave.Text = "儲存";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnOutSave.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnOutSave.Location = new System.Drawing.Point(935, 270);
+            this.btnOutSave.Name = "btnOutSave";
+            this.btnOutSave.Size = new System.Drawing.Size(115, 55);
+            this.btnOutSave.TabIndex = 28;
+            this.btnOutSave.Text = "領出";
+            this.btnOutSave.UseVisualStyleBackColor = true;
             // 
             // radioButtonCrucible4
             // 
@@ -805,6 +839,312 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "機台";
             // 
+            // btnIn
+            // 
+            this.btnIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIn.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnIn.Location = new System.Drawing.Point(1164, 400);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(106, 51);
+            this.btnIn.TabIndex = 42;
+            this.btnIn.Text = "領進";
+            this.btnIn.UseVisualStyleBackColor = true;
+            // 
+            // ChargeIn
+            // 
+            this.ChargeIn.Controls.Add(this.btnInCancel);
+            this.ChargeIn.Controls.Add(this.btnInSave);
+            this.ChargeIn.Controls.Add(this.txtPoly1212);
+            this.ChargeIn.Controls.Add(this.txtPoly1111);
+            this.ChargeIn.Controls.Add(this.txtPoly1010);
+            this.ChargeIn.Controls.Add(this.txtPoly99);
+            this.ChargeIn.Controls.Add(this.txtPoly88);
+            this.ChargeIn.Controls.Add(this.txtPoly77);
+            this.ChargeIn.Controls.Add(this.txtPoly66);
+            this.ChargeIn.Controls.Add(this.txtPoly55);
+            this.ChargeIn.Controls.Add(this.txtPoly44);
+            this.ChargeIn.Controls.Add(this.txtPoly33);
+            this.ChargeIn.Controls.Add(this.txtPoly22);
+            this.ChargeIn.Controls.Add(this.txtPoly11);
+            this.ChargeIn.Controls.Add(this.label39);
+            this.ChargeIn.Controls.Add(this.label38);
+            this.ChargeIn.Controls.Add(this.label37);
+            this.ChargeIn.Controls.Add(this.label36);
+            this.ChargeIn.Controls.Add(this.label35);
+            this.ChargeIn.Controls.Add(this.label34);
+            this.ChargeIn.Controls.Add(this.label33);
+            this.ChargeIn.Controls.Add(this.label32);
+            this.ChargeIn.Controls.Add(this.label31);
+            this.ChargeIn.Controls.Add(this.label30);
+            this.ChargeIn.Controls.Add(this.label29);
+            this.ChargeIn.Controls.Add(this.label28);
+            this.ChargeIn.Controls.Add(this.label27);
+            this.ChargeIn.Controls.Add(this.label26);
+            this.ChargeIn.Controls.Add(this.label25);
+            this.ChargeIn.Location = new System.Drawing.Point(4, 22);
+            this.ChargeIn.Name = "ChargeIn";
+            this.ChargeIn.Size = new System.Drawing.Size(1276, 689);
+            this.ChargeIn.TabIndex = 2;
+            this.ChargeIn.Text = "領進";
+            this.ChargeIn.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label25.Location = new System.Drawing.Point(17, 69);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(112, 31);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Poly種類";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label26.Location = new System.Drawing.Point(182, 69);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(78, 31);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "Poly1";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label27.Location = new System.Drawing.Point(351, 69);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(78, 31);
+            this.label27.TabIndex = 2;
+            this.label27.Text = "Poly2";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label28.Location = new System.Drawing.Point(529, 69);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(78, 31);
+            this.label28.TabIndex = 3;
+            this.label28.Text = "Poly3";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label29.Location = new System.Drawing.Point(698, 69);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(78, 31);
+            this.label29.TabIndex = 4;
+            this.label29.Text = "Poly4";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label30.Location = new System.Drawing.Point(869, 69);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(78, 31);
+            this.label30.TabIndex = 5;
+            this.label30.Text = "Poly5";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label31.Location = new System.Drawing.Point(17, 220);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(101, 31);
+            this.label31.TabIndex = 6;
+            this.label31.Text = "Dopant";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label32.ForeColor = System.Drawing.Color.Red;
+            this.label32.Location = new System.Drawing.Point(182, 220);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(115, 31);
+            this.label32.TabIndex = 7;
+            this.label32.Text = "Dopant1";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label33.ForeColor = System.Drawing.Color.Blue;
+            this.label33.Location = new System.Drawing.Point(351, 220);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(115, 31);
+            this.label33.TabIndex = 8;
+            this.label33.Text = "Dopant2";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label34.ForeColor = System.Drawing.Color.Green;
+            this.label34.Location = new System.Drawing.Point(529, 220);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(115, 31);
+            this.label34.TabIndex = 9;
+            this.label34.Text = "Dopant3";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label35.Location = new System.Drawing.Point(37, 344);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(62, 31);
+            this.label35.TabIndex = 10;
+            this.label35.Text = "坩堝";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label36.Location = new System.Drawing.Point(182, 344);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(124, 31);
+            this.label36.TabIndex = 11;
+            this.label36.Text = "Crucible1";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label37.Location = new System.Drawing.Point(529, 344);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(124, 31);
+            this.label37.TabIndex = 12;
+            this.label37.Text = "Crucible3";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label38.Location = new System.Drawing.Point(698, 344);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(124, 31);
+            this.label38.TabIndex = 13;
+            this.label38.Text = "Crucible4";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label39.Location = new System.Drawing.Point(351, 344);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(124, 31);
+            this.label39.TabIndex = 14;
+            this.label39.Text = "Crucible2";
+            // 
+            // txtPoly11
+            // 
+            this.txtPoly11.Location = new System.Drawing.Point(188, 130);
+            this.txtPoly11.Name = "txtPoly11";
+            this.txtPoly11.Size = new System.Drawing.Size(100, 22);
+            this.txtPoly11.TabIndex = 15;
+            // 
+            // txtPoly22
+            // 
+            this.txtPoly22.Location = new System.Drawing.Point(357, 130);
+            this.txtPoly22.Name = "txtPoly22";
+            this.txtPoly22.Size = new System.Drawing.Size(100, 22);
+            this.txtPoly22.TabIndex = 16;
+            // 
+            // txtPoly33
+            // 
+            this.txtPoly33.Location = new System.Drawing.Point(535, 130);
+            this.txtPoly33.Name = "txtPoly33";
+            this.txtPoly33.Size = new System.Drawing.Size(100, 22);
+            this.txtPoly33.TabIndex = 17;
+            // 
+            // txtPoly44
+            // 
+            this.txtPoly44.Location = new System.Drawing.Point(704, 130);
+            this.txtPoly44.Name = "txtPoly44";
+            this.txtPoly44.Size = new System.Drawing.Size(100, 22);
+            this.txtPoly44.TabIndex = 18;
+            // 
+            // txtPoly55
+            // 
+            this.txtPoly55.Location = new System.Drawing.Point(875, 130);
+            this.txtPoly55.Name = "txtPoly55";
+            this.txtPoly55.Size = new System.Drawing.Size(100, 22);
+            this.txtPoly55.TabIndex = 19;
+            // 
+            // txtPoly66
+            // 
+            this.txtPoly66.Location = new System.Drawing.Point(188, 271);
+            this.txtPoly66.Name = "txtPoly66";
+            this.txtPoly66.Size = new System.Drawing.Size(100, 22);
+            this.txtPoly66.TabIndex = 20;
+            // 
+            // txtPoly77
+            // 
+            this.txtPoly77.Location = new System.Drawing.Point(357, 271);
+            this.txtPoly77.Name = "txtPoly77";
+            this.txtPoly77.Size = new System.Drawing.Size(100, 22);
+            this.txtPoly77.TabIndex = 21;
+            // 
+            // txtPoly88
+            // 
+            this.txtPoly88.Location = new System.Drawing.Point(535, 271);
+            this.txtPoly88.Name = "txtPoly88";
+            this.txtPoly88.Size = new System.Drawing.Size(100, 22);
+            this.txtPoly88.TabIndex = 22;
+            // 
+            // txtPoly99
+            // 
+            this.txtPoly99.Location = new System.Drawing.Point(188, 393);
+            this.txtPoly99.Name = "txtPoly99";
+            this.txtPoly99.Size = new System.Drawing.Size(100, 22);
+            this.txtPoly99.TabIndex = 23;
+            // 
+            // txtPoly1010
+            // 
+            this.txtPoly1010.Location = new System.Drawing.Point(357, 393);
+            this.txtPoly1010.Name = "txtPoly1010";
+            this.txtPoly1010.Size = new System.Drawing.Size(100, 22);
+            this.txtPoly1010.TabIndex = 24;
+            // 
+            // txtPoly1111
+            // 
+            this.txtPoly1111.Location = new System.Drawing.Point(535, 393);
+            this.txtPoly1111.Name = "txtPoly1111";
+            this.txtPoly1111.Size = new System.Drawing.Size(100, 22);
+            this.txtPoly1111.TabIndex = 25;
+            // 
+            // txtPoly1212
+            // 
+            this.txtPoly1212.Location = new System.Drawing.Point(704, 393);
+            this.txtPoly1212.Name = "txtPoly1212";
+            this.txtPoly1212.Size = new System.Drawing.Size(100, 22);
+            this.txtPoly1212.TabIndex = 26;
+            // 
+            // btnInSave
+            // 
+            this.btnInSave.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnInSave.Location = new System.Drawing.Point(1047, 271);
+            this.btnInSave.Name = "btnInSave";
+            this.btnInSave.Size = new System.Drawing.Size(115, 46);
+            this.btnInSave.TabIndex = 27;
+            this.btnInSave.Text = "領進";
+            this.btnInSave.UseVisualStyleBackColor = true;
+            // 
+            // btnInCancel
+            // 
+            this.btnInCancel.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnInCancel.Location = new System.Drawing.Point(1047, 369);
+            this.btnInCancel.Name = "btnInCancel";
+            this.btnInCancel.Size = new System.Drawing.Size(115, 45);
+            this.btnInCancel.TabIndex = 28;
+            this.btnInCancel.Text = "取消";
+            this.btnInCancel.UseVisualStyleBackColor = true;
+            // 
             // PolyView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -819,6 +1159,8 @@
             this.ChargeList.PerformLayout();
             this.ChargeDetail.ResumeLayout(false);
             this.ChargeDetail.PerformLayout();
+            this.ChargeIn.ResumeLayout(false);
+            this.ChargeIn.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -880,10 +1222,41 @@
         private System.Windows.Forms.TextBox txtPoly3;
         private System.Windows.Forms.TextBox txtPoly2;
         private System.Windows.Forms.TextBox txtPoly1;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnOutCancel;
+        private System.Windows.Forms.Button btnOutSave;
         private System.Windows.Forms.ComboBox comboBoxMachine;
         private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.Label lbId;
+        private System.Windows.Forms.Button btnIn;
+        private System.Windows.Forms.TabPage ChargeIn;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox txtPoly11;
+        private System.Windows.Forms.TextBox txtPoly1212;
+        private System.Windows.Forms.TextBox txtPoly1111;
+        private System.Windows.Forms.TextBox txtPoly1010;
+        private System.Windows.Forms.TextBox txtPoly99;
+        private System.Windows.Forms.TextBox txtPoly88;
+        private System.Windows.Forms.TextBox txtPoly77;
+        private System.Windows.Forms.TextBox txtPoly66;
+        private System.Windows.Forms.TextBox txtPoly55;
+        private System.Windows.Forms.TextBox txtPoly44;
+        private System.Windows.Forms.TextBox txtPoly33;
+        private System.Windows.Forms.TextBox txtPoly22;
+        private System.Windows.Forms.Button btnInCancel;
+        private System.Windows.Forms.Button btnInSave;
     }
 }

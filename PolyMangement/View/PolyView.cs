@@ -49,13 +49,13 @@ namespace PolyMangement.View
                 DeleteEvent?.Invoke(this, EventArgs.Empty);
 
             };
-            btnSave.Click += delegate 
+            btnOutSave.Click += delegate 
             { 
                 SaveEvent?.Invoke(this, EventArgs.Empty);
                 tabControl1.TabPages.Remove(ChargeDetail);
                 tabControl1.TabPages.Add(ChargeList);
             };
-            btnCancel.Click += delegate 
+            btnOutCancel.Click += delegate 
             { 
                 tabControl1.TabPages.Remove(ChargeDetail);
                 tabControl1.TabPages.Add(ChargeList);
