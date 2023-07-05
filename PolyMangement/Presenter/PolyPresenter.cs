@@ -2,6 +2,7 @@
 using PolyMangement.View;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,9 @@ namespace PolyMangement.Presenter
         private IPolyRepository polyRepository;
         private BindingSource polyBindingSource;
         private IEnumerable<StockModel> stockList;
-
+        private int polySafety = 300;
+        private int dopantSafety = 3000;
+        private int crucibleSafety = 8;
         public PolyPresenter(IPolyView polyView, IPolyRepository polyRepository)
         {
             this.polyBindingSource = new BindingSource();
@@ -28,8 +31,28 @@ namespace PolyMangement.Presenter
             polyView.SaveEvent += SaveRecord;
             polyView.SetPolyBindingSource(polyBindingSource);
             UpdateRemainingStock();
+            CheckStockIsLower();
             LoadAllStockList();
         }
+
+        private void CheckStockIsLower()
+        {
+            polyView.RemainPoly1Color = polyRepository.StockSafety(Convert.ToInt32(polyView.RemainPoly1), polySafety);
+            polyView.RemainPoly2Color = polyRepository.StockSafety(Convert.ToInt32(polyView.RemainPoly2), polySafety);
+            polyView.RemainPoly3Color = polyRepository.StockSafety(Convert.ToInt32(polyView.RemainPoly3), polySafety);
+            polyView.RemainPoly4Color = polyRepository.StockSafety(Convert.ToInt32(polyView.RemainPoly4), polySafety);
+            polyView.RemainPoly5Color = polyRepository.StockSafety(Convert.ToInt32(polyView.RemainPoly5), polySafety);
+
+            polyView.RemainDopant1Color = polyRepository.StockSafety(Convert.ToInt32(polyView.RemainDopant1), dopantSafety);
+            polyView.RemainDopant2Color = polyRepository.StockSafety(Convert.ToInt32(polyView.RemainDopant2), dopantSafety);
+            polyView.RemainDopant3Color = polyRepository.StockSafety(Convert.ToInt32(polyView.RemainDopant3), dopantSafety);
+        
+            polyView.RemainCrucible1Color=polyRepository.StockSafety(Convert.ToInt32(polyView.RemainCrucible1), crucibleSafety);
+            polyView.RemainCrucible2Color = polyRepository.StockSafety(Convert.ToInt32(polyView.RemainCrucible2), crucibleSafety);
+            polyView.RemainCrucible3Color = polyRepository.StockSafety(Convert.ToInt32(polyView.RemainCrucible3), crucibleSafety);
+            polyView.RemainCrucible4Color = polyRepository.StockSafety(Convert.ToInt32(polyView.RemainCrucible4), crucibleSafety);
+        }
+
         public void Show()
         {
             polyView.Show();
@@ -52,7 +75,6 @@ namespace PolyMangement.Presenter
             polyView.RemainCrucible3 = polyRepository.UpdateRemainStock("crucible3").ToString();
             polyView.RemainCrucible4 = polyRepository.UpdateRemainStock("crucible4").ToString();
         }
-
         private void LoadAllStockList()
         {
             stockList = polyRepository.GetAll();
@@ -136,6 +158,7 @@ namespace PolyMangement.Presenter
             }
             LoadAllStockList();
             UpdateRemainingStock();
+            CheckStockIsLower();
             CleanViewField();
         }
         private void DeleteRecord(object sender, EventArgs e)
@@ -144,6 +167,7 @@ namespace PolyMangement.Presenter
             polyRepository.Delete(poly.id);
             LoadAllStockList();
             UpdateRemainingStock();
+            CheckStockIsLower();
         }
         private void CancelAction(object sender, EventArgs e)
         {

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -98,6 +99,10 @@ namespace PolyMangement.Repositories
                 }
             }
             return remaingStock;
+        }
+        public Color StockSafety(int current,int stockSafety)
+        {
+            return current <= stockSafety ? Color.Red : Color.Black;
         }
     }
 }

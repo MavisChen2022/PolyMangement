@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,6 +42,19 @@ namespace PolyMangement.View
         string RemainCrucible2 { get; set; }
         string RemainCrucible3 { get; set; }
         string RemainCrucible4 { get; set; }
+
+        Color RemainPoly1Color { set; }
+        Color RemainPoly2Color { set; }
+        Color RemainPoly3Color { set; }
+        Color RemainPoly4Color { set; }
+        Color RemainPoly5Color { set; }
+        Color RemainDopant1Color { set; }
+        Color RemainDopant2Color { set; }
+        Color RemainDopant3Color { set; }
+        Color RemainCrucible1Color { set; }
+        Color RemainCrucible2Color { set; }
+        Color RemainCrucible3Color { set; }
+        Color RemainCrucible4Color { set; }
 
         string poly11Text { get; set; }
         string poly22Text { get; set; }

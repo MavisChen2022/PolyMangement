@@ -300,6 +300,18 @@ namespace PolyMangement.View
             get => isChargeIN; 
             set => isChargeIN=value;
         }
+        public Color RemainPoly1Color { set => lbPoly1.ForeColor = value; }
+        public Color RemainPoly2Color { set => lbPoly2.ForeColor = value; }
+        public Color RemainPoly3Color { set => lbPoly3.ForeColor = value; }
+        public Color RemainPoly4Color { set => lbPoly4.ForeColor = value; }
+        public Color RemainPoly5Color { set => lbPoly5.ForeColor = value; }
+        public Color RemainDopant1Color { set => lbDopant1.ForeColor = value; }
+        public Color RemainDopant2Color { set => lbDopant2.ForeColor = value; }
+        public Color RemainDopant3Color { set => lbDopant3.ForeColor = value; }
+        public Color RemainCrucible1Color { set => lbCrucible1.ForeColor = value; }
+        public Color RemainCrucible2Color { set => lbCrucible2.ForeColor = value; }
+        public Color RemainCrucible3Color { set => lbCrucible3.ForeColor = value; }
+        public Color RemainCrucible4Color { set => lbCrucible4.ForeColor = value; }
 
         public event EventHandler AddEvent;
         public event EventHandler EditEvent;
